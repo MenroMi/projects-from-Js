@@ -44,7 +44,7 @@ window.addEventListener('DOMContentLoaded', () => {
         replaceBackImg() {
     
             const backImg = document.querySelector('.promo__bg');
-            backImg.style.backgroundImage = "url('/projects/project_2/img/bg.jpg')";
+            backImg.style.backgroundImage = "url('/project_02/img/bg.jpg')";
             backImg.style.backgroundPosition = 'top';
     
             return backImg;
