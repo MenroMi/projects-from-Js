@@ -5,11 +5,29 @@ const modals = () => {
             if (e.target) {
                 e.preventDefault();
             }
-        
+            
+
             modal.style.display = 'block';
             document.body.style.overflow = 'hidden';
         
         });
+
+        modal.addEventListener("click", (e) => {
+            if (e.target.classList.contains('popup_engineer')) {
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+            }
+        });
+
+       document.addEventListener('keydown', (e) => {
+
+            if (e.keyCode === 27) {
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+            }
+
+
+       });
 
 
         close.addEventListener('click', () => {
