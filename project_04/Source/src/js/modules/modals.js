@@ -1,15 +1,20 @@
-const modals = () => {
+function openModal(modalSelector, timer) {
+    const modal = document.querySelector(modalSelector);
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
 
-    function openModal(modal) {
-        modal.style.display = 'block';
-        document.body.style.overflow = 'hidden';
+    if (timer) {
+        clearTimeout(timer);
     }
+}
 
-    function closeModal(modal) {
-        modal.style.display = 'none';
-        document.body.style.overflow = '';
+function closeModal(modal) {
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
 
-    }
+}
+
+const modals = (timer) => {
 
     function bindModals(triggerSelector, modalSelector, closeSelector) {
 
@@ -24,7 +29,7 @@ const modals = () => {
                     e.preventDefault();
                 }
 
-                openModal(modal);
+                openModal(modalSelector, timer);
     
             });
     
@@ -50,17 +55,6 @@ const modals = () => {
 
     }
 
-    function timerId(modalWindow, time) {
-        
-        setTimeout(() => {
-            document.querySelector(modalWindow).style.display = 'block';
-            document.body.style.overflow = "hidden";
-        }, time);
-
-    }
-
-
-    timerId(".popup", 60000);
     bindModals(".popup_engineer_btn", ".popup_engineer", '.popup_engineer .popup_close');
     bindModals(".phone_link", ".popup", '.popup .popup_close');
     
@@ -68,3 +62,4 @@ const modals = () => {
 
 
 export default modals;
+export {openModal};

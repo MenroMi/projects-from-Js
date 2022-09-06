@@ -14041,8 +14041,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_modals__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/modals */ "./src/js/modules/modals.js");
 
 
+
 window.addEventListener('DOMContentLoaded', () => {
-  Object(_modules_modals__WEBPACK_IMPORTED_MODULE_1__["default"])();
+  const timerId = setTimeout(() => Object(_modules_modals__WEBPACK_IMPORTED_MODULE_1__["openModal"])(".popup", timerId), 5000);
+  Object(_modules_modals__WEBPACK_IMPORTED_MODULE_1__["default"])(timerId);
 });
 
 /***/ }),
@@ -14051,22 +14053,28 @@ window.addEventListener('DOMContentLoaded', () => {
 /*!**********************************!*\
   !*** ./src/js/modules/modals.js ***!
   \**********************************/
-/*! exports provided: default */
+/*! exports provided: default, openModal */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-const modals = () => {
-  function openModal(modal) {
-    modal.style.display = 'block';
-    document.body.style.overflow = 'hidden';
-  }
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "openModal", function() { return openModal; });
+function openModal(modalSelector, timer) {
+  const modal = document.querySelector(modalSelector);
+  modal.style.display = 'block';
+  document.body.style.overflow = 'hidden';
 
-  function closeModal(modal) {
-    modal.style.display = 'none';
-    document.body.style.overflow = '';
+  if (timer) {
+    clearTimeout(timer);
   }
+}
 
+function closeModal(modal) {
+  modal.style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+const modals = timer => {
   function bindModals(triggerSelector, modalSelector, closeSelector) {
     const trigger = document.querySelectorAll(triggerSelector),
           modal = document.querySelector(modalSelector),
@@ -14077,7 +14085,7 @@ const modals = () => {
           e.preventDefault();
         }
 
-        openModal(modal);
+        openModal(modalSelector, timer);
       });
     });
     document.addEventListener('keydown', e => {
@@ -14095,19 +14103,12 @@ const modals = () => {
     });
   }
 
-  function timerId(modalWindow, time) {
-    setTimeout(() => {
-      document.querySelector(modalWindow).style.display = 'block';
-      document.body.style.overflow = "hidden";
-    }, time);
-  }
-
-  timerId(".popup", 60000);
   bindModals(".popup_engineer_btn", ".popup_engineer", '.popup_engineer .popup_close');
   bindModals(".phone_link", ".popup", '.popup .popup_close');
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (modals);
+
 
 /***/ }),
 
