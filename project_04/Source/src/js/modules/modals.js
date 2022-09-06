@@ -1,48 +1,69 @@
 const modals = () => {
-    function bindModals(trigger, modal, close) {
 
-        trigger.addEventListener('click', (e) => {
-            if (e.target) {
-                e.preventDefault();
-            }
-            
+    function openModal(modal) {
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
 
-            modal.style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        
-        });
+    function closeModal(modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
 
-        modal.addEventListener("click", (e) => {
-            if (e.target.classList.contains('popup_engineer')) {
-                modal.style.display = 'none';
-                document.body.style.overflow = '';
-            }
+    }
+
+    function bindModals(triggerSelector, modalSelector, closeSelector) {
+
+
+        const trigger = document.querySelectorAll(triggerSelector),
+              modal = document.querySelector(modalSelector),
+              close = document.querySelector(closeSelector);
+
+        trigger.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                if (e.target) {
+                    e.preventDefault();
+                }
+
+                openModal(modal);
+    
+            });
+    
+
         });
 
        document.addEventListener('keydown', (e) => {
 
             if (e.keyCode === 27) {
-                modal.style.display = 'none';
-                document.body.style.overflow = '';
+                closeModal(modal);
             }
-
-
        });
 
+       modal.addEventListener("click", (e) => {
+        if (e.target.classList.contains('popup_engineer')) {
+            closeModal(modal);
+        }
+        });
 
         close.addEventListener('click', () => {
-            modal.style.display = 'none';
-            document.body.style.overflow = '';
+                closeModal(modal);
         });
 
     }
 
-    const callEngineerBtn = document.querySelector('.popup_engineer_btn'),
-          engineerModal = document.querySelector('.popup_engineer'),
-          modalEngineerClose = document.querySelector('.popup_engineer .popup_close');
+    function timerId(modalWindow, time) {
+        
+        setTimeout(() => {
+            document.querySelector(modalWindow).style.display = 'block';
+            document.body.style.overflow = "hidden";
+        }, time);
 
-    bindModals(callEngineerBtn, engineerModal, modalEngineerClose);
+    }
 
+
+    timerId(".popup", 60000);
+    bindModals(".popup_engineer_btn", ".popup_engineer", '.popup_engineer .popup_close');
+    bindModals(".phone_link", ".popup", '.popup .popup_close');
+    
 };
 
 
