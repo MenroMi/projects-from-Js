@@ -491,6 +491,10 @@ textarea:focus {
   color: #454545;
 }
 
+.img_glazing {
+  cursor: pointer;
+}
+
 /*Decoration*/
 .decoration {
   padding: 8rem 0;
