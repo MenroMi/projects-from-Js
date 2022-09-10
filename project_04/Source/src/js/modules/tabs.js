@@ -1,20 +1,21 @@
 function tabs() {
 
-    function tabGlazing(tabs, tabContent, tabParent) {
+    function tabGlazing(tabs, tabContent, tabParent, ...rest) {
         const parent = document.querySelector(tabParent),
               tabsChildren = document.querySelectorAll(tabs),
-            //   imgChildren = document.querySelectorAll(...imgs),
+              childElem= document.querySelectorAll(rest),
               tabsContent = document.querySelectorAll(tabContent);
-        
-
-
 
         function hide() {
 
 
-            // imgChildren.forEach(img => {    
-            //     img.classList.add('img_glazing');
-            // });
+            childElem.forEach(elem => {    
+                if ( elem.tagName === "IMG") {
+                    elem.classList.add('img_glazing');
+                } else {
+                    return;
+                }
+            });
 
             tabsChildren.forEach(tab => {
                 if ( tab.tagName == 'A') {
@@ -48,21 +49,20 @@ function tabs() {
             if (target) {
                 tabsChildren.forEach((tab, i) => {
                     if (target == tab) {
-                        
-                        console.log(target);
                         hide();
                         show(i);
                     }
                 });
             }
-            // if (target) {
-            //     imgChildren.forEach((img, i) => {
-            //         if (target == img) {
-            //             hide();
-            //             show(i);
-            //         }
-            //     });
-            // }
+
+            if (target) {
+                childElem.forEach((elem, i) => {
+                    if (target == elem) {
+                        hide();
+                        show(i);
+                    }
+                });
+            }
 
         });
 
@@ -70,8 +70,8 @@ function tabs() {
 
     }
 
-    tabGlazing(".glazing_block a", '.glazing_content', ".glazing_slider"); // ".glazing_block img"
-    tabGlazing(".decoration_item div", "[data-elem]", ".decoration_slider");
+    tabGlazing(".glazing_block a", '.glazing_content', ".glazing_slider", ".glazing_block img");
+    tabGlazing(".decoration_item div", "[data-elem]", ".decoration_slider", ".decoration_item a");
 
 }
 
