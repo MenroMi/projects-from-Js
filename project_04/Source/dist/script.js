@@ -15230,9 +15230,29 @@ const forms = () => {
     });
   };
 
-  form.forEach(form => {
-    bindPostData(form);
-  });
+  validationPhone();
+
+  function validationPhone() {
+    const inputPhone = document.querySelectorAll("[name='user_phone']");
+    form.forEach(form => {
+      const err = document.createElement('div');
+      inputPhone.forEach(input => {
+        input.addEventListener('input', () => {
+          err.classList.add("status");
+          form.appendChild(err);
+
+          if (input.value.match(/\D/g)) {
+            input.style.border = "1px solid red";
+            err.textContent = 'Введите сами цифры!';
+          } else {
+            input.style.border = '';
+            err.textContent = '';
+            bindPostData(form);
+          }
+        });
+      });
+    });
+  }
 
   function bindPostData(form) {
     form.addEventListener('submit', e => {
