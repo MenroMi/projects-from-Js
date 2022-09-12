@@ -46,6 +46,46 @@ const forms = () => {
         bindPostData(elem);
     });
 
+    function bindPostData(form) {
+
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const statusMessage = document.createElement('div');
+            statusMessage.classList.add('status');
+
+            form.appendChild(statusMessage);
+
+            const formData = new FormData(form);
+
+
+            post("assets/server.php", formData, statusMessage)
+            .then(res => {
+                console.log(res);
+                statusMessage.textContent = message.success;
+            })
+            .catch(() => {
+                statusMessage.textContent = message.failure;
+            })
+            .finally(() => {
+                clear(inputs);
+                setTimeout(() => {statusMessage.remove();}, 5000);
+            });
+
+
+        });
+    }
+
+};
+
+export default forms;
+
+
+// ==============================================
+
+
+
     // validationPhone();
 
     // function validationPhone() {
@@ -82,38 +122,3 @@ const forms = () => {
     //     });
 
     // }
-
-    function bindPostData(form) {
-
-
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-
-            const statusMessage = document.createElement('div');
-            statusMessage.classList.add('status');
-
-            form.appendChild(statusMessage);
-
-            const formData = new FormData(form);
-
-
-            post("assets/server.php", formData, statusMessage)
-            .then(res => {
-                console.log(res);
-                statusMessage.textContent = message.success;
-            })
-            .catch(() => {
-                statusMessage.textContent = message.failure;
-            })
-            .finally(() => {
-                clear(inputs);
-                setTimeout(() => {statusMessage.remove();}, 5000);
-            });
-
-
-        });
-    }
-
-};
-
-export default forms;

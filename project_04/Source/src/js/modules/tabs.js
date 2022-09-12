@@ -1,4 +1,4 @@
-const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
+const tabs = (headerSelector, tabSelector, contentSelector, activeClass, display = 'block') => {
     const header = document.querySelector(headerSelector),
           tabs = document.querySelectorAll(tabSelector),
           contents = document.querySelectorAll(contentSelector);
@@ -15,7 +15,7 @@ const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
     }
 
     function showTabContent(i = 0) {
-        contents[i].style.display = 'block'; // when elements have another
+        contents[i].style.display = display; // when elements have another
         //display we must change her property
         tabs[i].classList.add(activeClass);
     }
