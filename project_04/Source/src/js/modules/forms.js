@@ -1,8 +1,9 @@
+import checkNumb from "./checkNumInputs";
+
 const forms = () => {
 
     const form = document.querySelectorAll('form'),
-          inputs = document.querySelectorAll('input'),
-          phoneInputs = document.querySelectorAll("[name='user_phone']");
+          inputs = document.querySelectorAll('input');
 
     const message = {
         loading: 'Загрузка...',
@@ -10,11 +11,7 @@ const forms = () => {
         failure: 'Ошибка! Что-то не так!'
     };
 
-    phoneInputs.forEach(input => {
-        input.addEventListener('input', () => {
-            input.value = input.value.replace(/\D/g, '');
-        });
-    });
+    checkNumb("[name='user_phone']");
 
     const post = async (url, data, messageElem) => {
         messageElem.textContent = message.loading;
