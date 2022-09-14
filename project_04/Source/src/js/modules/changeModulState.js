@@ -13,17 +13,19 @@ const changeModal = (state) => {
     checkNumb("#height");
     // validationState(state, balconForms, 'form');
 
-    // function validationState(stateSelector,balconSelector, prop) {
-    //     btn.addEventListener("mouseenter", () => {
-    //         if(stateSelector[prop] == '') {
-    //             balconSelector[0].parentElement.style.border = '1px solid red';
-    //             btn.setAttribute('disabled', 'true');
-    //         } else {
-    //             balconSelector[0].parentElement.parentElement.style.border = '';
-    //             btn.removeAttribute('disabled');
-    //         }
-    //     });
-    // }
+    function validationState(stateSelector, balconSelector, prop) {
+        btn.addEventListener("mouseenter", () => {
+            if(stateSelector[prop] == '') {
+                balconSelector.forEach(sel => {
+                    sel.parentElement.style.border = '1px solid red';
+                    btn.setAttribute('disabled', 'true');
+                });
+            } else {
+                balconSelector[0].parentElement.parentElement.style.border = '';
+                btn.removeAttribute('disabled');
+            }
+        });
+    }
     
     function listenerEvent(selector, event, prop) {
         selector.forEach((form, i) => {
@@ -32,8 +34,7 @@ const changeModal = (state) => {
                 switch(form.tagName) {
                     case 'SPAN':
                         state[prop] = i;
-                        form.parentElement.style.border = '';
-                        btn.removeAttribute('disabled');
+                        validationState(state, selector, prop);
                         break;
                     case 'INPUT':
                         if (form.getAttribute('type') === "checkbox") {
@@ -56,6 +57,7 @@ const changeModal = (state) => {
                 console.log(state);
             });
 
+            validationState(state, selector, prop);
 
         });
     }
