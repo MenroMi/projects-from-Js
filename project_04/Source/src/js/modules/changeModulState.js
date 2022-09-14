@@ -3,41 +3,95 @@ import checkNumb from "./checkNumInputs";
 const changeModal = (state) => {
     
     const balconForms = document.querySelectorAll(".balcon_icons_img"),
-          balconWidth = document.querySelector("#width"),
-          balconHeight = document.querySelector("#height"),
-          balconGlazing = document.querySelector("#view_type"),
+          balconWidth = document.querySelectorAll("#width"),
+          balconHeight = document.querySelectorAll("#height"),
+          balconGlazing = document.querySelectorAll("#view_type"),
           balconColdOrWarm = document.querySelectorAll('.checkbox'),
           btn = document.querySelector('.popup_calc_button');
 
+    checkNumb("#width");
+    checkNumb("#height");
+    
     function listenerEvent(selector, event, prop) {
         selector.forEach((form, i) => {
             form.addEventListener(event, () => {
-                state[prop] = i+1;
+                // console.log(typeof form.tagName);
+                switch(form.tagName) {
+                    case 'SPAN':
+                        state[prop] = i;
+                        break;
+                    case 'INPUT':
+                        if (form.getAttribute('type') === "checkbox") {
+                            selector.forEach((check, j) => {
+                                check.checked = false;
+                                if (i == j) {
+                                    check.checked = true;
+                                    i == 0 ? state[prop] = 'Cold' : state[prop] = 'Warm';
+                                }
+                            });
+                        } else {
+                            state[prop] = +form.value;
+                        }
+                        break;
+                    case 'SELECT':
+                        state[prop] = form.value;
+                        break;
+                    }
+                
                 console.log(state);
-            });
+             });
         });
     }
+
+
+    /*
+                    if (selector.length > 1 && form.getAttribute('type') !== "checkbox") {
+                    state[prop] = i+1;
+                } else {
+                    if (form.getAttribute('type') === "checkbox") {
+                        selector.forEach((check, j) => {
+                            check.checked = false;
+                            if (i == j) {
+                                check.checked = true;
+                                if (i == 0) {
+                                    state[prop] = 'Cold';
+                                } else {
+                                    state[prop] = "Warm";
+                                }
+                            }
+                        });
+                    } else {
+                        state[prop] = form.value;
+                    }
+                }
+                
+    */
 
     listenerEvent(balconForms, 'click', 'form');
+    listenerEvent(balconHeight, 'input', 'height');
+    listenerEvent(balconWidth, 'input', 'width');
+    listenerEvent(balconGlazing, 'change', 'type');
+    listenerEvent(balconColdOrWarm, 'change', 'profile');
 
-    inputSize(balconHeight, 'height');
-    inputSize(balconWidth, 'width');
 
-    function inputSize(selector, propertie) {
+    // inputSize(balconHeight, 'height');
+    // inputSize(balconWidth, 'width');
 
-        checkNumb("#width");
-        checkNumb("#height");
+    // function inputSize(selector, propertie) {
 
-        selector.addEventListener('input', () => {
-            state[`${propertie}`] = +selector.value;
-            btn.removeAttribute('disabled');
-        });
+    //     checkNumb("#width");
+    //     checkNumb("#height");
+
+    //     selector.addEventListener('input', () => {
+    //         state[`${propertie}`] = +selector.value;
+    //         btn.removeAttribute('disabled');
+    //     });
         
-        if(selector.value === '') {
-            btn.setAttribute('disabled', 'true');
-        }
+    //     if(selector.value === '') {
+    //         btn.setAttribute('disabled', 'true');
+    //     }
 
-    }
+    // }
 
     // function inputSize(selector, propertie) {
 
@@ -81,21 +135,17 @@ const changeModal = (state) => {
     //     });
     // }
 
-    balconGlazing.addEventListener('change', (e) => {
-        state.glazing = `${e.target.value}`;
-    });
+    // coldOrWarm(this);
 
-    coldOrWarm(this);
+    // function coldOrWarm(contects) {
+    //     balconColdOrWarm.forEach(item => {
+    //         if ( item !== contects) {
+    //             item.checked = false;
+    //         }
+    //     });
+    // }
 
-    function coldOrWarm(contects) {
-        balconColdOrWarm.forEach(item => {
-            if ( item !== contects) {
-                item.checked = false;
-            }
-        });
-    }
-
-    console.log(balconColdOrWarm);
+    // console.log(balconColdOrWarm);
 
 };
 
