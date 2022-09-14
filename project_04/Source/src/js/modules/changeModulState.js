@@ -11,14 +11,29 @@ const changeModal = (state) => {
 
     checkNumb("#width");
     checkNumb("#height");
+    // validationState(state, balconForms, 'form');
+
+    // function validationState(stateSelector,balconSelector, prop) {
+    //     btn.addEventListener("mouseenter", () => {
+    //         if(stateSelector[prop] == '') {
+    //             balconSelector[0].parentElement.style.border = '1px solid red';
+    //             btn.setAttribute('disabled', 'true');
+    //         } else {
+    //             balconSelector[0].parentElement.parentElement.style.border = '';
+    //             btn.removeAttribute('disabled');
+    //         }
+    //     });
+    // }
     
     function listenerEvent(selector, event, prop) {
         selector.forEach((form, i) => {
+
             form.addEventListener(event, () => {
-                // console.log(typeof form.tagName);
                 switch(form.tagName) {
                     case 'SPAN':
                         state[prop] = i;
+                        form.parentElement.style.border = '';
+                        btn.removeAttribute('disabled');
                         break;
                     case 'INPUT':
                         if (form.getAttribute('type') === "checkbox") {
@@ -39,9 +54,22 @@ const changeModal = (state) => {
                     }
                 
                 console.log(state);
-             });
+            });
+
+
         });
     }
+
+    listenerEvent(balconForms, 'click', 'form');
+    listenerEvent(balconHeight, 'input', 'height');
+    listenerEvent(balconWidth, 'input', 'width');
+    listenerEvent(balconGlazing, 'change', 'type');
+    listenerEvent(balconColdOrWarm, 'change', 'profile');
+
+
+
+
+
 
 
     /*
@@ -66,13 +94,6 @@ const changeModal = (state) => {
                 }
                 
     */
-
-    listenerEvent(balconForms, 'click', 'form');
-    listenerEvent(balconHeight, 'input', 'height');
-    listenerEvent(balconWidth, 'input', 'width');
-    listenerEvent(balconGlazing, 'change', 'type');
-    listenerEvent(balconColdOrWarm, 'change', 'profile');
-
 
     // inputSize(balconHeight, 'height');
     // inputSize(balconWidth, 'width');

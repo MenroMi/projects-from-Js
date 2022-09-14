@@ -1,3 +1,5 @@
+
+
 function openModal(modalSelector, timer) {
     const modal = document.querySelector(modalSelector);
     modal.style.display = 'block';
@@ -8,13 +10,17 @@ function openModal(modalSelector, timer) {
     }
 }
 
-function closeModal(modal, windows) {
+function closeModal(modalSelector, windows) {
+    const modal = document.querySelectorAll(modalSelector);
 
     windows.forEach(win => {
         win.style.display = 'none';
     });
 
-    modal.style.display = 'none';
+    modal.forEach(m => {
+        m.style.display = 'none';
+    });
+
     document.body.style.overflow = '';
 
 }
@@ -25,7 +31,7 @@ const modals = (timer) => {
 
 
         const trigger = document.querySelectorAll(triggerSelector),
-              modal = document.querySelector(modalSelector),
+              modal = document.querySelectorAll(modalSelector),
               close = document.querySelector(closeSelector),
               windows = document.querySelectorAll("[data-modal]");
 
@@ -48,19 +54,22 @@ const modals = (timer) => {
 
        document.addEventListener('keydown', (e) => {
             if (e.keyCode === 27) {
-                closeModal(modal, windows);
+                closeModal(modalSelector, windows);
             }                
 
        });
 
-       modal.addEventListener("click", (e) => {
-        if (e.target.classList.contains(modalSelector.slice(1)) && closeOverflow) {
-            closeModal(modal, windows);
-        }
-        });
+       modal.forEach(m => {
+            m.addEventListener("click", (e) => {
+                if (e.target.classList.contains(modalSelector.slice(1)) && closeOverflow) {
+                    closeModal(modalSelector, windows);
+                }
+            });
+       });
+
 
         close.addEventListener('click', () => {
-                closeModal(modal, windows);
+                closeModal(modalSelector, windows);
         });
 
     }
@@ -76,3 +85,4 @@ const modals = (timer) => {
 
 export default modals;
 export {openModal};
+export {closeModal};

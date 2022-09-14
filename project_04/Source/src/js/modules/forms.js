@@ -1,6 +1,7 @@
 import checkNumb from "./checkNumInputs";
+import { closeModal } from "./modals";
 
-const forms = () => {
+const forms = (state) => {
 
     const form = document.querySelectorAll('form'),
           inputs = document.querySelectorAll('input');
@@ -24,11 +25,17 @@ const forms = () => {
         return await res.text();
     };
 
-    const clear = (inputs) => {
-        inputs.forEach(input => {
-            input.value = '';
-        });
-    };
+    function clear(items) {
+
+        if (items.length) {
+            items.forEach(item => {
+                item.value = '';
+            });
+        } else {
+            for ( let key in items) {delete items[key];}
+        }
+
+    }
 
     // inputs.forEach(input => {
     //     if(input.getAttribute('name') == "user_phone") {
@@ -49,12 +56,18 @@ const forms = () => {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            const statusMessage = document.createElement('div');
+            const statusMessage = document.createElement('div'),
+                  windows = document.querySelectorAll("[data-modal]");
+
             statusMessage.classList.add('status');
 
             form.appendChild(statusMessage);
 
             const formData = new FormData(form);
+
+            for (let key in state) {
+                formData.append(key, state[key]);
+            }
 
 
             post("assets/server.php", formData, statusMessage)
@@ -67,7 +80,10 @@ const forms = () => {
             })
             .finally(() => {
                 clear(inputs);
-                setTimeout(() => {statusMessage.remove();}, 5000);
+                clear(state);
+                setTimeout(() => {statusMessage.remove();
+                    setTimeout(() => {closeModal("[data-modal]", windows);});
+                }, 2000);
             });
 
 

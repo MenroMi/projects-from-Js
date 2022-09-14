@@ -9,14 +9,19 @@ import changeModal from "./modules/changeModulState";
 window.addEventListener('DOMContentLoaded', () => {
     "use strict";
     const timerId = setTimeout(() => openModal(".popup", timerId), 60000);
-    const modulState = {};
+    const modulState = {
+        form: '',
+        width: '',
+        height: "",
+        type: '',
+        profile: ''
+    };
 
     changeModal(modulState);
-    console.log(modulState);
     modals(timerId);
     tabs(".glazing_slider", ".glazing_block", ".glazing_content", "active");
     tabs(".decoration_slider", ".no_click", ".decoration_content > div > div", "after_click");
     tabs(".balcon_icons", ".balcon_icons_img", ".big_img > img", "do_image_more", "inline-block");
-    forms();
+    forms(modulState);
 
 });
