@@ -12,66 +12,109 @@ const changeModal = (state) => {
     checkNumb("#width");
     checkNumb("#height");
     // validationState(state, balconForms, 'form');
+    
+    // function listenerEvent(selector, event, prop) {
+    //     selector.forEach((form, i) => {
 
-    function validationState(stateSelector, balconSelector, prop) {
-        btn.addEventListener("mouseenter", () => {
-            if(stateSelector[prop] == '') {
-                balconSelector.forEach(sel => {
-                    sel.parentElement.style.border = '1px solid red';
+    //         form.addEventListener(event, () => {
+    //             switch(form.tagName) {
+    //                 case 'SPAN':
+    //                     state[prop] = i;
+
+    //                     break;
+    //                 case 'INPUT':
+    //                     if (form.getAttribute('type') === "checkbox") {
+    //                         selector.forEach((check, j) => {
+    //                             check.checked = false;
+    //                             if (i == j) {
+    //                                 check.checked = true;
+    //                                 i == 0 ? state[prop] = 'Cold' : state[prop] = 'Warm';
+    //                             }
+    //                         });
+    //                     } else {
+    //                         state[prop] = +form.value;
+    //                     }
+    //                     break;
+    //                 case 'SELECT':
+    //                     state[prop] = form.value;
+    //                     break;
+    //                 }
+                
+    //             console.log(state);
+    //         });
+
+    //     });
+    // }
+
+    // listenerEvent(balconForms, 'click', 'form');
+
+    // listenerEvent(balconGlazing, 'change', 'type');
+    // listenerEvent(balconColdOrWarm, 'change', 'profile');
+
+    modalFormAndSize(balconForms,'form');
+    modalFormAndSize(balconHeight, 'height');
+    modalFormAndSize(balconWidth, 'width');
+
+    function validationDataFirst(elem) {
+    
+            if (elem.tagName == 'INPUT') {
+                if(state.height == '' && state.width == '') {
+                    elem.classList.add("error_modal");
                     btn.setAttribute('disabled', 'true');
-                });
+                } else {
+                    elem.classList.remove('error_modal');
+                    validationData();
+                }
+            }
+    }
+
+    function validationDataSecond(elem) {
+    
+        if (elem.firstElementChild.tagName == 'SPAN') {
+            if(state.form == '') {
+                elem.classList.add("error_modal");
+                btn.setAttribute('disabled', 'true');
             } else {
-                balconSelector[0].parentElement.parentElement.style.border = '';
+                elem.classList.remove("error_modal");
+                validationData();
+            }
+        }
+
+    }
+
+    function validationData() {
+            if ( state.width != '' && state.height != '' && state.form != '') {
                 btn.removeAttribute('disabled');
             }
-        });
-    }
-    
-    function listenerEvent(selector, event, prop) {
-        selector.forEach((form, i) => {
-
-            form.addEventListener(event, () => {
-                switch(form.tagName) {
-                    case 'SPAN':
-                        state[prop] = i;
-                        validationState(state, selector, prop);
-                        break;
-                    case 'INPUT':
-                        if (form.getAttribute('type') === "checkbox") {
-                            selector.forEach((check, j) => {
-                                check.checked = false;
-                                if (i == j) {
-                                    check.checked = true;
-                                    i == 0 ? state[prop] = 'Cold' : state[prop] = 'Warm';
-                                }
-                            });
-                        } else {
-                            state[prop] = +form.value;
-                        }
-                        break;
-                    case 'SELECT':
-                        state[prop] = form.value;
-                        break;
-                    }
-                
-                console.log(state);
-            });
-
-            validationState(state, selector, prop);
-
-        });
     }
 
-    listenerEvent(balconForms, 'click', 'form');
-    listenerEvent(balconHeight, 'input', 'height');
-    listenerEvent(balconWidth, 'input', 'width');
-    listenerEvent(balconGlazing, 'change', 'type');
-    listenerEvent(balconColdOrWarm, 'change', 'profile');
 
+    // ==== first modal popup_calc
 
+    function modalFormAndSize(selector, prop) {
+        selector.forEach((item, i) => {
 
+            if (item.tagName == 'INPUT') {
+                btn.addEventListener('mouseenter', () => {validationDataFirst(item);});
+                item.addEventListener('input', () => {
+                    state[prop] = item.value;
+                    validationDataFirst(item);
+                    console.log(state);
+                });
+            }
 
+            if (item.tagName == 'SPAN') {
+                btn.addEventListener('mouseenter', () => {validationDataSecond(item.parentElement);});
+                item.addEventListener('click', () => {
+                    state[prop] = i;
+                    validationDataSecond(item.parentElement);
+                    console.log(state);
+                });
+            }
 
+        });
+
+    }
 
 
     /*
@@ -96,79 +139,6 @@ const changeModal = (state) => {
                 }
                 
     */
-
-    // inputSize(balconHeight, 'height');
-    // inputSize(balconWidth, 'width');
-
-    // function inputSize(selector, propertie) {
-
-    //     checkNumb("#width");
-    //     checkNumb("#height");
-
-    //     selector.addEventListener('input', () => {
-    //         state[`${propertie}`] = +selector.value;
-    //         btn.removeAttribute('disabled');
-    //     });
-        
-    //     if(selector.value === '') {
-    //         btn.setAttribute('disabled', 'true');
-    //     }
-
-    // }
-
-    // function inputSize(selector, propertie) {
-
-    //     btn.addEventListener("mouseenter", () => {
-    //         if(selector.value === "") {
-    //             elemError.textContent = 'Заполните все данные';
-    //             elemError.style.display = 'block';
-    //             elemError.style.width = '180px';
-    //             selector.style.border = '1px solid red';
-    //             selector.style.boxShadow = '0px 0px 4px red';
-    //             btn.setAttribute('disabled', 'true');
-    //         }
-    
-    //         selector.addEventListener('input', () => {
-
-    //             if(selector.value.match(/\D/ig)) {
-    //                 selector.style.border = '1px solid red';
-    //                 selector.style.boxShadow = '0px 0px 4px red';
-    //                 elemError.textContent = 'Впишите только цифры!';
-    //                 elemError.style.cssText = `
-    //                     display: block;
-    //                     height: 20px;
-    //                     width: 200px;
-    //                     box-shadow: 0px 0px 6px red;
-    //                     margin: 0 auto;
-    //                     border-radius: 3px;
-    //                     font-weight: 600;
-    //                     margin-top: 15px;
-    //                 `;
-    //                 btn.setAttribute('disabled', 'true');
-
-    //             } else {
-    //                 selector.style.border = '';
-    //                 selector.style.boxShadow = '';
-    //                 elemError.style.display = 'none';
-    //                 state[`${propertie}`] = +selector.value;
-    //                 btn.removeAttribute('disabled');
-    //             }
-                
-    //         });
-    //     });
-    // }
-
-    // coldOrWarm(this);
-
-    // function coldOrWarm(contects) {
-    //     balconColdOrWarm.forEach(item => {
-    //         if ( item !== contects) {
-    //             item.checked = false;
-    //         }
-    //     });
-    // }
-
-    // console.log(balconColdOrWarm);
 
 };
 

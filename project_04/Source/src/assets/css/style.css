@@ -1099,6 +1099,11 @@ textarea:focus {
   padding: 1rem 5rem;
 }
 
+.error_modal {
+  box-shadow: 0px 0px 3px red;
+  border: 1px solid red;
+}
+
 /*Media*/
 @media (max-width: 1400px) {
   .main {
