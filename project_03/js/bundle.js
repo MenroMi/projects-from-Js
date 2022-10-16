@@ -73,6 +73,7 @@ function calc() {
 
         elements.forEach(elem => {
             elem.addEventListener('click', (e) => {
+                console.log(elements);
                 if (e.target.getAttribute("data-ratio")) {
                     ratio = +e.target.getAttribute('data-ratio');
                     localStorage.setItem("ratio", +e.target.getAttribute('data-ratio'));
@@ -84,9 +85,10 @@ function calc() {
                 elements.forEach(elem => {
                     elem.classList.remove(activeClass);
                 });
-        
+
                 e.target.classList.add(activeClass);
-    
+                
+
                 calcTotal();
     
             });

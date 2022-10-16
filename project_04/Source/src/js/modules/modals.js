@@ -2,6 +2,7 @@
 
 function openModal(modalSelector, timer) {
     const modal = document.querySelector(modalSelector);
+
     modal.style.display = 'block';
     document.body.style.overflow = 'hidden';
 
@@ -79,6 +80,7 @@ const modals = (timer) => {
     bindModals(".popup_calc_btn", ".popup_calc", ".popup_calc_close");
     bindModals(".popup_calc_button", ".popup_calc_profile", ".popup_calc_profile_close", false);
     bindModals(".popup_calc_profile_button", ".popup_calc_end", ".popup_calc_end_close", false);
+
 
 };
 

@@ -5,8 +5,6 @@ const changeModal = (state) => {
     const balconForms = document.querySelectorAll(".balcon_icons_img"),
           balconWidth = document.querySelectorAll("#width"),
           balconHeight = document.querySelectorAll("#height"),
-          balconGlazing = document.querySelectorAll("#view_type"),
-          balconColdOrWarm = document.querySelectorAll('.checkbox'),
           btn = document.querySelector('.popup_calc_button');
 
     checkNumb("#width");
