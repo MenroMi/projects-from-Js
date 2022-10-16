@@ -643,7 +643,7 @@ __webpack_require__.r(__webpack_exports__);
 function timer(id, deadline) {
      // TIMER
 
-    //  const deadline = "2022-08-30T23:58:59.000Z"; // data końcowa
+    //  const deadline = "2022-10-30T23:58:59.000Z"; // data końcowa
 
      function getTimeRemainig(endtime) {
          // różnica między datą aktualną i datą końcową

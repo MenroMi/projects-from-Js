@@ -1,8 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: #faedcd;
 }
 
 img {
     display: block;
-    margin: 0 auto;
+    margin: 50px auto;
+}
+
+.elephant {
+    width: 300px;
+    border: 3px solid red;
+}
+
+.title-name {
+    margin: 30px;
+    margin-bottom: 50px;
+}
+
+hr {
+    margin: 30px 0;
+}
+
+h4 {
+    margin-bottom: 30px;
+}
+
+ol {
+    margin: 20px;
+    font-size: 25px;
+}
+
+nav {
+    position: absolute;
+}
+
+.example {
+    position: relative;
+    height: 300px;
+    background-color: gray;
 }
