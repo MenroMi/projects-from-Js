@@ -96,9 +96,8 @@ hr {
 .text-not {
     display: flex;
     flex-direction: column;
-    align-items: baseline;
-    padding-top: 5px;
     gap: 10px;
+    padding-top: 5px;
 }
 
 .time {
