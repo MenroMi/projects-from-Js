@@ -1,45 +1,63 @@
 * {
-    box-sizing: border-box;
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
 }
 
-body {
-    background-color: #faedcd;
+/* reset properties of margin and padding */
+
+.promo {
+    height: 880px;
+    background: url(../img/header-bg.png) center center/cover no-repeat;
+    padding: 39px 0 62px 0;
 }
 
-img {
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.logo .logo_img {
     display: block;
-    margin: 50px auto;
+    margin: 0 auto;
 }
 
-.elephant {
-    width: 300px;
-    border: 3px solid red;
+.logo .logo_text {
+    margin-top: 14px;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.6;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
 }
 
-.title-name {
-    margin: 30px;
-    margin-bottom: 50px;
+h1 {
+    margin-top: 53px;
 }
 
-hr {
-    margin: 30px 0;
+.promo_title {
+    font-family: Roboto;
+    font-size: 41px;
+    font-weight: 400;
+    line-height: 0.59;
+    text-align: center;
+    color: #f9bf3b;
+    text-transform: uppercase;
 }
 
-h4 {
-    margin-bottom: 30px;
+h2.promo_title {
+    margin-top: 30px;
 }
 
-ol {
-    margin: 20px;
-    font-size: 25px;
+.simple .promo_title_big {
+    margin-top: 21px;
+    font-family: Roboto;
+    font-size: 80px;
+    font-weight: 400;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
 }
 
-nav {
-    position: absolute;
-}
-
-.example {
-    position: relative;
-    height: 300px;
-    background-color: gray;
-}
