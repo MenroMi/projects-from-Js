@@ -96,8 +96,6 @@ h2.promo_title {
     border-radius: 5px;
     font-family: Roboto;
     font-size: 21px;
-    font-stretch: condensed;
-    line-height: 1.14;
     text-align: center;
     text-transform: uppercase;
 
@@ -258,4 +256,44 @@ h2.promo_title {
 
 .finish_study .finish_wrapper .finish_item .finish_descr {
     margin-top: 26px;
+}
+
+/* FIFTH SECTION */
+
+.gift {
+    min-height: 628px;
+    padding: 86px 0 87px 0;
+    background-color: #efefef;
+}
+
+.gift .gift_img {
+    display: block;
+    margin: 0 auto;
+}
+
+.gift .gift_descr {
+    margin-top: 42px;
+    font-family: Roboto;
+    font-size: 30px;
+    line-height: 1.43;
+    text-align: center;
+    color: #252525;
+}
+
+.gift .gift_btn {
+    display: block;
+    margin: 0 auto;
+    margin-top: 52px;
+    width: 313px;
+    height: 72px;
+    box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.18);
+    border: solid 4px rgba(0, 0, 0, 0.11);
+    border-radius: 5px;
+    background-image: linear-gradient(to top, #2798b9, #3ab6da);
+    text-shadow: -0.7px -0.7px 0 rgba(0, 0, 0, 0.22);
+    font-family: Roboto;
+    font-size: 21px;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
 }
