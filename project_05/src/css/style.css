@@ -6,6 +6,8 @@
 
 /* reset properties of margin and padding */
 
+/* SECTION FIRST */
+
 .promo {
     height: 880px;
     background: url(../img/header-bg.png) center center/cover no-repeat;
@@ -61,3 +63,116 @@ h2.promo_title {
     text-transform: uppercase;
 }
 
+.promo .promo_text {
+    margin-top: 23px;
+    padding: 0 15px;
+    font-family: Roboto;
+    font-size: 21px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+}
+
+.promo .promo_text span {
+    font-weight: bold;
+    color: #f9bf3b;
+}
+
+.promo .promo_btn {
+    display: block;
+    margin: 73px auto;
+    width: 313px;
+    height: 72px;
+    border: solid 4px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    background-image: linear-gradient(to top, #2798b9, #3ab6da);
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: Roboto;
+    font-size: 21px;
+    font-stretch: condensed;
+    line-height: 1.14;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+
+.more {
+    margin-top: 73px;
+}
+
+.more .more_text {
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 100;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.more .more_img {
+    display: block;
+    width: 30px;
+    margin: 0 auto;
+    margin-top: 13px;
+}
+
+
+/* SECTION SECOND */
+
+.waiting {
+    height: 604px;
+    padding: 85px 0 75px 0;
+    background-color: #efefef;
+}
+
+.waiting .waiting_header {
+    font-size: 30px;
+    text-align: center;
+    color: #252525;
+    text-transform: uppercase;
+}
+
+.waiting .waiting_divider {
+    width: 217px;
+    height: 4px;
+    margin: 18px auto;
+    background-color: #f9bf3b;
+}
+
+.waiting .waiting_subheader {
+    font-family: Roboto;
+    font-size: 23px;
+    text-align: center;
+    color: #4a4a4a;
+}
+
+.waiting .waiting_wrapper {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 45px;
+}
+
+.waiting .waiting_wrapper .waiting_item {
+    width: 339px;
+    text-align: center;
+
+}
+
+.waiting .waiting_wrapper .waiting_item .waiting_img {
+    width: 100%;
+}
+
+.waiting .waiting_wrapper .waiting_item .waiting_descr {
+    margin-top: 25px;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.4;
+    color: #4a4a4a;
+}
