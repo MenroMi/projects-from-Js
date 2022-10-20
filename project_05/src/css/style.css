@@ -336,3 +336,18 @@ h2.promo_title {
     text-align: center;
     color: #4a4a4a;
 }
+
+/* FOOTER */
+
+.footer {
+    background-color: rgb(0,0,0);
+    padding: 61px 0 69px 0;
+}
+
+.footer .footer_text {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.4;
+    text-align: center;
+    color: #888;
+}
