@@ -297,3 +297,42 @@ h2.promo_title {
     color: #fff;
     text-transform: uppercase;
 }
+
+/* SIXTH SECTION */
+
+.first_webinar {
+    min-height: 515px;
+    background-color: #fff;
+    padding: 89px 0 64px 0;
+}
+
+.first_webinar .webinar_img {
+    display: block;
+    margin: 0 auto;
+}
+
+.first_webinar .webinar_when {
+    margin-top: 37px;
+    font-family: Roboto;
+    font-size: 30px;
+    text-align: center;
+    color: #252525;
+}
+
+.first_webinar .webinar_date {
+    margin-top: 30px;
+    font-family: Roboto;
+    font-size: 36px;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    color: #299cbd;
+}
+
+.first_webinar .webinar_descr {
+    margin-top: 25px;
+    font-family: Roboto;
+    font-size: 23px;
+    text-align: center;
+    color: #4a4a4a;
+}
