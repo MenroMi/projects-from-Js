@@ -9,12 +9,13 @@
 /* SECTION FIRST */
 
 .promo {
-    height: 880px;
+    min-height: 880px;
     background: url(../img/header-bg.png) center center/cover no-repeat;
     padding: 39px 0 62px 0;
 }
 
 .container {
+    position: relative;
     width: 1140px;
     margin: 0 auto;
 }
@@ -126,7 +127,7 @@ h2.promo_title {
 /* SECTION SECOND */
 
 .waiting {
-    height: 604px;
+    min-height: 604px;
     padding: 85px 0 75px 0;
     background-color: #efefef;
 }
@@ -154,7 +155,7 @@ h2.promo_title {
 
 .waiting .waiting_wrapper {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 45px;
 }
 
@@ -175,4 +176,41 @@ h2.promo_title {
     font-weight: 300;
     line-height: 1.4;
     color: #4a4a4a;
+}
+
+.optimization {
+    min-height: 550px;
+    padding-top: 102px;
+}
+
+.optimization .woman_img {
+    position: absolute;
+    top: -54px;
+    right: 238px;
+    left: -240px;
+    z-index: -1;
+}
+
+.optimization .optimization_header {
+    margin-left: 391px;
+    font-family: Roboto;
+    font-size: 28px;
+    font-weight: 400;
+    color: #299cbd;
+    text-transform: uppercase;
+}
+
+.optimization .optimization_descr {
+    margin-left: 391px;
+    font-family: Roboto;
+    margin-top: 25px;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.59;
+    text-align: justify;
+    color: #4a4a4a;
+}
+
+.optimization .optimization_descr span {
+    font-weight: bold;
 }
