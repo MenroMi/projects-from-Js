@@ -178,6 +178,8 @@ h2.promo_title {
     color: #4a4a4a;
 }
 
+/* THIRD SECTION */
+
 .optimization {
     min-height: 550px;
     padding-top: 102px;
@@ -213,4 +215,47 @@ h2.promo_title {
 
 .optimization .optimization_descr span {
     font-weight: bold;
+}
+
+/* FOURTH SECTION */
+
+.finish_study {
+    min-height: 450px;
+    background: url(../img/footer-bg.png) center center/cover no-repeat;
+    padding: 86px 0 79px 0;
+}
+
+.finish_study .finish_header {
+    font-family: Roboto;
+    font-size: 30px;
+    text-align: center;
+    color: #efefef;
+    text-transform: uppercase;
+}
+
+.finish_study .finish_divider {
+    margin: 0 auto;
+    margin-top: 23px;
+    width: 217px;
+    height: 4px;
+    background-color: #f9bf3b;
+}
+
+.finish_study .finish_wrapper {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 41px;
+}
+
+.finish_study .finish_wrapper .finish_item {
+    flex: 1;
+    font-family: Roboto;
+    font-size: 17px;
+    font-weight: 300;
+    text-align: center;
+    color: #efefef;
+}
+
+.finish_study .finish_wrapper .finish_item .finish_descr {
+    margin-top: 26px;
 }
