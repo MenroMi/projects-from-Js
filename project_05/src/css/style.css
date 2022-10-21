@@ -241,12 +241,12 @@ h2.promo_title {
 
 .finish_study .finish_wrapper {
     display: flex;
-    justify-content: space-around;
     margin-top: 41px;
+    justify-content: space-between;
+
 }
 
 .finish_study .finish_wrapper .finish_item {
-    flex: 1;
     font-family: Roboto;
     font-size: 17px;
     font-weight: 300;
@@ -254,7 +254,19 @@ h2.promo_title {
     color: #efefef;
 }
 
+.finish_study .finish_wrapper .finish_item .finish_round {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    width: 115px;
+    height: 115px;
+    border-radius: 100%;
+    background-color: #b4e2ff;
+}
+
 .finish_study .finish_wrapper .finish_item .finish_descr {
+    width: 204px;
     margin-top: 26px;
 }
 
@@ -296,6 +308,7 @@ h2.promo_title {
     text-align: center;
     color: #fff;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 /* SIXTH SECTION */
@@ -344,7 +357,7 @@ h2.promo_title {
     padding: 61px 0 69px 0;
 }
 
-.footer .footer_text {
+.footer .footer_text, .footer_support {
     font-size: 15px;
     font-weight: 300;
     line-height: 1.4;
