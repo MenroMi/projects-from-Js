@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
 /* reset properties of margin and padding */
 
 /* SECTION FIRST */
@@ -27,7 +31,6 @@
 
 .logo .logo_text {
     margin-top: 14px;
-    font-family: Roboto;
     font-size: 15px;
     font-weight: 500;
     line-height: 1.6;
@@ -41,9 +44,9 @@ h1 {
 }
 
 .promo_title {
-    font-family: Roboto;
+    /* font-family: "Roboto-Black"; */
     font-size: 41px;
-    font-weight: 400;
+    font-weight: 900;
     line-height: 0.59;
     text-align: center;
     color: #f9bf3b;
@@ -56,9 +59,8 @@ h2.promo_title {
 
 .simple .promo_title_big {
     margin-top: 21px;
-    font-family: Roboto;
     font-size: 80px;
-    font-weight: 400;
+    font-weight: 900;
     text-align: center;
     color: #fff;
     text-transform: uppercase;
@@ -67,13 +69,9 @@ h2.promo_title {
 .promo .promo_text {
     margin-top: 23px;
     padding: 0 15px;
-    font-family: Roboto;
     font-size: 21px;
     font-weight: 300;
-    font-stretch: normal;
-    font-style: normal;
     line-height: 1.33;
-    letter-spacing: normal;
     text-align: center;
     color: #fff;
 }
@@ -94,11 +92,10 @@ h2.promo_title {
     color: #fff;
     cursor: pointer;
     border-radius: 5px;
-    font-family: Roboto;
     font-size: 21px;
     text-align: center;
     text-transform: uppercase;
-
+    font-stretch: condensed;
 }
 
 .more {
@@ -106,7 +103,6 @@ h2.promo_title {
 }
 
 .more .more_text {
-    font-family: Roboto;
     font-size: 15px;
     font-weight: 100;
     text-align: center;
@@ -145,7 +141,6 @@ h2.promo_title {
 }
 
 .waiting .waiting_subheader {
-    font-family: Roboto;
     font-size: 23px;
     text-align: center;
     color: #4a4a4a;
@@ -169,7 +164,6 @@ h2.promo_title {
 
 .waiting .waiting_wrapper .waiting_item .waiting_descr {
     margin-top: 25px;
-    font-family: Roboto;
     font-size: 15px;
     font-weight: 300;
     line-height: 1.4;
@@ -193,16 +187,14 @@ h2.promo_title {
 
 .optimization .optimization_header {
     margin-left: 391px;
-    font-family: Roboto;
     font-size: 28px;
-    font-weight: 400;
+    font-weight: 900;
     color: #299cbd;
     text-transform: uppercase;
 }
 
 .optimization .optimization_descr {
     margin-left: 391px;
-    font-family: Roboto;
     margin-top: 25px;
     font-size: 17px;
     font-weight: 300;
@@ -211,7 +203,11 @@ h2.promo_title {
     color: #4a4a4a;
 }
 
-.optimization .optimization_descr span {
+.optimization .optimization_descr .optimization_descr_text {
+    margin-top: 10px;
+}
+
+.optimization .optimization_descr .optimization_descr_bold {
     font-weight: bold;
 }
 
@@ -224,7 +220,6 @@ h2.promo_title {
 }
 
 .finish_study .finish_header {
-    font-family: Roboto;
     font-size: 30px;
     text-align: center;
     color: #efefef;
@@ -247,9 +242,7 @@ h2.promo_title {
 }
 
 .finish_study .finish_wrapper .finish_item {
-    font-family: Roboto;
     font-size: 17px;
-    font-weight: 300;
     text-align: center;
     color: #efefef;
 }
@@ -268,6 +261,7 @@ h2.promo_title {
 .finish_study .finish_wrapper .finish_item .finish_descr {
     width: 204px;
     margin-top: 26px;
+    font-weight: 300;
 }
 
 /* FIFTH SECTION */
@@ -284,8 +278,8 @@ h2.promo_title {
 }
 
 .gift .gift_descr {
+    font-weight: 400;
     margin-top: 42px;
-    font-family: Roboto;
     font-size: 30px;
     line-height: 1.43;
     text-align: center;
@@ -303,7 +297,6 @@ h2.promo_title {
     border-radius: 5px;
     background-image: linear-gradient(to top, #2798b9, #3ab6da);
     text-shadow: -0.7px -0.7px 0 rgba(0, 0, 0, 0.22);
-    font-family: Roboto;
     font-size: 21px;
     text-align: center;
     color: #fff;
@@ -326,7 +319,6 @@ h2.promo_title {
 
 .first_webinar .webinar_when {
     margin-top: 37px;
-    font-family: Roboto;
     font-size: 30px;
     text-align: center;
     color: #252525;
@@ -334,7 +326,6 @@ h2.promo_title {
 
 .first_webinar .webinar_date {
     margin-top: 30px;
-    font-family: Roboto;
     font-size: 36px;
     font-weight: 900;
     text-align: center;
@@ -344,7 +335,6 @@ h2.promo_title {
 
 .first_webinar .webinar_descr {
     margin-top: 25px;
-    font-family: Roboto;
     font-size: 23px;
     text-align: center;
     color: #4a4a4a;
