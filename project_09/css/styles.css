@@ -1,0 +1,146 @@
+html {
+    font-family: "Gilroy", sans-serif;
+}
+
+/* NAVIGATION */
+
+.navbar {
+    background-color: #000;
+}
+
+.navbar .navbar-brand .logo {
+    display: flex;
+    align-items: center;
+    color: #fff;
+
+}
+
+.navbar .navbar-brand .link_helper {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar .navbar-brand .link_helper:hover {
+    text-decoration: underline;
+}
+
+/* SEEARCHBAR */
+
+.searchbar {
+    background-color: #dadbf1;
+    min-height: 200px;
+}
+
+.searchbar {
+    padding-top: 80px;
+    padding-bottom: 110px;
+}
+
+.searchbar .searchbar_content {
+    margin: 0 auto;
+    max-width: 720px;
+}
+
+.searchbar .searchbar_content .searchbar_title {
+    display: block;
+    text-align: center;
+    font-size: 80px;
+    font-weight: medium;
+    word-spacing: -10px;
+}
+
+.searchbar .searchbar_content .searchbar_search-box {
+    position: relative;
+}
+
+.searchbar .searchbar_content .searchbar_search-box .searchbar_search {
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    height: 60px;
+    width: 700px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #4C5FD5;
+    border-radius: 3px;
+    font-size: larger;
+    color: #000;
+}
+
+.searchbar .searchbar_content .searchbar_search::placeholder {
+    color:#000;
+    opacity: 1;
+}
+
+.searchbar .searchbar_content .searchbar_search-box .searchbar_arrow {
+    position: absolute;
+    /* display: inline-block;    */
+    top: 21px;
+    right: 25px;
+    cursor: pointer;
+}
+
+/* .searchbar .searchbar_content .searchbar_search-box:hover {
+    background-color:#dadbf1;
+    transition: ease 0.5s;
+} */
+
+/* columns with information */
+
+.grid-information  {
+    padding: 100px 0 30px 0;
+}
+
+.grid-information .row .card .card-body a {
+    text-decoration: none;
+    color: #4C5FD5;
+}
+
+.grid-information .row .card .card-body a:hover {
+    text-decoration: underline;
+}
+
+
+/* footer */
+
+.footer {
+    background-color: #000;
+    min-height: 30px;
+    padding-top: 50px;
+}
+
+.footer .wrapper {
+    min-height: 285px;
+}
+
+.footer .wrapper .footer_item {
+    width: 250px;
+}
+
+.footer .wrapper .footer_item h5 {
+    margin-bottom: 16px;
+    font-size: 25px;
+}
+
+.footer .wrapper .footer_item a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.footer .wrapper .footer_item a:hover {
+    text-decoration: underline;
+}
+
+.footer .wrapper .footer_column_copyright {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.footer .wrapper .footer_column_copyright .footer_column_text {
+    color: #fff;
+    padding-top: 20px;
+    font-size: large;
+}
+
