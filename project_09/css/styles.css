@@ -155,3 +155,36 @@ html {
     font-size: large;
 }
 
+
+/* modal window */
+
+.modal_login {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal_login .modal_login_dialog .modal_login_content {
+    position: fixed;
+    top: 20%;
+    left: 50%; 
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    min-width: 30rem;
+    min-height: 20rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.modal_login .modal_login_dialog .modal_login_content .modal_close {
+    position: absolute;
+    font-size: 2em;
+    right: 5px;
+    background: none;
+    border: none;
+}
