@@ -1,0 +1,36 @@
+* {
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    height: 50px;
+    background-color: #212121;
+}
+
+header nav {
+    padding: 13px 70px;
+}
+
+header .menu_header {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+header .menu_header .menu_item .menu_link {
+    font-size: 15px;
+    font-weight: 300;
+    text-decoration: none;
+    color: #fff;
+    padding: 2px 0;
+    padding-right: 60px;
+    border-right: 2px dotted white;
+}
+
+header .menu_header .menu_item .menu_link:hover {
+    text-decoration: underline;
+}
+
+header .menu_header .menu_item:last-child .menu_link {
+    border-right: none;
+}
