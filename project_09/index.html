@@ -16,7 +16,7 @@
           <div class="navbar-brand">
             <div class="logo">
               <img  class="logo_img" src="./icons/logo.png" alt="logo" width="30px" height="30px">
-              <div class="logo_name ps-2 fw-semibold fs-4">Abstract</div>
+              <a class="logo_name ps-2 fw-semibold fs-4" href="#">Abstract</a>
               <span class="px-2 fs-3">|</span>
               <a class="link_helper fs-4" href="#">Help Center</a>
             </div>
@@ -38,8 +38,10 @@
         <div class="searchbar_content">
           <h2 class="searchbar_title">How can we help?</h2>
           <div class="searchbar_search-box">
-            <input class="searchbar_search px-3" type="search" placeholder="Search">
-            <img class="searchbar_arrow" src="./icons/arrow-for-form.png" alt="enter" width="20px" height="20px">
+            <form method="get">
+              <input name="submitted-search" class="searchbar_search px-3" type="search" placeholder="Search">
+              <img draggable="false" class="searchbar_arrow" src="./icons/arrow-for-form.png" alt="enter" width="20px" height="20px">
+            </form>
           </div>
         </div>
       </div>
@@ -180,7 +182,7 @@
               </div>
             </div>
         </div>
-        <div class="text-center text-light mt-5 pb-3 fs-10">Challenge made by <a class="text-light" href="https://www.frontendpractice.com">Frontend Practice</a></div>
+        <div class="text-center text-light mt-5 pb-3 fs-10">Challenge from <a class="text-light" href="https://www.frontendpractice.com">Frontend Practice</a> by MenroMi</div>
       </div>
     </section>
 

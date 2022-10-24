@@ -1,5 +1,5 @@
 html {
-    font-family: "Gilroy", sans-serif;
+    font-family: Gilroy, sans-serif;
 }
 
 /* NAVIGATION */
@@ -15,9 +15,20 @@ html {
 
 }
 
+.navbar .navbar-brand .logo .logo_name {
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar .navbar-brand .logo .logo_name:hover {
+    color: rgb(189, 195, 199);
+    cursor: pointer;
+}
+
 .navbar .navbar-brand .link_helper {
     color: #fff;
     text-decoration: none;
+    font-weight: 500;
 }
 
 .navbar .navbar-brand .link_helper:hover {
