@@ -159,7 +159,7 @@ html {
 /* modal window */
 
 .modal_login {
-    display: block;
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -180,6 +180,7 @@ html {
     background-color: #ffffff;
     border-radius: 10px;
     text-align: center;
+    padding: 30px 0 30px 0;
 }
 
 .modal_login .modal_login_content .modal_close {
@@ -187,6 +188,7 @@ html {
     font-size: 30px;
     line-height: 28px;
     right: 6px;
+    top: 1px;
     background: none;
     border: none;
     padding: 0;
@@ -197,26 +199,22 @@ html {
     display: flex;
     justify-content: center;
     align-items: baseline;
-    padding-top: 30px;
-
 }
 
 .modal_login .modal_login_content .modal_title > h3 {
-    font-size: 40px;
+    font-size: 55px;
     font-weight: 700;
     padding-right: 5px;
 }
 
 .modal_login .modal_login_content .modal_title > h5 {
     font-weight: 600;
-    padding-right: 5px;
+    padding-right: 7px;
 }
 
 .modal_login .modal_login_content .modal_title .social_media {
-    /* display: flex; */
-
-    padding-right: 5px;
-    
+    display: flex;
+    padding-right: 7px;
 }
 
 .modal_login .modal_login_content .modal_title .social_media .modal_link {
@@ -227,6 +225,7 @@ html {
     background: url(../icons/social-media/facebook.png) center center/cover no-repeat;
     width: 30px;
     height: 30px;
+
 }
 
 .modal_login .modal_login_content .modal_title .social_media .modal_apple-id {
@@ -247,15 +246,16 @@ html {
     flex-direction: column;
     align-content: baseline;
     align-items: center;
-    padding-top: 25px;
+    padding-top: 20px;
+    padding-right: 8px;
 }
 
 .modal_login .modal_login_content .modal_form input {
-    width: 300px;
-    height: 40px;
+    width: 340px;
+    height: 50px;
     border: 1px solid black;
     border-radius: 5px;
-    padding-left: 18px;
+    padding-left: 15px;
 }
 
 .modal_login .modal_login_content .modal_form input:nth-of-type(2) {
@@ -263,10 +263,10 @@ html {
 }
 
 
-.modal_login .modal_login_content .modal_form .form_btns .form_btn {
-    width: 90px;
-    height: 40px;
-    margin-top: 20px;
+.modal_login .modal_login_content .modal_form .form_btn {
+    width: 340px;
+    height: 50px;
+    margin-top: 35px;
     color: #fff;
     background-color: #000;
     border: 1px solid black;
@@ -274,25 +274,53 @@ html {
     /* margin-right: 160px; */
 }
 
-.modal_login .modal_login_content .modal_form .form_btns .form_btn:hover {
+.modal_login .modal_login_content .modal_form .form_btn:hover {
     background-color: #fff;
     color:#000;
     transition: ease 0.3s;
 }
 
-.modal_login .modal_login_content .modal_form .form_btns .create_account_btn {
-    width: 120px;
-    height: 40px;
-    margin-top: 20px;
-    color: #fff;
-    background-color: #000;
-    border: 1px solid black;
-    border-radius: 5px;
-    /* margin-right: 160px; */
+.modal_login .modal_login_content .modal_data {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 10px 68px;
+    margin-right: 7px;
 }
 
-.modal_login .modal_login_content .modal_form .form_btns .create_account_btn:hover {
-    background-color: #fff;
-    color:#000;
-    transition: ease 0.3s;
+.modal_login .modal_login_content .modal_data label {
+    color: #000;
+    font-size: 0.8em;
+}
+
+.modal_login .modal_login_content .modal_data a {
+    text-decoration: none;
+    color: #000;
+    font-size: 0.8em;
+}
+
+.modal_login .modal_login_content .modal_data a:hover {
+    text-decoration: underline;
+}
+
+.modal_login .modal_login_content .modal_footer {
+    /* position: absolute; */
+    padding-top: 20px;
+    left: 68px;
+    font-size: 0.8em;
+    color: #000;
+}
+
+.modal_login .modal_login_content .modal_footer .modal_sign_up a {
+    text-decoration: none;
+    color: #000;
+}
+
+.modal_login .modal_login_content .modal_footer .modal_sign_up a:hover {
+    text-decoration: underline;
+}
+
+.modal_login .modal_login_content .modal_footer .modal_terms_of_policy {
+    text-decoration: none;
+    color: gray;
 }
