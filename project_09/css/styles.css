@@ -169,7 +169,7 @@ html {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.modal_login .modal_login_dialog .modal_login_content {
+.modal_login .modal_login_content {
     position: fixed;
     top: 20%;
     left: 50%; 
@@ -179,12 +179,120 @@ html {
     min-height: 20rem;
     background-color: #ffffff;
     border-radius: 10px;
+    text-align: center;
 }
 
-.modal_login .modal_login_dialog .modal_login_content .modal_close {
+.modal_login .modal_login_content .modal_close {
     position: absolute;
-    font-size: 2em;
-    right: 5px;
+    font-size: 30px;
+    line-height: 28px;
+    right: 6px;
     background: none;
     border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.modal_login .modal_login_content .modal_title {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding-top: 30px;
+
+}
+
+.modal_login .modal_login_content .modal_title > h3 {
+    font-size: 40px;
+    font-weight: 700;
+    padding-right: 5px;
+}
+
+.modal_login .modal_login_content .modal_title > h5 {
+    font-weight: 600;
+    padding-right: 5px;
+}
+
+.modal_login .modal_login_content .modal_title .social_media {
+    /* display: flex; */
+
+    padding-right: 5px;
+    
+}
+
+.modal_login .modal_login_content .modal_title .social_media .modal_link {
+    margin-right: 5px;
+}
+
+.modal_login .modal_login_content .modal_title .social_media .modal_facebook {
+    background: url(../icons/social-media/facebook.png) center center/cover no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+.modal_login .modal_login_content .modal_title .social_media .modal_apple-id {
+    background: url(../icons/social-media/apple-id.png) center center/cover no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+.modal_login .modal_login_content .modal_title .social_media .modal_google {
+    background: url(../icons/social-media/google.png) center center/cover no-repeat;
+    width: 30px;
+    height: 30px;
+    margin-right: 0;
+}
+
+.modal_login .modal_login_content .modal_form {
+    display: flex;
+    flex-direction: column;
+    align-content: baseline;
+    align-items: center;
+    padding-top: 25px;
+}
+
+.modal_login .modal_login_content .modal_form input {
+    width: 300px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-left: 18px;
+}
+
+.modal_login .modal_login_content .modal_form input:nth-of-type(2) {
+    margin-top: 20px;
+}
+
+
+.modal_login .modal_login_content .modal_form .form_btns .form_btn {
+    width: 90px;
+    height: 40px;
+    margin-top: 20px;
+    color: #fff;
+    background-color: #000;
+    border: 1px solid black;
+    border-radius: 5px;
+    /* margin-right: 160px; */
+}
+
+.modal_login .modal_login_content .modal_form .form_btns .form_btn:hover {
+    background-color: #fff;
+    color:#000;
+    transition: ease 0.3s;
+}
+
+.modal_login .modal_login_content .modal_form .form_btns .create_account_btn {
+    width: 120px;
+    height: 40px;
+    margin-top: 20px;
+    color: #fff;
+    background-color: #000;
+    border: 1px solid black;
+    border-radius: 5px;
+    /* margin-right: 160px; */
+}
+
+.modal_login .modal_login_content .modal_form .form_btns .create_account_btn:hover {
+    background-color: #fff;
+    color:#000;
+    transition: ease 0.3s;
 }
