@@ -2,6 +2,12 @@
     font-family: "Roboto", sans-serif;
 }
 
+/* HEADER */
+
+header {
+    position: relative;
+}
+
 nav {
     height: 50px;
     background-color: #212121;
@@ -35,9 +41,13 @@ header .menu_header .menu_item:last-child .menu_link {
     border-right: none;
 }
 
+/* SUBHEADER */
+
 header .subheader {
+    position: absolute;
     height: 84px;
-    background-color: rgba(0, 0, 0, .6)
+    background-color: rgba(0, 0, 0, .6);
+    width: 100%;
 }
 
 header .subheader .subheader_logo_link {
@@ -86,7 +96,113 @@ header .subheader .subheader_btn {
     text-shadow: 0.7px 0.7px 0 rgba(0, 0, 0, 0.21);
     text-transform: uppercase;
     font-size: 14px;
-    text-align: center;
     color: #fff;
     cursor: pointer;
 }
+
+
+/* PROMO SECTION */
+
+.promo {
+    padding: 151px 0 135px 0;
+    min-height: 800px;
+    background: url(../imgs/cars-with-hand_header.png) center center/cover no-repeat;
+    text-align: center;
+}
+
+.promo .promo_title {
+    font-weight: bold;
+    font-size: 60px;
+    color: #fff;
+}
+
+.promo .promo_subtitle {
+    font-weight: 600;
+    font-size: 36px;
+    color: #fff;
+}
+
+.promo .promo_descr {
+    padding-top: 23px;
+    font-family: Roboto;
+    font-size: 18px;
+    /* line-height: 1.33; */
+    color: #fff;
+}
+
+.promo .promo_btn {
+    display: block;
+    margin: 118px auto 0 auto;
+    padding: 19px 39px;
+    font-size: 18px;
+    width: 259px;
+    height: 63px;
+    box-shadow: inset 0px -4px 0 0 rgba(0, 0, 0, 0.12);
+    border: none;
+    background-image: linear-gradient(to top, #1eacc7, #4ce2ff);
+    border-radius: 5px;
+    text-shadow: 0.7px 0.7px 0 rgba(0, 0, 0, 0.21);
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* PLUSES */
+.pluses {
+    padding: 71px 0 65px 0;
+}
+
+.pluses_head {
+    text-align: center;
+}
+
+.pluses_head .pluses_title {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #000;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 300;
+    
+}
+
+.pluses_head .pluses_reasons_title {
+    padding-top: 38px;
+    font-size: 38px;
+    font-weight: 700;
+    color: #222;
+    text-transform: uppercase;
+}
+
+.pluses .pluses_reason {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.pluses .pluses_reason .reason_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 113px;
+    height: 113px;
+    border-radius: 50%;
+    background-color: #1eacc7;
+}
+
+.pluses .pluses_reason .reason_descr {
+    text-align: justify;
+    width: 341px;
+    margin-left: 26px;
+    font-size: 15px;
+    font-weight: 300;
+    color: #202020;
+}
+
+.pluses .pluses_reason .reason_descr .descr_title {
+    color: #1eacc7;
+    font-weight: 400;
+    text-align: start;
+}
+
