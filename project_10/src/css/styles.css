@@ -206,3 +206,47 @@ header .subheader .subheader_btn {
     text-align: start;
 }
 
+
+/* Advantages of mobile app */
+
+.mobile {
+    background: url(../imgs/mobile-app/background-photo.png) center center/cover no-repeat;
+    text-align: center;
+    min-height: 865px;
+    padding: 48px 0 80px 0;
+}
+
+.mobile .mobile_head .mobile_title {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #000;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 300;
+}
+
+.mobile .mobile_head .mobile_app {
+    padding-top: 38px;
+    font-size: 38px;
+    font-weight: 700;
+    color: #222;
+    text-transform: uppercase;
+}
+
+.mobile .mobile_head .mobile_subtitle {
+    padding-top: 19px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #222;
+}
+
+.mobile .mobile_line_adv {
+    position: relative;
+    padding-top: 32px;
+}
+
+/* .mobile .mobile_adv .mobile_adv_content {
+    position: absolute;
+    bottom: 50%;
+    top: 50%;
+} */
