@@ -5,8 +5,7 @@ window.addEventListener('DOMContentLoaded', () => {
         const counter = document.querySelector(".counter"),
               mark = document.querySelector(".mark"),
               notifications = document.querySelectorAll(".notification"),
-              circleRed = document.querySelectorAll('.circle'),
-              linkChessCLub = document.querySelectorAll(".chess-club");
+              circleRed = document.querySelectorAll('.circle');
     
         countNewNotifications();
         uncheckNewNotifications();
