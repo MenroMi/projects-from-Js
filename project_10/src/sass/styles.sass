@@ -1,45 +1,45 @@
 *
-  font-family: "Roboto", sans-serif
+    font-family: "Roboto", sans-serif
 
 /* HEADER
 
 header
-  position: relative
+    position: relative
 
 nav
-  position: fixed
-  z-index: 1
-  top: 0
-  width: 100%
-  height: 50px
-  background-color: #212121
+    position: fixed
+    z-index: 1
+    top: 0
+    width: 100%
+    height: 50px
+    background-color: #212121
 
 header
-  nav
+nav
     padding: 13px 70px
 
-  .menu_header
+.menu_header
     display: flex
     justify-content: space-between
     list-style: none
 
     .menu_item
-      .menu_link
-        font-size: 15px
-        font-weight: 300
-        text-decoration: none
-        color: #fff
-        padding: 2px 0
-        padding-right: 45px
-        border-right: 2px dotted white
+        .menu_link
+            font-size: 15px
+            font-weight: 300
+            text-decoration: none
+            color: #fff
+            padding: 2px 0
+            padding-right: 64px
+            border-right: 2px dotted white
 
-        &:hover
-          text-decoration: underline
+            &:hover
+                text-decoration: underline
 
-      &:last-child .menu_link
-        border-right: none
+        &:last-child .menu_link
+            border-right: none
 
-  .subheader
+.subheader
     position: absolute
     height: 84px
     background-color: rgba(0, 0, 0, 0.6)
@@ -47,71 +47,71 @@ header
     margin-top: 50px
 
     .subheader_logo_link
-      display: block
-      max-width: 100%
-      margin-top: 16px
+        display: block
+        max-width: 100%
+        margin-top: 16px
 
     .subheader_title
-      margin-top: 6px
-      font-size: 13px
-      font-weight: 400
-      text-align: left
-      color: rgba(255, 255, 255, 0.5)
+        margin-top: 6px
+        font-size: 13px
+        font-weight: 400
+        text-align: left
+        color: rgba(255, 255, 255, 0.5)
 
     .subheader_call
-      margin-top: 20px
-      font-size: 12px
-      font-weight: 300
-      text-align: right
-      color: #fff
+        margin-top: 20px
+        font-size: 12px
+        font-weight: 300
+        text-align: right
+        color: #fff
 
     .subheader_phone_number
-      display: block
-      margin-top: 8px
-      font-size: 22px
-      font-weight: 400
-      text-align: right
-      color: #fff
-      text-decoration: none
-      line-height: 12px
+        display: block
+        margin-top: 8px
+        font-size: 22px
+        font-weight: 400
+        text-align: right
+        color: #fff
+        text-decoration: none
+        line-height: 12px
 
     .subheader_btn
-      width: 172px
-      height: 46px
-      margin: 19px auto
-      padding-top: 12px
-      text-align: center
-      box-shadow: inset 0px -3px 0 0 rgba(0, 0, 0, 0.12)
-      border: none
-      border-radius: 5px
-      background-image: linear-gradient(to top, #1eacc7, #4ce2ff)
-      text-shadow: 0.7px 0.7px 0 rgba(0, 0, 0, 0.21)
-      text-transform: uppercase
-      font-size: 14px
-      color: #fff
-      cursor: pointer
+        width: 172px
+        height: 46px
+        margin: 19px auto
+        padding-top: 12px
+        text-align: center
+        box-shadow: inset 0px -3px 0 0 rgba(0, 0, 0, 0.12)
+        border: none
+        border-radius: 5px
+        background-image: linear-gradient(to top, #1eacc7, #4ce2ff)
+        text-shadow: 0.7px 0.7px 0 rgba(0, 0, 0, 0.21)
+        text-transform: uppercase
+        font-size: 14px
+        color: #fff
+        cursor: pointer
 
 /* SUBHEADER
 
 /* PROMO SECTION
 
 .promo
-  padding: 151px 0 135px 0
-  min-height: 800px
-  background: url(../imgs/cars-with-hand_header.png) center (center / cover) no-repeat
-  text-align: center
+    padding: 151px 0 135px 0
+    min-height: 800px
+    background: url(../imgs/cars-with-hand_header.png) center (center / cover) no-repeat
+    text-align: center
 
-  .promo_title
+.promo_title
     font-weight: bold
     font-size: 60px
     color: #fff
 
-  .promo_subtitle
+.promo_subtitle
     font-weight: 600
     font-size: 36px
     color: #fff
 
-  .promo_descr
+.promo_descr
     padding-top: 23px
     font-family: Roboto
     font-size: 18px
@@ -119,7 +119,7 @@ header
     /* line-height: 1.33;
     color: #fff
 
-  .promo_btn
+.promo_btn
     display: block
     margin: 118px auto 0 auto
     padding: 19px 39px
@@ -134,24 +134,17 @@ header
     color: #fff
     text-align: center
     text-transform: uppercase
+    cursor: pointer
 
 /* PLUSES
 
 .pluses
-  padding: 71px 0 65px 0
+    padding: 71px 0 65px 0
 
 .pluses_head
-  text-align: center
+    text-align: center
 
-  .pluses_title
-    display: inline-block
-    padding: 8px 12px
-    background-color: #000
-    text-transform: uppercase
-    color: #fff
-    font-weight: 300
-
-  .pluses_reasons_title
+.title
     padding-top: 38px
     font-size: 38px
     font-weight: 700
@@ -159,12 +152,12 @@ header
     text-transform: uppercase
 
 .pluses .pluses_reason
-  display: flex
-  align-items: center
-  justify-content: center
-  padding-top: 40px
+    display: flex
+    align-items: center
+    justify-content: center
+    padding-top: 40px
 
-  .reason_img
+.reason_img
     display: flex
     justify-content: center
     align-items: center
@@ -173,7 +166,7 @@ header
     border-radius: 50%
     background-color: #1eacc7
 
-  .reason_descr
+.reason_descr
     text-align: justify
     width: 341px
     margin-left: 26px
@@ -182,42 +175,71 @@ header
     color: #202020
 
     .descr_title
-      color: #1eacc7
-      font-weight: 400
-      text-align: start
+        color: #1eacc7
+        font-weight: 400
+        text-align: start
+
+
+.label
+    display: inline-block
+    padding: 8px 12px
+    background-color: #000
+    text-transform: uppercase
+    color: #fff
+    font-weight: 300
 
 /* Advantages of mobile app
 
 .mobile
-  background: url(../imgs/mobile-app/background-photo.png) center (center / cover) no-repeat
-  text-align: center
-  min-height: 865px
-  padding: 48px 0 80px 0
+    background: url(../imgs/mobile-app/background-photo.png) center (center / cover) no-repeat
+    text-align: center
+    min-height: 865px
+    padding: 48px 0 80px 0
+    &_head
+        .subtitle
+            padding-top: 19px
+            font-size: 20px
+            font-weight: 400
+            color: #222
+    &_line_adv
+        margin-top: 32px
+    &_item
+        position: relative
+        width: 320px
+        height: 280px
+        margin: 0 auto
+        padding-top: 92px
+        margin-bottom: 19px
+        &_click
+            background: url(../imgs/mobile-app/one-click.png) center (center / cover) no-repeat
+        &_reliable
+            background: url(../imgs/mobile-app/reliable.png)  center (center / cover) no-repeat
+        &_transparent
+            background: url(../imgs/mobile-app/transparent-price.png)  center (center / cover) no-repeat
+        &_cashless
+            background: url(../imgs/mobile-app/cashless-payment.png)  center (center / cover) no-repeat
+        &_feedback
+            background: url(../imgs/mobile-app/feedback.png)  center (center / cover) no-repeat
+        &_divide
+            background: url(../imgs/mobile-app/divide-payment.png)  center (center / cover) no-repeat
+        &_content
+            display: flex
+            flex-direction: column
+            align-items: center
+        &_text
+            font-size: 24px
+            color: #fff
+            text-transform: uppercase
+        &_plus
+            position: absolute
+            bottom: 39px
+            width: 26px
+            height: 26px
+            padding: 6px
+            border-radius: 50%
+            background-color: #000
+            cursor: pointer
 
-  .mobile_head
-    .mobile_title
-      display: inline-block
-      padding: 8px 12px
-      background-color: #000
-      text-transform: uppercase
-      color: #fff
-      font-weight: 300
-
-    .mobile_app
-      padding-top: 38px
-      font-size: 38px
-      font-weight: 700
-      color: #222
-      text-transform: uppercase
-
-    .mobile_subtitle
-      padding-top: 19px
-      font-size: 20px
-      font-weight: 400
-      color: #222
-
-  .mobile_line_adv
-    padding-top: 32px
 
 /* .mobile .mobile_adv .mobile_adv_content {
  *    position: absolute;

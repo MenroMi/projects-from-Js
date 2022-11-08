@@ -16,10 +16,11 @@ nav {
   background-color: #212121;
 }
 
-header nav {
+nav {
   padding: 13px 70px;
 }
-header .menu_header {
+
+.menu_header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28,48 +29,49 @@ header .menu_header {
           justify-content: space-between;
   list-style: none;
 }
-header .menu_header .menu_item .menu_link {
+.menu_header .menu_item .menu_link {
   font-size: 15px;
   font-weight: 300;
   text-decoration: none;
   color: #fff;
   padding: 2px 0;
-  padding-right: 45px;
+  padding-right: 64px;
   border-right: 2px dotted white;
 }
-header .menu_header .menu_item .menu_link:hover {
+.menu_header .menu_item .menu_link:hover {
   text-decoration: underline;
 }
-header .menu_header .menu_item:last-child .menu_link {
+.menu_header .menu_item:last-child .menu_link {
   border-right: none;
 }
-header .subheader {
+
+.subheader {
   position: absolute;
   height: 84px;
   background-color: rgba(0, 0, 0, 0.6);
   width: 100%;
   margin-top: 50px;
 }
-header .subheader .subheader_logo_link {
+.subheader .subheader_logo_link {
   display: block;
   max-width: 100%;
   margin-top: 16px;
 }
-header .subheader .subheader_title {
+.subheader .subheader_title {
   margin-top: 6px;
   font-size: 13px;
   font-weight: 400;
   text-align: left;
   color: rgba(255, 255, 255, 0.5);
 }
-header .subheader .subheader_call {
+.subheader .subheader_call {
   margin-top: 20px;
   font-size: 12px;
   font-weight: 300;
   text-align: right;
   color: #fff;
 }
-header .subheader .subheader_phone_number {
+.subheader .subheader_phone_number {
   display: block;
   margin-top: 8px;
   font-size: 22px;
@@ -79,7 +81,7 @@ header .subheader .subheader_phone_number {
   text-decoration: none;
   line-height: 12px;
 }
-header .subheader .subheader_btn {
+.subheader .subheader_btn {
   width: 172px;
   height: 46px;
   margin: 19px auto;
@@ -106,24 +108,28 @@ header .subheader .subheader_btn {
   background: url(../imgs/cars-with-hand_header.png) center center/cover no-repeat;
   text-align: center;
 }
-.promo .promo_title {
+
+.promo_title {
   font-weight: bold;
   font-size: 60px;
   color: #fff;
 }
-.promo .promo_subtitle {
+
+.promo_subtitle {
   font-weight: 600;
   font-size: 36px;
   color: #fff;
 }
-.promo .promo_descr {
+
+.promo_descr {
   padding-top: 23px;
   font-family: Roboto;
   font-size: 18px;
   /* line-height: 1.33; */
   color: #fff;
 }
-.promo .promo_btn {
+
+.promo_btn {
   display: block;
   margin: 118px auto 0 auto;
   padding: 19px 39px;
@@ -140,6 +146,7 @@ header .subheader .subheader_btn {
   color: #fff;
   text-align: center;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 /* PLUSES */
@@ -150,15 +157,8 @@ header .subheader .subheader_btn {
 .pluses_head {
   text-align: center;
 }
-.pluses_head .pluses_title {
-  display: inline-block;
-  padding: 8px 12px;
-  background-color: #000;
-  text-transform: uppercase;
-  color: #fff;
-  font-weight: 300;
-}
-.pluses_head .pluses_reasons_title {
+
+.title {
   padding-top: 38px;
   font-size: 38px;
   font-weight: 700;
@@ -178,7 +178,8 @@ header .subheader .subheader_btn {
           justify-content: center;
   padding-top: 40px;
 }
-.pluses .pluses_reason .reason_img {
+
+.reason_img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -193,7 +194,8 @@ header .subheader .subheader_btn {
   border-radius: 50%;
   background-color: #1eacc7;
 }
-.pluses .pluses_reason .reason_descr {
+
+.reason_descr {
   text-align: justify;
   width: 341px;
   margin-left: 26px;
@@ -201,10 +203,19 @@ header .subheader .subheader_btn {
   font-weight: 300;
   color: #202020;
 }
-.pluses .pluses_reason .reason_descr .descr_title {
+.reason_descr .descr_title {
   color: #1eacc7;
   font-weight: 400;
   text-align: start;
+}
+
+.label {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #000;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 300;
 }
 
 /* Advantages of mobile app */
@@ -214,29 +225,67 @@ header .subheader .subheader_btn {
   min-height: 865px;
   padding: 48px 0 80px 0;
 }
-.mobile .mobile_head .mobile_title {
-  display: inline-block;
-  padding: 8px 12px;
-  background-color: #000;
-  text-transform: uppercase;
-  color: #fff;
-  font-weight: 300;
-}
-.mobile .mobile_head .mobile_app {
-  padding-top: 38px;
-  font-size: 38px;
-  font-weight: 700;
-  color: #222;
-  text-transform: uppercase;
-}
-.mobile .mobile_head .mobile_subtitle {
+.mobile_head .subtitle {
   padding-top: 19px;
   font-size: 20px;
   font-weight: 400;
   color: #222;
 }
-.mobile .mobile_line_adv {
-  padding-top: 32px;
+.mobile_line_adv {
+  margin-top: 32px;
+}
+.mobile_item {
+  position: relative;
+  width: 320px;
+  height: 280px;
+  margin: 0 auto;
+  padding-top: 92px;
+  margin-bottom: 19px;
+}
+.mobile_item_click {
+  background: url(../imgs/mobile-app/one-click.png) center center/cover no-repeat;
+}
+.mobile_item_reliable {
+  background: url(../imgs/mobile-app/reliable.png) center center/cover no-repeat;
+}
+.mobile_item_transparent {
+  background: url(../imgs/mobile-app/transparent-price.png) center center/cover no-repeat;
+}
+.mobile_item_cashless {
+  background: url(../imgs/mobile-app/cashless-payment.png) center center/cover no-repeat;
+}
+.mobile_item_feedback {
+  background: url(../imgs/mobile-app/feedback.png) center center/cover no-repeat;
+}
+.mobile_item_divide {
+  background: url(../imgs/mobile-app/divide-payment.png) center center/cover no-repeat;
+}
+.mobile_item_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.mobile_item_text {
+  font-size: 24px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.mobile_item_plus {
+  position: absolute;
+  bottom: 39px;
+  width: 26px;
+  height: 26px;
+  padding: 6px;
+  border-radius: 50%;
+  background-color: #000;
+  cursor: pointer;
 }
 
 /* .mobile .mobile_adv .mobile_adv_content {
