@@ -221,9 +221,9 @@ nav {
 /* Advantages of mobile app */
 .mobile {
   background: url(../imgs/mobile-app/background-photo.png) center center/cover no-repeat;
-  text-align: center;
   min-height: 865px;
   padding: 48px 0 80px 0;
+  text-align: center;
 }
 .mobile_line_adv {
   margin-top: 32px;
@@ -328,8 +328,29 @@ nav {
   color: #fff;
 }
 
-/* .mobile .mobile_adv .mobile_adv_content {
- * *    position: absolute;
- * *    bottom: 50%;
- * *    top: 50%;
- * *} *//*# sourceMappingURL=styles.css.map */
+.conditions {
+  min-height: 919px;
+  padding: 68px 0 84px 0;
+}
+.conditions_head {
+  text-align: center;
+}
+.conditions .row {
+  padding-top: 33px;
+  text-align: justify;
+}
+.conditions .row .title_descr {
+  color: #1eacc7;
+  font-size: 700;
+}
+.conditions .row li {
+  margin: 0;
+  list-style-image: url(../icons/check-mark.png);
+  font-size: 17px;
+  font-weight: 300;
+}
+.conditions .row .footer_descr {
+  color: #1eacc7;
+  font-size: 17px;
+  font-weight: 300;
+}/*# sourceMappingURL=styles.css.map */
