@@ -176,10 +176,10 @@ nav {
 }
 
 .title {
+  color: #000;
   padding-top: 38px;
   font-size: 38px;
   font-weight: 700;
-  color: #000;
   text-transform: uppercase;
 }
 
@@ -233,11 +233,11 @@ nav {
 }
 
 .label {
+  background-color: #000;
+  color: #fff;
   display: inline-block;
   padding: 8px 12px;
-  background-color: #000;
   text-transform: uppercase;
-  color: #fff;
   font-weight: 300;
   cursor: default;
   -webkit-transition: 0.5s all;
@@ -347,10 +347,10 @@ nav {
 }
 
 .subtitle {
+  color: #000;
   padding-top: 19px;
   font-size: 20px;
   font-weight: 400;
-  color: #000;
 }
 
 .choose_car {
@@ -452,4 +452,53 @@ nav {
   background: url(../icons/check-mark-red.png) center center/cover no-repeat;
   left: -30px;
   top: 2px;
+}
+
+.map {
+  min-height: 717px;
+  background-color: #000;
+  text-align: center;
+  padding: 49px 0;
+  background: url(../imgs/planet.png) center center/cover no-repeat;
+}
+.map_cities {
+  display: block;
+  margin-top: 486px;
+  font-size: 15px;
+  text-transform: uppercase;
+  list-style: none;
+  text-decoration: none;
+  color: #1eacc7;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.map_cities:hover {
+  color: #fff;
+}
+.map .label {
+  background-color: #fff;
+  color: #000;
+  display: inline-block;
+  padding: 8px 12px;
+  text-transform: uppercase;
+  font-weight: 300;
+  cursor: default;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+.map .label:hover {
+  background-color: #1eacc7;
+}
+.map .title {
+  color: #fff;
+  padding-top: 38px;
+  font-size: 38px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.map .subtitle {
+  color: #fff;
+  padding-top: 19px;
+  font-size: 20px;
+  font-weight: 400;
 }/*# sourceMappingURL=styles.css.map */

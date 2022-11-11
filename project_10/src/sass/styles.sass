@@ -7,9 +7,7 @@ $TURQUOISE: #4ce2ff
 @mixin label-style
     display: inline-block
     padding: 8px 12px
-    background-color: $BLACK
     text-transform: uppercase
-    color: $WHITE
     font-weight: 300
     cursor: default
     transition: 0.5s all
@@ -20,14 +18,12 @@ $TURQUOISE: #4ce2ff
     padding-top: 19px
     font-size: 20px
     font-weight: 400
-    color: $BLACK
     
 
 @mixin title-style
     padding-top: 38px
     font-size: 38px
     font-weight: 700
-    color: $BLACK
     text-transform: uppercase
 
 @mixin btn-style
@@ -190,6 +186,7 @@ nav
     text-align: center
 
 .title
+    color: $BLACK
     @include title-style
 
 .pluses .pluses_reason
@@ -226,6 +223,8 @@ nav
         text-align: start
 
 .label
+    background-color: $BLACK
+    color: $WHITE
     @include label-style
 
 /* Advantages of mobile app
@@ -288,6 +287,7 @@ nav
                     color: $BLACK
 
 .subtitle
+    color: $BLACK
     @include subtitle-style
 
 // "CHOOSE YOUR CAR"
@@ -382,3 +382,37 @@ nav
                     background: url(../icons/check-mark-red.png) center (center / cover) no-repeat
                     left: -30px
                     top: 2px
+
+
+// Map of World
+
+.map
+    min-height: 717px
+    background-color: $BLACK
+    text-align: center
+    padding: 49px 0
+    background: url(../imgs/planet.png) center (center / cover) no-repeat
+    &_cities
+        display: block
+        margin-top: 486px
+        font-size: 15px
+        text-transform: uppercase
+        list-style: none
+        text-decoration: none
+        color: $TEALISH
+        transition: 0.5s
+        &:hover
+            color: $WHITE
+    .label
+        background-color: $WHITE
+        color: $BLACK
+        @include label-style
+    .title
+        color: $WHITE
+        @include title-style
+    .subtitle
+        color: $WHITE
+        @include subtitle-style
+
+
+    
