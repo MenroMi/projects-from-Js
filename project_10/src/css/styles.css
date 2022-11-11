@@ -29,20 +29,31 @@ nav {
           justify-content: space-between;
   list-style: none;
 }
+.menu_header .menu_item {
+  padding-right: 64px;
+  border-right: 2px dotted white;
+}
+.menu_header .menu_item:last-child {
+  border-right: none;
+}
 .menu_header .menu_item .menu_link {
   font-size: 15px;
   font-weight: 300;
   text-decoration: none;
   color: #fff;
   padding: 2px 0;
-  padding-right: 64px;
-  border-right: 2px dotted white;
 }
-.menu_header .menu_item .menu_link:hover {
-  text-decoration: underline;
+.menu_header .menu_item .menu_link:after {
+  content: "";
+  display: block;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  background-color: white;
+  height: 2px;
+  width: 0%;
 }
-.menu_header .menu_item:last-child .menu_link {
-  border-right: none;
+.menu_header .menu_item .menu_link:hover:after {
+  width: 100%;
 }
 
 .subheader {
@@ -177,6 +188,10 @@ nav {
       -ms-flex-pack: center;
           justify-content: center;
   padding-top: 40px;
+  cursor: default;
+}
+.pluses .pluses_reason:hover .reason_img {
+  background-color: #000;
 }
 
 .reason_img {
@@ -193,6 +208,8 @@ nav {
   height: 113px;
   border-radius: 50%;
   background-color: #1eacc7;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
 }
 
 .reason_descr {
@@ -216,6 +233,12 @@ nav {
   text-transform: uppercase;
   color: #fff;
   font-weight: 300;
+  cursor: default;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+.label:hover {
+  background-color: #1eacc7;
 }
 
 /* Advantages of mobile app */
@@ -281,11 +304,36 @@ nav {
   background-color: #000;
   cursor: pointer;
 }
-.mobile_item_plus:hover {
-  width: 30px;
-  height: 30px;
-  -webkit-transition: linear 0.5s;
-  transition: linear 0.5s;
+.mobile_item_circle {
+  position: absolute;
+  bottom: 39px;
+  background-color: #000;
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+}
+.mobile_item_circle::before {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 15px;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  background-color: #1eacc7;
+}
+.mobile_item_circle::after {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 2px;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  background-color: #1eacc7;
 }
 
 .subtitle {
@@ -322,6 +370,13 @@ nav {
   text-transform: uppercase;
   color: #000;
   font-weight: 300;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  cursor: default;
+}
+.label_white:hover {
+  background-color: #1eacc7;
+  color: #fff;
 }
 
 .white {

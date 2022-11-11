@@ -28,22 +28,27 @@ nav
     display: flex
     justify-content: space-between
     list-style: none
-
     .menu_item
+        padding-right: 64px
+        border-right: 2px dotted white
+        &:last-child
+            border-right: none
         .menu_link
             font-size: 15px
             font-weight: 300
             text-decoration: none
             color: $WHITE
             padding: 2px 0
-            padding-right: 64px
-            border-right: 2px dotted white
-
+            &:after
+                content: ""
+                display: block
+                transition: 0.5s all
+                background-color: white
+                height: 2px
+                width: 0%
             &:hover
-                text-decoration: underline
-
-        &:last-child .menu_link
-            border-right: none
+                &:after
+                    width: 100%
 
 .subheader
     position: absolute
@@ -161,6 +166,10 @@ nav
     align-items: center
     justify-content: center
     padding-top: 40px
+    cursor: default
+    &:hover
+        .reason_img
+            background-color: $BLACK
 
 .reason_img
     display: flex
@@ -170,6 +179,7 @@ nav
     height: 113px
     border-radius: 50%
     background-color: $TURQUOISE
+    transition: 0.5s all
 
 .reason_descr
     text-align: justify
@@ -192,6 +202,10 @@ nav
     text-transform: uppercase
     color: $WHITE
     font-weight: 300
+    cursor: default
+    transition: 0.5s all
+    &:hover
+        background-color: $TURQUOISE
 
 /* Advantages of mobile app
 
@@ -238,10 +252,50 @@ nav
             border-radius: 50%
             background-color: $BLACK
             cursor: pointer
-            &:hover
-                width: 30px
-                height: 30px
-                transition: linear 0.5s
+
+        &_circle
+            position: absolute
+            bottom: 39px
+            background-color: $BLACK
+            height: 26px
+            width: 26px
+            border-radius: 50%
+            &::before
+                position: absolute
+                display: block
+                content: ''
+                height: 2px
+                width: 15px
+                left: 50%
+                top: 50%
+                transform: translateX(-50%) translateY(-50%)
+                background-color: $TURQUOISE
+            &::after
+                position: absolute
+                content: ''
+                // display: block
+                height: 15px
+                width: 2px
+                left: 50%
+                top: 50%
+                transform: translateX(-50%) translateY(-50%)
+                background-color: $TURQUOISE
+                
+            
+
+                //         &::after
+                // content: ""
+                // display: block
+                // position: absolute
+                // bottom: 39px
+                // width: 26px
+                // height: 26px
+                // padding: 6px
+                // border-radius: 50%
+                // background-color: $BLACK
+                // cursor: pointer
+                // background-color: $BLACK
+                // border-radius: 50%
     
 .subtitle
     padding-top: 19px
@@ -275,6 +329,11 @@ nav
     text-transform: uppercase
     color: $BLACK
     font-weight: 300
+    transition: 0.3s all
+    cursor: default
+    &:hover
+        background-color: $TURQUOISE
+        color: $WHITE
 
 .white
     color: $WHITE
