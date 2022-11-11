@@ -339,17 +339,30 @@ nav {
   padding-top: 33px;
   text-align: justify;
 }
-.conditions .row .title_descr {
+.conditions .row .grapefruit {
+  padding-top: 64px;
+}
+.conditions .row .title_descr_turq {
   color: #1eacc7;
   font-size: 700;
 }
-.conditions .row li {
-  margin: 0;
+.conditions .row .title_descr_grapefruit {
+  color: #ff5656;
+  font-size: 700;
+}
+.conditions .row .check_turq li {
   list-style-image: url(../icons/check-mark.png);
+  margin: 0;
   font-size: 17px;
   font-weight: 300;
 }
-.conditions .row .footer_descr {
+.conditions .row .check_grapefruit li {
+  list-style-image: url(../icons/check-mark-red.png);
+  margin: 0;
+  font-size: 17px;
+  font-weight: 300;
+}
+.conditions .row .footer_descr_turq {
   color: #1eacc7;
   font-size: 17px;
   font-weight: 300;

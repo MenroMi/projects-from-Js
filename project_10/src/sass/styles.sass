@@ -290,15 +290,29 @@ nav
     .row
         padding-top: 33px
         text-align: justify
+        .grapefruit
+            padding-top: 64px
         .title_descr
-            color: $TURQUOISE
-            font-size: 700
-        li
-            margin: 0
-            list-style-image: url(../icons/check-mark.png)
-            font-size: 17px
-            font-weight: 300
+            &_turq
+                color: $TURQUOISE
+                font-size: 700
+            &_grapefruit
+                color: $GRAPEFRUIT
+                font-size: 700
+        .check
+            &_turq li
+                list-style-image: url(../icons/check-mark.png)
+                margin: 0
+                font-size: 17px
+                font-weight: 300
+            &_grapefruit li
+                list-style-image: url(../icons/check-mark-red.png)
+                margin: 0
+                font-size: 17px
+                font-weight: 300    
         .footer_descr
-            color: $TURQUOISE
-            font-size: 17px
-            font-weight: 300
+            &_turq
+                color: $TURQUOISE
+                font-size: 17px
+                font-weight: 300
+
