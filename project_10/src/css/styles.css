@@ -63,26 +63,26 @@ nav {
   width: 100%;
   margin-top: 50px;
 }
-.subheader .subheader_logo_link {
+.subheader_logo_link {
   display: block;
   max-width: 100%;
   margin-top: 16px;
 }
-.subheader .subheader_title {
+.subheader_title {
   margin-top: 6px;
   font-size: 13px;
   font-weight: 300;
   text-align: left;
   color: rgba(255, 255, 255, 0.5);
 }
-.subheader .subheader_call {
+.subheader_call {
   margin-top: 20px;
   font-size: 12px;
   font-weight: 300;
   text-align: right;
   color: #fff;
 }
-.subheader .subheader_phone_number {
+.subheader_phone_number {
   display: block;
   margin-top: 8px;
   font-size: 22px;
@@ -92,11 +92,15 @@ nav {
   text-decoration: none;
   line-height: 12px;
 }
-.subheader .subheader_btn {
+.subheader_phone_number:hover {
+  color: #1eacc7;
+}
+.subheader_btn {
   width: 172px;
   height: 46px;
   margin: 19px auto;
   padding-top: 12px;
+  font-size: 14px;
   text-align: center;
   -webkit-box-shadow: inset 0px -3px 0 0 rgba(0, 0, 0, 0.12);
           box-shadow: inset 0px -3px 0 0 rgba(0, 0, 0, 0.12);
@@ -106,9 +110,12 @@ nav {
   background-image: linear-gradient(to top, #1eacc7, #4ce2ff);
   text-shadow: 0.7px 0.7px 0 rgba(0, 0, 0, 0.21);
   text-transform: uppercase;
-  font-size: 14px;
   color: #fff;
   cursor: pointer;
+}
+.subheader_btn:hover {
+  background-image: none;
+  background-color: #1eacc7;
 }
 
 /* SUBHEADER */
@@ -119,27 +126,22 @@ nav {
   background: url(../imgs/cars-with-hand_header.png) center center/cover no-repeat;
   text-align: center;
 }
-
 .promo_title {
   font-weight: bold;
   font-size: 60px;
   color: #fff;
 }
-
 .promo_subtitle {
   font-weight: 600;
   font-size: 36px;
   color: #fff;
 }
-
 .promo_descr {
   padding-top: 23px;
   font-family: Roboto;
   font-size: 18px;
-  /* line-height: 1.33; */
   color: #fff;
 }
-
 .promo_btn {
   display: block;
   margin: 118px auto 0 auto;
@@ -147,17 +149,21 @@ nav {
   font-size: 18px;
   width: 259px;
   height: 63px;
-  -webkit-box-shadow: inset 0px -4px 0 0 rgba(0, 0, 0, 0.12);
-          box-shadow: inset 0px -4px 0 0 rgba(0, 0, 0, 0.12);
+  text-align: center;
+  -webkit-box-shadow: inset 0px -3px 0 0 rgba(0, 0, 0, 0.12);
+          box-shadow: inset 0px -3px 0 0 rgba(0, 0, 0, 0.12);
   border: none;
+  border-radius: 5px;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#1eacc7), to(#4ce2ff));
   background-image: linear-gradient(to top, #1eacc7, #4ce2ff);
-  border-radius: 5px;
   text-shadow: 0.7px 0.7px 0 rgba(0, 0, 0, 0.21);
-  color: #fff;
-  text-align: center;
   text-transform: uppercase;
+  color: #fff;
   cursor: pointer;
+}
+.promo_btn:hover {
+  background-image: none;
+  background-color: #1eacc7;
 }
 
 /* PLUSES */
@@ -294,16 +300,6 @@ nav {
   color: #fff;
   text-transform: uppercase;
 }
-.mobile_item_plus {
-  position: absolute;
-  bottom: 39px;
-  width: 26px;
-  height: 26px;
-  padding: 6px;
-  border-radius: 50%;
-  background-color: #000;
-  cursor: pointer;
-}
 .mobile_item_circle {
   position: absolute;
   bottom: 39px;
@@ -311,29 +307,43 @@ nav {
   height: 26px;
   width: 26px;
   border-radius: 50%;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  cursor: pointer;
 }
 .mobile_item_circle::before {
-  position: absolute;
-  display: block;
-  content: "";
   height: 2px;
   width: 15px;
+  content: "";
+  display: block;
+  position: absolute;
   left: 50%;
   top: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
   background-color: #1eacc7;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
 }
 .mobile_item_circle::after {
-  position: absolute;
-  content: "";
   height: 15px;
   width: 2px;
+  content: "";
+  display: block;
+  position: absolute;
   left: 50%;
   top: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
   background-color: #1eacc7;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+.mobile_item_circle:hover {
+  background-color: #fff;
+}
+.mobile_item_circle:hover::before, .mobile_item_circle:hover::after {
+  color: #000;
 }
 
 .subtitle {
@@ -351,6 +361,7 @@ nav {
 .choose_car_black_header {
   padding-top: 57px;
   height: 499px;
+  width: 100%;
   background-color: #000;
 }
 .choose_car_img {
@@ -384,41 +395,61 @@ nav {
 }
 
 .conditions {
-  min-height: 919px;
-  padding: 68px 0 84px 0;
-}
-.conditions_head {
+  padding: 68px 0 51px 0;
   text-align: center;
 }
-.conditions .row {
-  padding-top: 33px;
+.conditions_block {
+  margin: 33px 0;
   text-align: justify;
 }
-.conditions .row .grapefruit {
-  padding-top: 64px;
-}
-.conditions .row .title_descr_turq {
+.conditions_title {
   color: #1eacc7;
-  font-size: 700;
+  font-weight: 700;
 }
-.conditions .row .title_descr_grapefruit {
+.conditions_descr {
+  margin: 0;
+  color: #1eacc7;
+  font-size: 17px;
+  font-weight: 300;
+}
+.conditions_check li {
+  position: relative;
+  list-style: none;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.41;
+  margin-bottom: 10px;
+}
+.conditions_check li::before {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 20px;
+  width: 21px;
+  background: url(../icons/check-mark.png) center center/cover no-repeat;
+  left: -30px;
+  top: 2px;
+}
+.conditions .grapefruit .conditions_title {
   color: #ff5656;
-  font-size: 700;
+  font-weight: 700;
 }
-.conditions .row .check_turq li {
-  list-style-image: url(../icons/check-mark.png);
-  margin: 0;
-  font-size: 17px;
+.conditions .grapefruit .conditions_check li {
+  position: relative;
+  list-style: none;
+  font-size: 18px;
   font-weight: 300;
+  line-height: 1.41;
+  margin-bottom: 10px;
 }
-.conditions .row .check_grapefruit li {
-  list-style-image: url(../icons/check-mark-red.png);
-  margin: 0;
-  font-size: 17px;
-  font-weight: 300;
-}
-.conditions .row .footer_descr_turq {
-  color: #1eacc7;
-  font-size: 17px;
-  font-weight: 300;
+.conditions .grapefruit .conditions_check li::before {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 20px;
+  width: 21px;
+  border-radius: 50%;
+  background: url(../icons/check-mark-red.png) center center/cover no-repeat;
+  left: -30px;
+  top: 2px;
 }/*# sourceMappingURL=styles.css.map */

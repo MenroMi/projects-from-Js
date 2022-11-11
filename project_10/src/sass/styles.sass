@@ -1,9 +1,66 @@
 $WHITE: #fff
 $BLACK: #000
-$TURQUOISE: #1eacc7
+$TEALISH: #1eacc7
 $GRAPEFRUIT: #ff5656
+$TURQUOISE: #4ce2ff
     
+@mixin label-style
+    display: inline-block
+    padding: 8px 12px
+    background-color: $BLACK
+    text-transform: uppercase
+    color: $WHITE
+    font-weight: 300
+    cursor: default
+    transition: 0.5s all
+    &:hover
+        background-color: $TEALISH
+
+@mixin subtitle-style
+    padding-top: 19px
+    font-size: 20px
+    font-weight: 400
+    color: $BLACK
     
+
+@mixin title-style
+    padding-top: 38px
+    font-size: 38px
+    font-weight: 700
+    color: $BLACK
+    text-transform: uppercase
+
+@mixin btn-style
+    text-align: center
+    box-shadow: inset 0px -3px 0 0 rgba(0, 0, 0, 0.12)
+    border: none
+    border-radius: 5px
+    background-image: linear-gradient(to top, $TEALISH, #4ce2ff)
+    text-shadow: 0.7px 0.7px 0 rgba(0, 0, 0, 0.21)
+    text-transform: uppercase
+    color: $WHITE
+    cursor: pointer
+
+@mixin btn-hover-style
+    &:hover
+        background-image: none
+        background-color: $TEALISH
+    
+@mixin choose-car-plus
+    content: ''
+    display: block    
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translateX(-50%) translateY(-50%)
+    background-color: $TEALISH
+    transition: 0.5s all
+    
+@mixin conditions-check-style
+
+
+// =============================================
+
 *
     font-family: "Roboto", sans-serif
 
@@ -56,27 +113,23 @@ nav
     background-color: rgba(0, 0, 0, 0.6)
     width: 100%
     margin-top: 50px
-
-    .subheader_logo_link
+    &_logo_link
         display: block
         max-width: 100%
         margin-top: 16px
-
-    .subheader_title
+    &_title
         margin-top: 6px
         font-size: 13px
         font-weight: 300
         text-align: left
         color: rgba(255, 255, 255, 0.5)
-
-    .subheader_call
+    &_call
         margin-top: 20px
         font-size: 12px
         font-weight: 300
         text-align: right
         color: $WHITE
-
-    .subheader_phone_number
+    &_phone_number
         display: block
         margin-top: 8px
         font-size: 22px
@@ -85,22 +138,16 @@ nav
         color: $WHITE
         text-decoration: none
         line-height: 12px
-
-    .subheader_btn
+        &:hover
+            color: $TEALISH
+    &_btn
         width: 172px
         height: 46px
         margin: 19px auto
         padding-top: 12px
-        text-align: center
-        box-shadow: inset 0px -3px 0 0 rgba(0, 0, 0, 0.12)
-        border: none
-        border-radius: 5px
-        background-image: linear-gradient(to top, $TURQUOISE, #4ce2ff)
-        text-shadow: 0.7px 0.7px 0 rgba(0, 0, 0, 0.21)
-        text-transform: uppercase
         font-size: 14px
-        color: $WHITE
-        cursor: pointer
+        @include btn-style
+        @include btn-hover-style
 
 /* SUBHEADER
 
@@ -111,40 +158,28 @@ nav
     min-height: 800px
     background: url(../imgs/cars-with-hand_header.png) center (center / cover) no-repeat
     text-align: center
-
-.promo_title
-    font-weight: bold
-    font-size: 60px
-    color: $WHITE
-
-.promo_subtitle
-    font-weight: 600
-    font-size: 36px
-    color: $WHITE
-
-.promo_descr
-    padding-top: 23px
-    font-family: Roboto
-    font-size: 18px
-    /* line-height: 1.33;
-    color: $WHITE
-
-.promo_btn
-    display: block
-    margin: 118px auto 0 auto
-    padding: 19px 39px
-    font-size: 18px
-    width: 259px
-    height: 63px
-    box-shadow: inset 0px -4px 0 0 rgba(0, 0, 0, 0.12)
-    border: none
-    background-image: linear-gradient(to top, $TURQUOISE, #4ce2ff)
-    border-radius: 5px
-    text-shadow: 0.7px 0.7px 0 rgba(0, 0, 0, 0.21)
-    color: $WHITE
-    text-align: center
-    text-transform: uppercase
-    cursor: pointer
+    &_title
+        font-weight: bold
+        font-size: 60px
+        color: $WHITE
+    &_subtitle
+        font-weight: 600
+        font-size: 36px
+        color: $WHITE
+    &_descr
+        padding-top: 23px
+        font-family: Roboto
+        font-size: 18px
+        color: $WHITE
+    &_btn
+        display: block
+        margin: 118px auto 0 auto
+        padding: 19px 39px
+        font-size: 18px
+        width: 259px
+        height: 63px
+        @include btn-style
+        @include btn-hover-style
 
 /* PLUSES
 
@@ -155,11 +190,7 @@ nav
     text-align: center
 
 .title
-    padding-top: 38px
-    font-size: 38px
-    font-weight: 700
-    color: $BLACK
-    text-transform: uppercase
+    @include title-style
 
 .pluses .pluses_reason
     display: flex
@@ -178,7 +209,7 @@ nav
     width: 113px
     height: 113px
     border-radius: 50%
-    background-color: $TURQUOISE
+    background-color: $TEALISH
     transition: 0.5s all
 
 .reason_descr
@@ -190,22 +221,12 @@ nav
     color: $BLACK
 
     .descr_title
-        color: $TURQUOISE
+        color: $TEALISH
         font-weight: 400
         text-align: start
 
-
 .label
-    display: inline-block
-    padding: 8px 12px
-    background-color: $BLACK
-    text-transform: uppercase
-    color: $WHITE
-    font-weight: 300
-    cursor: default
-    transition: 0.5s all
-    &:hover
-        background-color: $TURQUOISE
+    @include label-style
 
 /* Advantages of mobile app
 
@@ -243,16 +264,6 @@ nav
             font-size: 24px
             color: $WHITE
             text-transform: uppercase
-        &_plus
-            position: absolute
-            bottom: 39px
-            width: 26px
-            height: 26px
-            padding: 6px
-            border-radius: 50%
-            background-color: $BLACK
-            cursor: pointer
-
         &_circle
             position: absolute
             bottom: 39px
@@ -260,48 +271,24 @@ nav
             height: 26px
             width: 26px
             border-radius: 50%
+            transition: 0.5s all
+            cursor: pointer
             &::before
-                position: absolute
-                display: block
-                content: ''
                 height: 2px
                 width: 15px
-                left: 50%
-                top: 50%
-                transform: translateX(-50%) translateY(-50%)
-                background-color: $TURQUOISE
+                @include choose-car-plus
             &::after
-                position: absolute
-                content: ''
-                // display: block
                 height: 15px
                 width: 2px
-                left: 50%
-                top: 50%
-                transform: translateX(-50%) translateY(-50%)
-                background-color: $TURQUOISE
-                
-            
+                @include choose-car-plus
+            &:hover
+                background-color: $WHITE
+            &:hover
+                &::before, &::after 
+                    color: $BLACK
 
-                //         &::after
-                // content: ""
-                // display: block
-                // position: absolute
-                // bottom: 39px
-                // width: 26px
-                // height: 26px
-                // padding: 6px
-                // border-radius: 50%
-                // background-color: $BLACK
-                // cursor: pointer
-                // background-color: $BLACK
-                // border-radius: 50%
-    
 .subtitle
-    padding-top: 19px
-    font-size: 20px
-    font-weight: 400
-    color: $BLACK
+    @include subtitle-style
 
 // "CHOOSE YOUR CAR"
 
@@ -312,6 +299,7 @@ nav
     &_black_header
         padding-top: 57px
         height: 499px
+        width: 100%
         background-color: $BLACK
     &_img
         padding-top: 56px
@@ -332,7 +320,7 @@ nav
     transition: 0.3s all
     cursor: default
     &:hover
-        background-color: $TURQUOISE
+        background-color: $TEALISH
         color: $WHITE
 
 .white
@@ -342,36 +330,55 @@ nav
 // conditions and requirements
 
 .conditions
-    min-height: 919px
-    padding: 68px 0 84px 0
-    &_head
-        text-align: center
-    .row
-        padding-top: 33px
+    padding: 68px 0 51px 0
+    text-align: center
+    &_block
+        margin: 33px 0
         text-align: justify
-        .grapefruit
-            padding-top: 64px
-        .title_descr
-            &_turq
-                color: $TURQUOISE
-                font-size: 700
-            &_grapefruit
-                color: $GRAPEFRUIT
-                font-size: 700
-        .check
-            &_turq li
-                list-style-image: url(../icons/check-mark.png)
-                margin: 0
-                font-size: 17px
+    &_title
+        color: $TEALISH
+        font-weight: 700
+    &_descr
+        margin: 0
+        color: $TEALISH
+        font-size: 17px
+        font-weight: 300
+    &_check
+            li
+                position: relative
+                list-style: none
+                font-size: 18px
                 font-weight: 300
-            &_grapefruit li
-                list-style-image: url(../icons/check-mark-red.png)
-                margin: 0
-                font-size: 17px
-                font-weight: 300    
-        .footer_descr
-            &_turq
-                color: $TURQUOISE
-                font-size: 17px
+                line-height: 1.41
+                margin-bottom: 10px
+                &::before
+                    position: absolute
+                    content: ''
+                    display: block
+                    height: 20px
+                    width: 21px
+                    background: url(../icons/check-mark.png) center (center / cover) no-repeat
+                    left: -30px
+                    top: 2px
+    .grapefruit
+        .conditions_title
+            color: $GRAPEFRUIT
+            font-weight: 700            
+        .conditions_check
+            li
+                position: relative
+                list-style: none
+                font-size: 18px
                 font-weight: 300
-
+                line-height: 1.41
+                margin-bottom: 10px
+                &::before
+                    position: absolute
+                    content: ''
+                    display: block
+                    height: 20px
+                    width: 21px
+                    border-radius: 50%
+                    background: url(../icons/check-mark-red.png) center (center / cover) no-repeat
+                    left: -30px
+                    top: 2px
