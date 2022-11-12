@@ -52,8 +52,16 @@ $TURQUOISE: #4ce2ff
     background-color: $TEALISH
     transition: 0.5s all
     
-@mixin conditions-check-style
+@mixin position-align-style
+    top: 50%    
+    left: 50%
+    transform: translate(-50%, -50%)
 
+@mixin position-footer-btn-style
+    display: inline-block
+    text-transform: uppercase
+    &:last-child
+        padding-right: 0
 
 // =============================================
 
@@ -415,4 +423,76 @@ nav
         @include subtitle-style
 
 
+// footer
+
+footer
+    padding-top: 14px
+    position: relative
+
+.footer_divider
+    &::before
+        content: ''
+        display: block
+        margin: 0 auto
+        width: 299px
+        height: 4px
+        background-color: #1fbad6
+.footer_menu
+    padding: 32px 25px 0 25px
+    display: flex
+    justify-content: space-between
+    &_social
+        .media
+            display: inline-block
+            position: relative
+            margin-right: 9px
+            width: 32px
+            height: 32px
+            border-radius: 50%
+            background-color: $BLACK
+        .social_fb
+            position: absolute
+            @include position-align-style
+        .social_twitter
+            position: absolute
+            @include position-align-style
+        .social_li
+            position: absolute
+            @include position-align-style
+        .social_insta
+            position: absolute
+            @include position-align-style
+
+    // footer navigation
+
+    &_nav
+        position: absolute
+        text-align: center
+        margin-top: 32px
+        @include position-align-style
+        &_main
+            .btn_main
+                padding-right: 50px
+                @include position-footer-btn-style
+        &_second-menu
+            .btn_sec
+                font-size: 11px
+                font-weight: 300
+                text-align: left
+                color: #999
+                padding-right: 21px
+                @include position-footer-btn-style
+        &_language
+            padding-top: 19px
+            font-size: 11px
+            text-align: center
+            color: #1fbad6
+            text-transform: uppercase
+
+                    
+
+
+    // btns with download of app
     
+    
+                

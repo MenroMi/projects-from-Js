@@ -501,4 +501,101 @@ nav {
   padding-top: 19px;
   font-size: 20px;
   font-weight: 400;
+}
+
+footer {
+  padding-top: 14px;
+  position: relative;
+}
+
+.footer_divider::before {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 299px;
+  height: 4px;
+  background-color: #1fbad6;
+}
+
+.footer_menu {
+  padding: 32px 25px 0 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.footer_menu_social .media {
+  display: inline-block;
+  position: relative;
+  margin-right: 9px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #000;
+}
+.footer_menu_social .social_fb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.footer_menu_social .social_twitter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.footer_menu_social .social_li {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.footer_menu_social .social_insta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.footer_menu_nav {
+  position: absolute;
+  text-align: center;
+  margin-top: 32px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.footer_menu_nav_main .btn_main {
+  padding-right: 50px;
+  display: inline-block;
+  text-transform: uppercase;
+}
+.footer_menu_nav_main .btn_main:last-child {
+  padding-right: 0;
+}
+.footer_menu_nav_second-menu .btn_sec {
+  font-size: 11px;
+  font-weight: 300;
+  text-align: left;
+  color: #999;
+  padding-right: 21px;
+  display: inline-block;
+  text-transform: uppercase;
+}
+.footer_menu_nav_second-menu .btn_sec:last-child {
+  padding-right: 0;
+}
+.footer_menu_nav_language {
+  padding-top: 19px;
+  font-size: 11px;
+  text-align: center;
+  color: #1fbad6;
+  text-transform: uppercase;
 }/*# sourceMappingURL=styles.css.map */
