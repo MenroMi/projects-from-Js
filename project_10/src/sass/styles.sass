@@ -57,11 +57,11 @@ $TURQUOISE: #4ce2ff
     left: 50%
     transform: translate(-50%, -50%)
 
-@mixin position-footer-btn-style
-    display: inline-block
-    text-transform: uppercase
-    &:last-child
-        padding-right: 0
+// @mixin position-footer-btn-style
+//     display: inline-block
+//     text-transform: uppercase
+//     list-style: none
+//     text-decoration: none
 
 // =============================================
 
@@ -423,11 +423,15 @@ nav
         @include subtitle-style
 
 
-// footer
+// footer               
 
 footer
-    padding-top: 14px
-    position: relative
+    padding: 14px 0 39px 0
+    a
+        list-style: none
+        text-decoration: none
+        text-transform: uppercase
+    // position: relative
 
 .footer_divider
     &::before
@@ -450,49 +454,49 @@ footer
             height: 32px
             border-radius: 50%
             background-color: $BLACK
-        .social_fb
-            position: absolute
-            @include position-align-style
-        .social_twitter
-            position: absolute
-            @include position-align-style
-        .social_li
-            position: absolute
-            @include position-align-style
-        .social_insta
+        img
             position: absolute
             @include position-align-style
 
     // footer navigation
 
     &_nav
-        position: absolute
+        position: relative
+        left: 15%
+        width: 390px
+        margin: 0 auto
         text-align: center
-        margin-top: 32px
-        @include position-align-style
         &_main
             .btn_main
                 padding-right: 50px
-                @include position-footer-btn-style
+                color: $BLACK
+                &:last-child
+                    padding-right: 0
+                &:hover
+                    color: $TEALISH
+
         &_second-menu
             .btn_sec
+                padding-right: 21px
                 font-size: 11px
                 font-weight: 300
-                text-align: left
-                color: #999
-                padding-right: 21px
-                @include position-footer-btn-style
+                color: #999999
+                &:last-child
+                    padding-right: 0
+                &:hover
+                    color: $BLACK
         &_language
-            padding-top: 19px
+            display: block
+            margin-top: 19px
             font-size: 11px
-            text-align: center
-            color: #1fbad6
-            text-transform: uppercase
-
-                    
-
+            color: $TEALISH
+            &:hover
+                color: $BLACK
 
     // btns with download of app
-    
+
+
+
+ 
     
                 

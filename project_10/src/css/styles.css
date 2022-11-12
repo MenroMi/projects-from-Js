@@ -504,8 +504,12 @@ nav {
 }
 
 footer {
-  padding-top: 14px;
-  position: relative;
+  padding: 14px 0 39px 0;
+}
+footer a {
+  list-style: none;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .footer_divider::before {
@@ -535,28 +539,7 @@ footer {
   border-radius: 50%;
   background-color: #000;
 }
-.footer_menu_social .social_fb {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-.footer_menu_social .social_twitter {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-.footer_menu_social .social_li {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-.footer_menu_social .social_insta {
+.footer_menu_social img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -564,38 +547,40 @@ footer {
           transform: translate(-50%, -50%);
 }
 .footer_menu_nav {
-  position: absolute;
+  position: relative;
+  left: 15%;
+  width: 390px;
+  margin: 0 auto;
   text-align: center;
-  margin-top: 32px;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
 }
 .footer_menu_nav_main .btn_main {
   padding-right: 50px;
-  display: inline-block;
-  text-transform: uppercase;
+  color: #000;
 }
 .footer_menu_nav_main .btn_main:last-child {
   padding-right: 0;
 }
+.footer_menu_nav_main .btn_main:hover {
+  color: #1eacc7;
+}
 .footer_menu_nav_second-menu .btn_sec {
+  padding-right: 21px;
   font-size: 11px;
   font-weight: 300;
-  text-align: left;
-  color: #999;
-  padding-right: 21px;
-  display: inline-block;
-  text-transform: uppercase;
+  color: #999999;
 }
 .footer_menu_nav_second-menu .btn_sec:last-child {
   padding-right: 0;
 }
+.footer_menu_nav_second-menu .btn_sec:hover {
+  color: #000;
+}
 .footer_menu_nav_language {
-  padding-top: 19px;
+  display: block;
+  margin-top: 19px;
   font-size: 11px;
-  text-align: center;
-  color: #1fbad6;
-  text-transform: uppercase;
+  color: #1eacc7;
+}
+.footer_menu_nav_language:hover {
+  color: #000;
 }/*# sourceMappingURL=styles.css.map */
