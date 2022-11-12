@@ -401,7 +401,7 @@ nav
     padding: 49px 0
     background: url(../imgs/planet.png) center (center / cover) no-repeat
     &_cities
-        display: block
+        display: inline-block
         margin-top: 486px
         font-size: 15px
         text-transform: uppercase
@@ -415,6 +415,8 @@ nav
         background-color: $WHITE
         color: $BLACK
         @include label-style
+        &:hover
+            color: $WHITE
     .title
         color: $WHITE
         @include title-style
@@ -431,7 +433,6 @@ footer
         list-style: none
         text-decoration: none
         text-transform: uppercase
-    // position: relative
 
 .footer_divider
     &::before
@@ -454,6 +455,8 @@ footer
             height: 32px
             border-radius: 50%
             background-color: $BLACK
+            &:hover
+                border: 2px solid $TEALISH
         img
             position: absolute
             @include position-align-style
@@ -492,6 +495,11 @@ footer
             color: $TEALISH
             &:hover
                 color: $BLACK
+    &_apps
+        a
+            border: none
+            &:hover
+                box-shadow: 0 0 10px $BLACK
 
     // btns with download of app
 

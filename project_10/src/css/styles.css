@@ -462,7 +462,7 @@ nav {
   background: url(../imgs/planet.png) center center/cover no-repeat;
 }
 .map_cities {
-  display: block;
+  display: inline-block;
   margin-top: 486px;
   font-size: 15px;
   text-transform: uppercase;
@@ -488,6 +488,9 @@ nav {
 }
 .map .label:hover {
   background-color: #1eacc7;
+}
+.map .label:hover {
+  color: #fff;
 }
 .map .title {
   color: #fff;
@@ -539,6 +542,9 @@ footer a {
   border-radius: 50%;
   background-color: #000;
 }
+.footer_menu_social .media:hover {
+  border: 2px solid #1eacc7;
+}
 .footer_menu_social img {
   position: absolute;
   top: 50%;
@@ -583,4 +589,11 @@ footer a {
 }
 .footer_menu_nav_language:hover {
   color: #000;
+}
+.footer_menu_apps a {
+  border: none;
+}
+.footer_menu_apps a:hover {
+  -webkit-box-shadow: 0 0 10px #000;
+          box-shadow: 0 0 10px #000;
 }/*# sourceMappingURL=styles.css.map */
