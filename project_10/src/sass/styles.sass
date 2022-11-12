@@ -447,9 +447,12 @@ footer
     display: flex
     justify-content: space-between
     &_social
+        display: flex
+        justify-content: space-around
         .media
-            display: inline-block
-            position: relative
+            display: flex
+            justify-content: center
+            align-items: center
             margin-right: 9px
             width: 32px
             height: 32px
@@ -457,17 +460,17 @@ footer
             background-color: $BLACK
             &:hover
                 border: 2px solid $TEALISH
-        img
-            position: absolute
-            @include position-align-style
+            span
+                color: $WHITE
+                display: flex
+                justify-content: center
+                align-content: center
 
     // footer navigation
 
     &_nav
-        position: relative
-        left: 15%
         width: 390px
-        margin: 0 auto
+        margin-left: 127px
         text-align: center
         &_main
             .btn_main
