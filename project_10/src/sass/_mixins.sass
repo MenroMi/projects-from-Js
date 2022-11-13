@@ -1,0 +1,52 @@
+@mixin label-style
+    display: inline-block
+    padding: 8px 12px
+    text-transform: uppercase
+    font-weight: 300
+    cursor: default
+    transition: 0.5s all
+    &:hover
+        background-color: $TEALISH
+
+@mixin subtitle-style
+    padding-top: 19px
+    font-size: 20px
+    font-weight: 400
+    
+
+@mixin title-style
+    padding-top: 38px
+    font-size: 38px
+    font-weight: 700
+    text-transform: uppercase
+
+@mixin btn-style
+    text-align: center
+    box-shadow: inset 0px -3px 0 0 rgba(0, 0, 0, 0.12)
+    border: none
+    border-radius: 5px
+    background-image: linear-gradient(to top, $TEALISH, #4ce2ff)
+    text-shadow: 0.7px 0.7px 0 rgba(0, 0, 0, 0.21)
+    text-transform: uppercase
+    color: $WHITE
+    cursor: pointer
+
+@mixin btn-hover-style
+    &:hover
+        background-image: none
+        background-color: $TEALISH
+    
+@mixin choose-car-plus
+    content: ''
+    display: block    
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translateX(-50%) translateY(-50%)
+    background-color: $TEALISH
+    transition: 0.5s all
+    
+@mixin position-align-style
+    top: 50%    
+    left: 50%
+    transform: translate(-50%, -50%)

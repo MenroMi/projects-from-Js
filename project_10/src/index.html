@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="./css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="./css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/font.css">
     <link rel="stylesheet" href="./css/styles.min.css">
     <title>Document</title>
@@ -18,44 +19,47 @@
     <header>
         <nav>
             <div class="container">
-                <ul class="menu_header">
+                <ul class="menu">
                     <li class="menu_item">
-                        <a href="#" class="menu_link">Homepage</a>
+                        <a href="#" class="menu_item_link">Homepage</a>
                     </li>
                     <li class="menu_item">
-                        <a href="#" class="menu_link">With your car</a>
+                        <a href="#" class="menu_item_link">With your car</a>
                     </li>
                     <li class="menu_item">
-                        <a href="#" class="menu_link">With company car</a>
+                        <a href="#" class="menu_item_link">With company car</a>
                     </li>
                     <li class="menu_item">
-                        <a href="#" class="menu_link">Requirements</a>
+                        <a href="#" class="menu_item_link">Requirements</a>
                     </li>
                     <li class="menu_item">
-                        <a href="#" class="menu_link">Contacts</a>
+                        <a href="#" class="menu_item_link">Contacts</a>
                     </li>
                     <li class="menu_item">
-                        <a href="#" class="menu_link">Submit application</a>
+                        <a href="#" class="menu_item_link">Submit application</a>
                     </li>
                 </ul>
             </div>
+            <div class="menu_burger">
+                <i class="fa-solid fa-bars"></i>
+            </div>  
         </nav>
         <div class="subheader">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4 offset-md-1">
+                    <div class="col-md-4 offset-md-1 col-sm-4">
                         <a class="subheader_logo_link" href="#">
-                            <img src=".//imgs/logo.png" alt="log_uber">
+                            <img class="subheader_logo_img" src=".//imgs/logo.png" alt="log_uber">
                         </a>
                         <div class="subheader_title">
                             Official partner of Uber in Warsaw
                         </div>
                     </div>
-                    <div class="col-md-2 offset-md-2">
+                    <div class="col-md-3 offset-md-1 col-xl-2 offset-xl-2 col-sm-3 offset-sm-1">
                         <div class="subheader_call">Call us daily</div>
                         <a href="tel:4857970988" class="subheader_phone_number">48 579-709-888</a>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-lg-2 col-md-3 col-sm-4">
                         <div class="subheader_btn">Request a call</div>
                     </div>
                 </div>
@@ -66,7 +70,7 @@
     <section class="promo">
         <div class="container">
             <div class="row">
-                <div class="col-md-10 offset-md-1">
+                <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12">
                     <h1 class="promo_title">UBER PARTNERS COMPANY!</h1>
                     <h2 class="promo_subtitle">WE INVITE DRIVERS! ON YOUR CAR!</h2>
                     <p class="promo_descr">
@@ -89,59 +93,59 @@
             
             <div class="row">
                 <div class="pluses_reason col-md-6">
-                    <div class="reason_img"><img src="./icons/pocket.png" alt="pocket"></div>
-                    <p class="reason_descr">
+                    <div class="pluses_reason_img"><img src="./icons/pocket.png" alt="pocket"></div>
+                    <p class="pluses_reason_descr">
                         <span class="descr_title">No cash, payment is automatic</span> <br>
                         The cost of the trip is paid by the passenger from the linked bank card, i.е. there are no risks associated with the carriage of cash for both the passenger and the driver, you do not need to look for small money for exchange.
                     </p>
                 </div>
                 <div class="pluses_reason col-md-6">
-                    <div class="reason_img"><img src="./icons/diagram.png" alt="diagram"></div>
-                    <p class="reason_descr">
+                    <div class="pluses_reason_img"><img src="./icons/diagram.png" alt="diagram"></div>
+                    <p class="pluses_reason_descr">
                         <span class="descr_title">Commission 8% + BONUSES
                         </span> <br>
                         We have a minimum commission and we pay bonuses for each trip, some of our competitors keep bonuses for themselves. We work honestly and drivers earn more with us!
                     </p>
                 </div>
                 <div class="pluses_reason col-md-6">
-                    <div class="reason_img"><img src="./icons/cash.png" alt="cash"></div>
-                    <p class="reason_descr">
+                    <div class="pluses_reason_img"><img src="./icons/cash.png" alt="cash"></div>
+                    <p class="pluses_reason_descr">
                         <span class="descr_title">High income with guaranteed payouts</span> <br>
                         We pay wages to the driver's personal bank card! You do not need to register an LLC, individual entrepreneur, pay taxes, file a declaration, pay for accounting services and maintain a bank account.
                     </p>
                 </div>
                 <div class="pluses_reason col-md-6">
-                    <div class="reason_img"><img src="./icons/calendar.png" alt="calendar"></div>
-                    <p class="reason_descr">
+                    <div class="pluses_reason_img"><img src="./icons/calendar.png" alt="calendar"></div>
+                    <p class="pluses_reason_descr">
                         <span class="descr_title">Work at a convenient time, no schedules</span> <br>
                         You just press the button to get on the line to start working, when you decide to finish, press to get off the line. You can only work in the morning, in the evening, on weekends or holidays!
                     </p>
                 </div>
                 <div class="pluses_reason col-md-6">
-                    <div class="reason_img"><img src="./icons/keys.png" alt="keys"></div>
-                    <p class="reason_descr">
+                    <div class="pluses_reason_img"><img src="./icons/keys.png" alt="keys"></div>
+                    <p class="pluses_reason_descr">
                         <span class="descr_title">Comfortable, transparent and easy connection</span> <br>
                         We connect remotely and for free, you do not need to come to us! You send us copies of documents, we register you and send you data for connection, in 1-2 days you can start working!                       
                     </p>
                 </div>
                 <div class="pluses_reason col-md-6">
-                    <div class="reason_img"><img src="./icons/maps.png" alt="map"></div>
-                    <p class="reason_descr">
+                    <div class="pluses_reason_img"><img src="./icons/maps.png" alt="map"></div>
+                    <p class="pluses_reason_descr">
                         <span class="descr_title">Always a large number of orders</span> <br>
                         The application shows where there are currently the most orders and where higher rates apply. You will not have downtime and idle runs. Our passengers are always pleasant and absolutely non-conflict people who are pleasant to carry. 
                     </p>
                 </div>
 
                 <div class="pluses_reason col-md-6">
-                    <div class="reason_img"><img src="./icons/support.png" alt="support"></div>
-                    <p class="reason_descr">
+                    <div class="pluses_reason_img"><img src="./icons/support.png" alt="support"></div>
+                    <p class="pluses_reason_descr">
                         <span class="descr_title">24/7 support</span> <br>
                         Uber has 24/7 driver support via email. If something is not clear, you can always ask a question via On-line consultation.                
                     </p>
                 </div>
                 <div class="pluses_reason col-md-6">
-                    <div class="reason_img"><img src="./icons/car.png" alt="car"></div>
-                    <p class="reason_descr">
+                    <div class="pluses_reason_img"><img src="./icons/car.png" alt="car"></div>
+                    <p class="pluses_reason_descr">
                         <span class="descr_title">Without checkers and stickers</span> <br>
                         You do not need to change the color, install "checkers" on the car and paste it with stickers.
                     </p>
