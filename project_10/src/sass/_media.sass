@@ -53,7 +53,7 @@
             &_img
                 margin-bottom: 20px
 
-@media (max-width: 767px)
+@media (max-width: 767.98px)
     .menu
         position: fixed
         top: 0
@@ -79,10 +79,29 @@
         right: 10px
         top: 50%
         transform: translateY(-50%)
-        i
-            color: $WHITE
-            font-size: 35px
-            cursor: pointer
+        width: 30px
+        span
+            display: block
+            background-color: #fff
+            margin-bottom: 5px
+            height: 3px
+            transition: 0.3s all
+            &:last-child
+                margin: 0
+        &:active
+            span
+                margin-bottom: -5px
+                &:first-child
+                    transform: rotate(-45deg)
+                &:nth-child(2)
+                    display: none
+                &:last-child
+                    transform: rotate(45deg)
+                    
+.active
+    right: 0
+
+    
 
 
 
