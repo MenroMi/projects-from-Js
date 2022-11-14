@@ -3,7 +3,7 @@ function hamburger() {
     const btnBurger = document.querySelector(".menu_burger"),
           menu = document.querySelector(".menu"),
           menuLinks = document.querySelectorAll(".menu_item > a");
-
+          
     hideMenuAfterClick(menu, btnBurger);
 
     function checkActiveClass(menuBrg, crossBtn) {

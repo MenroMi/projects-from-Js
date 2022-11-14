@@ -2,7 +2,11 @@
   font-family: "Roboto", sans-serif;
 }
 
-/* HEADER */
+* {
+  font-family: "Roboto", sans-serif;
+  /* HEADER */
+}
+
 header {
   position: relative;
 }
@@ -151,7 +155,7 @@ nav {
 .promo_btn {
   display: block;
   margin: 118px auto 0 auto;
-  padding: 19px 39px;
+  padding: 19px 0;
   font-size: 18px;
   width: 259px;
   height: 63px;
@@ -361,6 +365,7 @@ nav {
   background: url(../imgs/mobile-app/background-photo.png) center center/cover no-repeat;
 }
 .choose_car_black_header {
+  background-color: #000;
   padding-top: 57px;
   height: 499px;
   width: 100%;
@@ -631,6 +636,22 @@ footer a {
   .pluses_reason_descr {
     width: 300px;
   }
+  .mobile_item {
+    width: 290px;
+  }
+  .footer_menu_nav {
+    margin-left: 115px;
+  }
+  .footer_menu_apps {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 @media (max-width: 1088px) {
   .menu_item {
@@ -677,12 +698,46 @@ footer a {
   .pluses_reason_img {
     margin-bottom: 20px;
   }
+  .mobile_item {
+    width: 215px;
+    height: 240px;
+    padding-top: 55px;
+    margin-bottom: 25px;
+  }
+  .choose_car {
+    min-height: 820px;
+  }
+  .choose_car_img {
+    width: 600px;
+  }
+  .conditions_check li {
+    font-size: 15px;
+  }
+  .conditions .grapefruit .conditions_check li {
+    font-size: 15px;
+  }
+  .footer_menu_social .media {
+    margin-right: 2px;
+  }
+  .footer_menu_nav {
+    margin-left: 28px;
+  }
+  .footer_menu_apps {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 @media (max-width: 767.98px) {
   .menu {
     position: fixed;
     top: 0;
-    right: -50%;
+    right: -70%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -774,15 +829,133 @@ footer a {
   .promo_descr {
     font-size: 15px;
   }
-  .pluses_head .title {
-    font-size: 31px;
+  .mobile {
+    padding: 48px 0 70px 0;
+  }
+  .mobile_item {
+    width: 300px;
+    height: 260px;
+  }
+  .title {
+    font-size: 30px;
+  }
+  .choose_car {
+    min-height: 750px;
+  }
+  .choose_car_img {
+    width: 500px;
+  }
+  .conditions_check li {
+    line-height: 1.8;
+  }
+  .conditions .grapefruit .conditions_check li {
+    line-height: 1.8;
+  }
+  .footer_divider::before {
+    width: 280px;
+  }
+  .footer_menu_social {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .footer_menu_social .media {
+    margin: 2px;
+  }
+  .footer_menu_nav {
+    width: 237px;
+    margin-left: 74px;
+  }
+  .footer_menu_nav_main .btn_main {
+    padding-right: 10px;
   }
 }
 @media (max-width: 575.98px) {
-  .subheader_logo_link {
-    margin-top: 22px;
+  nav {
+    height: 30px;
+  }
+  .menu_item_link {
+    font-size: 20px;
+  }
+  .subheader {
+    height: 60px;
+    margin-top: 30px;
   }
   .subheader_logo_title {
     display: none;
+  }
+  .subheader_mobile_size .subheader_phone_number {
+    font-size: 12px;
+  }
+  .subheader_mobile_size .subheader_btn {
+    height: 22px;
+    width: 110px;
+    font-size: 10px;
+    padding-top: 3px;
+    margin-top: 9px;
+  }
+  .promo {
+    padding: 143px 0 35px 0;
+    min-height: 400px;
+  }
+  .promo_title {
+    line-height: 0.9;
+    font-size: 32px;
+  }
+  .promo_subtitle {
+    font-size: 23px;
+    margin-top: 33px;
+  }
+  .promo_descr {
+    display: none;
+  }
+  .promo_btn {
+    width: 210px;
+    height: 50px;
+    padding: 12px 0;
+  }
+  .pluses {
+    padding: 20px 0 50px;
+  }
+  .pluses_head .title {
+    font-size: 25px;
+  }
+  .pluses_reason_descr {
+    min-width: 290px;
+    margin-left: 0;
+  }
+  .menu {
+    width: 70%;
+  }
+  .mobile_item {
+    width: 290px;
+    height: 255px;
+  }
+  .choose_car {
+    min-height: 390px;
+    background: none;
+  }
+  .choose_car_black_header {
+    min-height: 423px;
+    padding-top: 25px;
+    padding-bottom: 33px;
+  }
+  .choose_car_black_header .choose_car_img {
+    width: 100%;
+    padding-left: 4px;
+    padding-right: 16px;
+  }
+  .choose_car_black_header .choose_car_descr {
+    padding: 23px 37px 0 34px;
+    font-size: 17px;
+    font-weight: 300;
+    text-align: center;
+    color: #fff;
+    line-height: 1.8;
+  }
+  .choose_car .title, .choose_car .subtitle {
+    display: none;
+  }
+  .conditions .title {
+    font-size: 18px;
   }
 }/*# sourceMappingURL=styles.css.map */

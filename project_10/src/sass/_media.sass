@@ -14,6 +14,17 @@
         &_reason
               &_descr
                 width: 300px
+    .mobile
+        &_item
+            width: 290px
+    
+    .footer_menu
+        &_nav
+            margin-left: 115px
+        &_apps
+            display: flex
+            justify-content: flex-end
+            flex-wrap: wrap
 
 @media (max-width: 1088px)
     .menu
@@ -55,11 +66,43 @@
             &_img
                 margin-bottom: 20px
 
+    .mobile
+        &_item
+            width: 215px
+            height: 240px
+            padding-top: 55px
+            margin-bottom: 25px
+
+    .choose_car
+        min-height: 820px
+        &_img
+            width: 600px
+    .conditions
+        &_check
+            li
+                font-size: 15px
+        .grapefruit
+            .conditions_check
+                li
+                    font-size: 15px
+    .footer_menu
+        &_social
+            .media
+                margin-right: 2px
+        &_nav
+            margin-left: 28px
+        &_apps
+            display: flex
+            justify-content: flex-end
+            flex-wrap: wrap
+
+        
+
 @media (max-width: 767.98px)
     .menu
         position: fixed
         top: 0
-        right: -50%
+        right: -70%
         flex-direction: column
         align-items: flex-end
         justify-content: center
@@ -130,21 +173,128 @@
             font-size: 27px
         &_descr
             font-size: 15px
-    
-    .pluses
-        &_head
-            .title
-                font-size: 31px
+
+    .mobile
+        padding: 48px 0 70px 0
+        &_item
+            width: 300px
+            height: 260px
+    .title
+        font-size: 30px
+
+    .choose_car
+        min-height: 750px
+        &_img
+            width: 500px
+    .conditions
+        &_check
+            li
+                line-height: 1.8
+        .grapefruit
+            .conditions_check
+                li
+                    line-height: 1.8
+    .footer
+        &_divider
+            &::before
+                width: 280px
+        &_menu
+            &_social
+                flex-wrap: wrap
+                .media
+                    margin: 2px
+            &_nav
+                width: 237px
+                margin-left: 74px
+                &_main
+                    .btn_main
+                        padding-right: 10px
+
+        
 
 @media (max-width: 575.98px)
-    .subheader
-        &_logo
+    nav
+        height: 30px
+
+    .menu
+        &_item
             &_link
-                margin-top: 22px
+                font-size: 20px
+
+    .subheader
+        height: 60px
+        margin-top: 30px
+        &_logo
             &_title
                 display: none
+        &_mobile_size
+            .subheader
+                &_phone
+                    &_number
+                        font-size: 12px
+                &_btn
+                    height: 22px
+                    width: 110px
+                    font-size: 10px
+                    padding-top: 3px
+                    margin-top: 9px
+    .promo
+        padding: 143px 0 35px 0
+        min-height: 400px
+        &_title
+            line-height: 0.9
+            font-size: 32px
+        &_subtitle
+            font-size: 23px
+            margin-top: 33px
+        &_descr
+            display: none
+        &_btn
+            width: 210px
+            height: 50px
+            padding: 12px 0
 
+    .pluses
+        padding: 20px 0 50px
+        &_head
+            .title
+                font-size: 25px 
+        &_reason
+            &_descr
+                min-width: 290px
+                margin-left: 0
 
+    .menu
+        width: 70%
+
+    .mobile
+        &_item
+            width: 290px
+            height: 255px
+    .choose_car
+        min-height: 390px
+        background: none
+        &_black_header
+            min-height: 423px
+            padding-top: 25px
+            padding-bottom: 33px
+            .choose_car_img
+                width: 100%
+                padding-left: 4px
+                padding-right: 16px
+            .choose_car_descr
+                padding: 23px 37px 0 34px
+                font-size: 17px
+                font-weight: 300
+                text-align: center
+                color: #fff
+                line-height: 1.8
+        .title, .subtitle
+            display: none
+    
+    .conditions
+        .title
+            font-size: 18px
                 
                 
             
