@@ -49,43 +49,47 @@ nav
     background-color: rgba(0, 0, 0, 0.6)
     width: 100%
     margin-top: 50px
-    &_logo_link
-        display: block
-        max-width: 100%
-        margin-top: 16px
-    &_title
-        margin-top: 6px
-        font-size: 13px
-        font-weight: 300
-        text-align: left
-        color: rgba(255, 255, 255, 0.5)
-    &_call
-        margin-top: 20px
-        font-size: 12px
-        font-weight: 300
-        text-align: right
-        color: $WHITE
-    &_phone_number
-        display: block
-        margin-top: 8px
-        font-size: 22px
-        font-weight: 400
-        text-align: right
-        color: $WHITE
-        text-decoration: none
-        line-height: 12px
-        &:hover
-            color: $TEALISH
-    &_btn
-        width: 172px
-        height: 46px
-        margin: 19px auto
-        padding-top: 12px
-        font-size: 14px
-        @include btn-style
-        @include btn-hover-style
+    &_logo
+        &_link
+            display: block
+            max-width: 100%
+            margin-top: 16px
+        &_title
+            margin-top: 6px
+            font-size: 13px
+            font-weight: 300
+            text-align: left
+            color: rgba(255, 255, 255, 0.5)
+    &_phone
+        &_call
+            margin-top: 20px
+            font-size: 12px
+            font-weight: 300
+            text-align: right
+            color: $WHITE
+        &_number
+            display: block
+            margin-top: 8px
+            font-size: 22px
+            font-weight: 400
+            text-align: right
+            color: $WHITE
+            text-decoration: none
+            line-height: 12px
+            &:hover
+                color: $TEALISH
+    &_mobile_size
+        .subheader_btn
+            width: 172px
+            height: 46px
+            margin: 19px auto
+            padding-top: 12px
+            font-size: 14px
+            @include btn-style
+            @include btn-hover-style
 
-/* SUBHEADER
+.xs-visible
+    display: none
 
 /* PROMO SECTION
 
