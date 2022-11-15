@@ -2,7 +2,6 @@
     font-family: "Roboto", sans-serif
     
     /* HEADER
-
 header
     position: relative
 
@@ -95,7 +94,6 @@ nav
     display: none
 
 /* PROMO SECTION
-
 .promo
     padding: 151px 0 135px 0
     min-height: 800px
@@ -125,7 +123,6 @@ nav
         @include btn-hover-style
 
 /* PLUSES
-
 .title
     color: $BLACK
     @include title-style
@@ -171,7 +168,6 @@ nav
                 text-align: start
 
 /* Advantages of mobile app
-
 .mobile
     background: url(../imgs/mobile-app/background-photo.png) center (center / cover) no-repeat
     min-height: 865px
@@ -234,9 +230,7 @@ nav
     @include subtitle-style
 
 // "CHOOSE YOUR CAR"
-
 .choose_car
-
     min-height: 896px
     text-align: center
     background: url(../imgs/mobile-app/background-photo.png) center (center / cover) no-repeat
@@ -245,7 +239,6 @@ nav
         padding-top: 57px
         height: 499px
         width: 100%
-        background-color: $BLACK
     &_img
         padding-top: 56px
     &_descr
@@ -273,7 +266,6 @@ nav
 
 
 // conditions and requirements
-
 .conditions
     padding: 68px 0 51px 0
     text-align: center
@@ -330,10 +322,8 @@ nav
 
 
 // Map of World
-
 .map
     min-height: 717px
-    background-color: $BLACK
     text-align: center
     padding: 49px 0
     background: url(../imgs/planet.png) center (center / cover) no-repeat
@@ -363,11 +353,9 @@ nav
 
 
 // footer               
-
 footer
     padding: 14px 0 39px 0
     a
-        list-style: none
         text-decoration: none
         text-transform: uppercase
 
@@ -383,68 +371,56 @@ footer
     padding: 32px 25px 0 25px
     display: flex
     justify-content: space-between
-    &_social
-        display: flex
-        justify-content: space-around
-        .media
+    align-items: flex-start
+    &_wrapper
+        width: 33%
+        &:nth-child(3)
             display: flex
+            justify-content: flex-end
+    &_social
+        width: 160px
+        display: flex
+        justify-content: space-between
+        a
+            display: flex 
             justify-content: center
             align-items: center
-            margin-right: 9px
             width: 32px
             height: 32px
-            border-radius: 50%
-            background-color: $BLACK
-            &:hover
-                border: 2px solid $TEALISH
+            background-color: #070716
+            border-radius: 100%
             span
                 color: $WHITE
-                display: flex
-                justify-content: center
-                align-content: center
-
-    // footer navigation
-
     &_nav
         width: 390px
-        margin-left: 127px
-        text-align: center
+        margin: 0 auto
         &_main
-            .btn_main
-                padding-right: 50px
-                color: $BLACK
-                &:last-child
-                    padding-right: 0
-                &:hover
-                    color: $TEALISH
-
+            display: flex
+            justify-content: space-between
+            padding: 0 10px
+            a
+                color: #070716
+                font-size: 15px
+                font-weight: 300
+                text-transform: uppercase
         &_second-menu
-            .btn_sec
-                padding-right: 21px
+            display: flex
+            justify-content: space-between
+            margin-top: 10px
+            a
+                color: #999999
                 font-size: 11px
                 font-weight: 300
-                color: #999999
-                &:last-child
-                    padding-right: 0
-                &:hover
-                    color: $BLACK
+                text-transform: uppercase
         &_language
-            display: block
-            margin-top: 19px
+            display: block 
+            margin: 0 auto
+            color: #1fbad6
             font-size: 11px
-            color: $TEALISH
-            &:hover
-                color: $BLACK
-    &_apps
-        a
-            border: none
-            &:hover
-                box-shadow: 0 0 10px $BLACK
+            font-weight: 400
+            margin-top: 19px
+            text-transform: uppercase
+            text-align: center
+        
 
     // btns with download of app
-
-
-
- 
-    
-                

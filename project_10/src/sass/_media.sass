@@ -19,8 +19,6 @@
             width: 290px
     
     .footer_menu
-        &_nav
-            margin-left: 115px
         &_apps
             display: flex
             justify-content: flex-end
@@ -30,6 +28,12 @@
     .menu
         &_item
             padding-right: 22px
+    .footer_menu
+        &_nav
+            width: 300px
+        &_apps
+            flex-direction: column
+
 
 @media (max-width: 991.98px)
     .menu
@@ -86,15 +90,10 @@
                 li
                     font-size: 15px
     .footer_menu
-        &_social
-            .media
-                margin-right: 2px
         &_nav
-            margin-left: 28px
+            width: 300px
         &_apps
-            display: flex
-            justify-content: flex-end
-            flex-wrap: wrap
+            flex-direction: column
 
         
 
@@ -201,15 +200,11 @@
         &_menu
             &_social
                 flex-wrap: wrap
+                width: 73px
                 .media
                     margin: 2px
-            &_nav
-                width: 237px
-                margin-left: 74px
-                &_main
-                    .btn_main
-                        padding-right: 10px
-
+            &_wrapper
+                width: 60%
         
 
 @media (max-width: 575.98px)
@@ -258,7 +253,7 @@
         padding: 20px 0 50px
         &_head
             .title
-                font-size: 25px 
+                font-size: 20px 
         &_reason
             &_descr
                 min-width: 290px
@@ -275,27 +270,94 @@
         min-height: 390px
         background: none
         &_black_header
-            min-height: 423px
             padding-top: 25px
-            padding-bottom: 33px
-            .choose_car_img
-                width: 100%
-                padding-left: 4px
-                padding-right: 16px
-            .choose_car_descr
-                padding: 23px 37px 0 34px
-                font-size: 17px
-                font-weight: 300
-                text-align: center
-                color: #fff
-                line-height: 1.8
+        &_img
+            width: 100%
+            padding-left: 4px
+            padding-right: 16px
+        &_descr
+            padding: 23px 37px 0 34px
+            font-size: 17px
+            font-weight: 300
+            text-align: center
+            color: #fff
+            line-height: 1.8
         .title, .subtitle
             display: none
     
     .conditions
+        padding: 25px 15px 25px 15px
+        &_check
+            li
+                line-height: 1.5
+                font-size: 13px
+                &::before
+                    top: 0
+        &_descr
+            font-size: 15px
+        .grapefruit
+            .conditions_check
+                li
+                    line-height: 1.5
+                    font-size: 13px
+                    &::before
+                        top: 0
+            .conditions_descr
+                font-size: 15px
+    
+    .map
+        min-height: 360px
+        padding: 25px 0 30px 0
+        &_cities
+            margin-top: 216px
         .title
-            font-size: 18px
-                
+            margin-top: 15px
+            font-size: 16px
+        .subtitle
+            font-size: 14px
+    
+
+    .title
+        font-size: 20px
+    .subtitle
+        font-size: 15px
+
+    footer
+        padding: 25px 0 16px 0
+
+    .footer
+        &_divider
+            &::before
+                width: 253px
+        &_menu
+            padding-top: 22px
+            flex-direction: column
+            align-content: center
+            &_wrapper
+                width: 100%
+                &:nth-child(1)
+                    order: 2
+                    display: flex
+                    justify-content: center
+                &:nth-child(2)
+                    order: 1
+                &:nth-child(3)
+                    order: 3
+                    justify-content: center
+            &_nav
+                width: 270px
+            &_social
+                width: 160px
+                flex-wrap: nowrap
+                .media
+                    margin: 20px 9px 20px 0
+            &_apps
+                flex-direction: row
+                flex-wrap: nowrap
+                margin-top: 20px
+                img
+                    margin-right: 6px
+
                 
             
         
