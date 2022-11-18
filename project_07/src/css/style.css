@@ -248,7 +248,7 @@ body main {
   display: -ms-flexbox;
   display: flex;
 }
-.window_background .data_info_date_inputs_day {
+.window_background .data_info_date_inputs_month {
   width: 100%;
   height: 55px;
   border-radius: 5px;
@@ -258,22 +258,22 @@ body main {
   margin-right: 10px;
   width: 40%;
 }
-.window_background .data_info_date_inputs_day:focus {
+.window_background .data_info_date_inputs_month:focus {
   border-color: hsl(249deg, 99%, 64%) to hsl(278deg, 94%, 30%);
 }
-.window_background .data_info_date_inputs_day::-webkit-input-placeholder {
+.window_background .data_info_date_inputs_month::-webkit-input-placeholder {
   color: rgba(0, 0, 0, 0.4);
 }
-.window_background .data_info_date_inputs_day::-moz-placeholder {
+.window_background .data_info_date_inputs_month::-moz-placeholder {
   color: rgba(0, 0, 0, 0.4);
 }
-.window_background .data_info_date_inputs_day:-ms-input-placeholder {
+.window_background .data_info_date_inputs_month:-ms-input-placeholder {
   color: rgba(0, 0, 0, 0.4);
 }
-.window_background .data_info_date_inputs_day::-ms-input-placeholder {
+.window_background .data_info_date_inputs_month::-ms-input-placeholder {
   color: rgba(0, 0, 0, 0.4);
 }
-.window_background .data_info_date_inputs_day::placeholder {
+.window_background .data_info_date_inputs_month::placeholder {
   color: rgba(0, 0, 0, 0.4);
 }
 .window_background .data_info_date_inputs_year {
