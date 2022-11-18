@@ -22,62 +22,77 @@
 <body>
 
     <main>
-            <div class="window">
-                <div class="window_background">
-                    <div class="container">
-                        <div class="row">
-                            <div class="wrapper_card col-6">
-                                <div class="card_front">
-                                    <div class="wrapper_front">
-                                        <div class="card_front_circle">
-                                            <div class="card_front_circle_one"></div>
-                                            <div class="card_front_circle_two"></div>
-                                        </div>
-                                        <div class="card_front_number">0000 0000 0000 0000</div>
-                                        <div class="card_front_data">
-                                            <div class="card_front_name">name surname</div>
-                                            <div class="card_front_date">00/00</div>
-                                        </div>
+        <div class="window">
+            <div class="window_background">
+                <div class="container">
+                    <div class="row">
+                        <div class="wrapper_card col-6">
+                            <div class="card_front">
+                                <div class="wrapper_front">
+                                    <div class="card_front_circle">
+                                        <div class="card_front_circle_one"></div>
+                                        <div class="card_front_circle_two"></div>
                                     </div>
-                                </div>
-                                <div class="card_back">
-                                    <div class="card_back_cvv">000</div>
+                                    <div class="card_front_number">0000 0000 0000 0000</div>
+                                    <div class="card_front_data">
+                                        <div class="card_front_name">name surname</div>
+                                        <div class="card_front_date">00/00</div>
+                                    </div>
                                 </div>
                             </div>
-                            <form class="col-4 offset-md-1">
-                                <div class="data">
-                                    <div class="data_cardholder">
-                                        <div class="data_cardholder title">
-                                            cardholder name
-                                        </div>
-                                        <input class="data_cardholder_input" placeholder="your name"></input>
-                                    </div>
-                                    <div class="data_cardnumber">
-                                        <div class="data_cardnumber title">card number</div>
-                                        <input class="data_cardnumber_input" placeholder="your card number"></input>
-                                    </div>
-                                    <div class="data_info">
-                                        <div class="data_info_date">
-                                            <div class="data_info_date title">exp, date (mm/yy)</div>
-                                            <div class="data_info_date_inputs">
-                                                <input class="data_info_date_inputs_month"  placeholder="MM"></input>
-                                                <input class="data_info_date_inputs_year" placeholder="YY"></input>
-                                            </div>
-                                        </div>
-                                        <div class="data_info_cvv">
-                                            <div class="data_info_cvv title">cvv</div>
-                                            <input class="data_info_cvv_input" placeholder="e.g. 123"></input>
-                                        </div>
-                                    </div>
-                                    <button class="data_btn" type="submit">Confirm</button>
-                                </div>
-                            </form>
+                            <div class="card_back">
+                                <div class="card_back_cvv">000</div>
+                            </div>
                         </div>
+                        <div class="data col-4 offset-md-1">
+                            <form   >
+                                <div class="data_cardholder">
+                                    <div class="data_cardholder title">
+                                        cardholder name
+                                    </div>
+                                    <input required name="name" type="text" class="data_cardholder_input"
+                                        placeholder="e.g. Jane Appleseed"></input>
+                                </div>
+                                <div class="data_cardnumber">
+                                    <div class="data_cardnumber title">card number</div>
+                                    <input required name="number" type="" class="data_cardnumber_input"
+                                        placeholder="e.g. 1234 5678 8765 4321"></input>
+                                </div>
+                                <div class="data_info">
+                                    <div class="data_info_date">
+                                        <div class="data_info_date title">exp, date (mm/yy)</div>
+                                        <div class="data_info_date_inputs">
+                                            <input required name="month" type="number"
+                                                class="data_info_date_inputs_month" placeholder="MM"></input>
+                                            <input required name="year" type="number" class="data_info_date_inputs_year"
+                                                placeholder="YY"></input>
+                                        </div>
+                                    </div>
+                                    <div class="data_info_cvv">
+                                        <div class="data_info_cvv title">cvv</div>
+                                        <input required name="code" type="text" class="data_info_cvv_input"
+                                            placeholder="e.g. 123"></input>
+                                    </div>
+                                </div>
+                                <button class="data_btn" type="submit">Confirm</button>
+                            </form>
+                            <div class="wrapper_after_request hidden">
+                                <div class="request_check"><img src="./images/icon-complete.svg" alt="checkbox"></div>
+                                <div class="request_information">
+                                    <div class="request_information_title">thank you!</div>
+                                    <div class="request_information_subtitle">We've added your card details</div>
+                                </div>
+                                <button class="request_button" type="button">Continue</button>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
+        </div>
     </main>
 
+    <script src="./js/script.js"></script>
 
 </body>
 

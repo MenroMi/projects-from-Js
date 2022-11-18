@@ -162,6 +162,7 @@ body main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border: 1px solid red;
 }
 .window_background .data .title {
   color: black;
@@ -180,7 +181,6 @@ body main {
   border-radius: 5px;
   border: 1px solid black;
   padding: 0 10px;
-  text-transform: uppercase;
 }
 .window_background .data_cardholder_input:focus {
   border-color: hsl(249deg, 99%, 64%) to hsl(278deg, 94%, 30%);
@@ -210,7 +210,6 @@ body main {
   border-radius: 5px;
   border: 1px solid black;
   padding: 0 10px;
-  text-transform: uppercase;
 }
 .window_background .data_cardnumber_input:focus {
   border-color: hsl(249deg, 99%, 64%) to hsl(278deg, 94%, 30%);
@@ -254,7 +253,6 @@ body main {
   border-radius: 5px;
   border: 1px solid black;
   padding: 0 10px;
-  text-transform: uppercase;
   margin-right: 10px;
   width: 40%;
 }
@@ -282,7 +280,6 @@ body main {
   border-radius: 5px;
   border: 1px solid black;
   padding: 0 10px;
-  text-transform: uppercase;
   width: 40%;
 }
 .window_background .data_info_date_inputs_year:focus {
@@ -309,7 +306,6 @@ body main {
   border-radius: 5px;
   border: 1px solid black;
   padding: 0 10px;
-  text-transform: uppercase;
 }
 .window_background .data_info_cvv_input:focus {
   border-color: hsl(249deg, 99%, 64%) to hsl(278deg, 94%, 30%);
@@ -332,6 +328,7 @@ body main {
 .window_background .data_btn {
   width: 100%;
   height: 55px;
+  border: 1px solid hsl(278deg, 68%, 11%);
   border-radius: 10px;
   background-color: hsl(278deg, 68%, 11%);
   color: hsl(0deg, 0%, 100%);
@@ -342,4 +339,55 @@ body main {
   background-color: #fff;
   color: hsl(278deg, 68%, 11%);
   border: 1px solid hsl(278deg, 68%, 11%);
+}
+.window_background .data .wrapper_after_request {
+  width: 100%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.window_background .data .wrapper_after_request .request_check {
+  margin: 0 auto 40px auto;
+  height: 80px;
+  width: 80px;
+  background-color: hsl(278deg, 68%, 30%);
+  border-radius: 100%;
+}
+.window_background .data .wrapper_after_request .request_information {
+  margin-bottom: 40px;
+}
+.window_background .data .wrapper_after_request .request_information_title {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 25px;
+}
+.window_background .data .wrapper_after_request .request_information_subtitle {
+  color: rgba(0, 0, 0, 0.4);
+}
+.window_background .data .wrapper_after_request .request_button {
+  height: 55px;
+  border: 1px solid hsl(278deg, 68%, 11%);
+  border-radius: 10px;
+  background-color: hsl(278deg, 68%, 11%);
+  color: hsl(0deg, 0%, 100%);
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.window_background .data .wrapper_after_request .request_button:hover {
+  background-color: #fff;
+  color: hsl(278deg, 68%, 11%);
+  border: 1px solid hsl(278deg, 68%, 11%);
+}
+.window_background .data_error {
+  text-align: center;
+  color: red;
+}
+.window_background .data .hidden {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

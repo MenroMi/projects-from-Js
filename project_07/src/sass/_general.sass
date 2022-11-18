@@ -61,7 +61,7 @@ body
                     height: 33%
                     color: white
                     font-size: 30px
-                    
+
                 &_data
                     display: flex
                     justify-content: space-between
@@ -90,6 +90,7 @@ body
             flex-direction: column
             align-items: center
             justify-content: center
+            border: 1px solid red
             .title
                 color: black
                 text-transform: uppercase
@@ -98,18 +99,18 @@ body
                 letter-spacing: 2px
             &_cardholder
                 width: 100%
-                margin-bottom: 20px  
+                margin-bottom: 20px
                 &_input
                     @include style-inputs
             &_cardnumber
                 width: 100%
-                margin-bottom: 20px  
+                margin-bottom: 20px
                 &_input
                     @include style-inputs
             &_info
                 display: flex
                 width: 100%
-                margin-bottom: 20px  
+                margin-bottom: 20px
                 &_date
                     width: 50%
                     .title
@@ -122,14 +123,15 @@ body
                             width: 40%
                         &_year
                             @include style-inputs
-                            width: 40%                    
+                            width: 40%
                 &_cvv
                     &_input
                         @include style-inputs
-            
+
             &_btn
                 width: 100%
                 height: 55px
+                border: 1px solid $very-dark-violet
                 border-radius: 10px
                 background-color: $very-dark-violet
                 color: $white
@@ -139,5 +141,40 @@ body
                     color: $very-dark-violet
                     border: 1px solid $very-dark-violet
 
+            .wrapper_after_request
+                width: 100%
+                text-align: center
+                display: flex
+                flex-direction: column
+                .request_check
+                    margin: 0 auto 40px auto
+                    height: 80px
+                    width: 80px
+                    background-color: $gradient-violet
+                    border-radius: 100%
+                .request_information
+                    margin-bottom: 40px
+                    &_title
+                        margin-bottom: 10px
+                        text-transform: uppercase
+                        letter-spacing: 5px
+                        font-size: 25px
+                    &_subtitle
+                        color: rgba(0,0,0,0.4)
+                .request_button
+                    height: 55px
+                    border: 1px solid $very-dark-violet
+                    border-radius: 10px
+                    background-color: $very-dark-violet
+                    color: $white
+                    transition: 0.3s ease
+                    &:hover
+                        background-color: #fff
+                        color: $very-dark-violet
+                        border: 1px solid $very-dark-violet
+            &_error
+                text-align: center
+                color: red
+            .hidden
+                display: none
 
-            
