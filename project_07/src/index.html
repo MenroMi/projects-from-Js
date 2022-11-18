@@ -45,34 +45,38 @@
                             </div>
                         </div>
                         <div class="data col-4 offset-md-1">
-                            <form   >
+                            <form>
                                 <div class="data_cardholder">
                                     <div class="data_cardholder title">
                                         cardholder name
                                     </div>
-                                    <input required name="name" type="text" class="data_cardholder_input"
+                                    <input required id="name" name="name" type="text" class="data_cardholder_input"
                                         placeholder="e.g. Jane Appleseed"></input>
+                                    <div class="data_form_error hidden">Wrong format. Only letters.</div>
                                 </div>
                                 <div class="data_cardnumber">
                                     <div class="data_cardnumber title">card number</div>
-                                    <input required name="number" type="" class="data_cardnumber_input"
+                                    <input required id="number" name="card-number" type="" class="data_cardnumber_input"
                                         placeholder="e.g. 1234 5678 8765 4321"></input>
+                                    <div class="data_form_error hidden">Wrong format. Only numbers.</div>
                                 </div>
                                 <div class="data_info">
                                     <div class="data_info_date">
                                         <div class="data_info_date title">exp, date (mm/yy)</div>
                                         <div class="data_info_date_inputs">
-                                            <input required name="month" type="number"
+                                            <input required id="month" name="month" type="number"
                                                 class="data_info_date_inputs_month" placeholder="MM"></input>
-                                            <input required name="year" type="number" class="data_info_date_inputs_year"
+                                            <input required id="year" name="year" type="number" class="data_info_date_inputs_year"
                                                 placeholder="YY"></input>
                                         </div>
+                                        <div class="data_form_error hidden">Can't blank</div>
                                     </div>
                                     <div class="data_info_cvv">
                                         <div class="data_info_cvv title">cvv</div>
-                                        <input required name="code" type="text" class="data_info_cvv_input"
+                                        <input required id="code-cvv" name="code" type="text" class="data_info_cvv_input"
                                             placeholder="e.g. 123"></input>
                                     </div>
+                                    <div class="data_form_error hidden">Can't blank</div>
                                 </div>
                                 <button class="data_btn" type="submit">Confirm</button>
                             </form>

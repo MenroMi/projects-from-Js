@@ -162,7 +162,6 @@ body main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border: 1px solid red;
 }
 .window_background .data .title {
   color: black;
@@ -383,6 +382,12 @@ body main {
   background-color: #fff;
   color: hsl(278deg, 68%, 11%);
   border: 1px solid hsl(278deg, 68%, 11%);
+}
+.window_background .data_form_error {
+  display: block;
+  color: red;
+  text-align: left;
+  font-size: 14px;
 }
 .window_background .data_error {
   text-align: center;
