@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "coingecko-api": "^1.0.10",
     "node-telegram-bot-api": "^0.60.0",
     "nodemon": "^2.0.20"
   }
