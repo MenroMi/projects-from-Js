@@ -18,6 +18,8 @@ window.addEventListener("DOMContentLoaded", () => {
         yearEl = document.querySelector("#year"),
         cvvCodeEl = document.querySelector("#code-cvv");
 
+    let user, numbCC, numbMonth, numbYear, numbCVV;
+
     const isRequired = value => value === '' ? true : false;
     const checkLength = (length, min, max) => length < min || length > max ? true : false;
     const checkSpecialCharactersAndNumbers = value => (/(?=.*[\!@#$%^&*()\\[\]{}\-_+=~`|:;"'<>,./?])|(?=(.*[0-9]))/).test(value);
@@ -37,7 +39,7 @@ window.addEventListener("DOMContentLoaded", () => {
         }
         const errorMsg = divField.querySelector("small");
         errorMsg.style.color = 'red';
-        btnSubmit.disabled = 'true';
+        btnSubmit.disabled = true;
 
         return errorMsg.textContent = msg;
     };
@@ -53,16 +55,11 @@ window.addEventListener("DOMContentLoaded", () => {
         }
 
         const errorMsg = divField.querySelector("small");
-        btnSubmit.disabled = 'false';
-
+        btnSubmit.disabled = false;
         return errorMsg.textContent = '';
     }
 
-    postData(formForPost);
-    validateData(formForPost);
-    afterPost(wrapperRequest, formForPost);
-
-    function postData(form) {
+    const postData = form => {
 
         form.addEventListener("submit", (e) => {
             e.preventDefault();
@@ -107,7 +104,7 @@ window.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    function afterPost(requestForm, form) {
+    const afterPost = (requestForm, form) => {
         btnContinue.addEventListener("click", () => {
             if (form.classList.contains("hidden")) {
                 requestForm.classList.add('hidden');
@@ -117,6 +114,10 @@ window.addEventListener("DOMContentLoaded", () => {
         })
         return;
     }
+
+    postData(formForPost);
+    validateData(formForPost);
+    afterPost(wrapperRequest, formForPost);
 
 
     function validateData(form) {
@@ -153,10 +154,18 @@ window.addEventListener("DOMContentLoaded", () => {
                     validateCardNumber(numberEl);
                     break;
                 case 'month':
+                    if (value.length > 2) {
+                        validateCardMonth(monthEl);
+                        return;
+                    }
                     cardMonth.textContent = value.length === 1 ? `0${value}` : value;
                     validateCardMonth(monthEl);
                     break;
                 case 'year':
+                    if (value.length > 2) {
+                        validateCardYear(yearEl);
+                        return;
+                    }
                     cardYear.textContent = value.length === 1 ? `0${value}` : value;
                     validateCardYear(yearEl);
                     break;
@@ -172,7 +181,7 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 
     function validateUsername(username) {
-
+        
         let min = 3, max = 25;
         const name = username.value.trim();
 
@@ -186,6 +195,8 @@ window.addEventListener("DOMContentLoaded", () => {
         else {
             showSuccess(username);
         }
+
+        return;
 
     }
 
@@ -202,7 +213,10 @@ window.addEventListener("DOMContentLoaded", () => {
             showError(numbers, "Must be 16 characters.");
         } else {
             showSuccess(numbers);
+
         }
+
+        return;
 
     }
 
@@ -223,6 +237,8 @@ window.addEventListener("DOMContentLoaded", () => {
             showSuccess(month);
         }
 
+        return;
+
     }
 
     function validateCardYear(year) {
@@ -242,6 +258,8 @@ window.addEventListener("DOMContentLoaded", () => {
             showSuccess(year);
         }
 
+        return;
+
     }
 
     function validateCardCVV(cvv) {
@@ -258,6 +276,8 @@ window.addEventListener("DOMContentLoaded", () => {
         } else {
             showSuccess(cvv);
         }
+
+        return;
     }
 
 });
