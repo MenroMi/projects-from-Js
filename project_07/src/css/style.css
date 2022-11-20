@@ -393,6 +393,9 @@ body main {
   text-align: center;
   color: red;
 }
+.window_background .data .form-error {
+  border: 1px solid red;
+}
 .window_background .data .hidden {
   display: none;
 }/*# sourceMappingURL=style.css.map */

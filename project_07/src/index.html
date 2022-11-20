@@ -36,7 +36,7 @@
                                     <div class="card_front_number">0000 0000 0000 0000</div>
                                     <div class="card_front_data">
                                         <div class="card_front_name">name surname</div>
-                                        <div class="card_front_date">00/00</div>
+                                        <div class="card_front_date"><span class="card_front_date_m">00</span>/<span class="card_front_date_y">00</span></div>
                                     </div>
                                 </div>
                             </div>
@@ -47,38 +47,57 @@
                         <div class="data col-4 offset-md-1">
                             <form>
                                 <div class="data_cardholder">
-                                    <div class="data_cardholder title">
+                                    <label class="data_cardholder title" for="username">
                                         cardholder name
-                                    </div>
-                                    <input required id="name" name="name" type="text" class="data_cardholder_input"
-                                        placeholder="e.g. Jane Appleseed"></input>
-                                    <div class="data_form_error hidden">Wrong format. Only letters.</div>
+                                    </label>
+                                    <input required 
+                                    id="username" 
+                                    name="username" 
+                                    type="text" 
+                                    class="data_cardholder_input"
+                                    placeholder="e.g. Jane Appleseed"></input>
+                                    <small></small>
                                 </div>
                                 <div class="data_cardnumber">
-                                    <div class="data_cardnumber title">card number</div>
-                                    <input required id="number" name="card-number" type="" class="data_cardnumber_input"
-                                        placeholder="e.g. 1234 5678 8765 4321"></input>
-                                    <div class="data_form_error hidden">Wrong format. Only numbers.</div>
+                                    <label class="data_cardnumber title" for="cardnumber">card number</label>
+                                    <input required 
+                                    id="cardnumber" 
+                                    name="card-number" 
+                                    type="text" 
+                                    class="data_cardnumber_input"
+                                    placeholder="e.g. 1234 5678 8765 4321"></input>
+                                    <small></small>
                                 </div>
                                 <div class="data_info">
                                     <div class="data_info_date">
                                         <div class="data_info_date title">exp, date (mm/yy)</div>
                                         <div class="data_info_date_inputs">
-                                            <input required id="month" name="month" type="number"
-                                                class="data_info_date_inputs_month" placeholder="MM"></input>
-                                            <input required id="year" name="year" type="number" class="data_info_date_inputs_year"
-                                                placeholder="YY"></input>
+                                            <input required 
+                                            id="month" 
+                                            name="month" 
+                                            type="number"
+                                            class="data_info_date_inputs_month" placeholder="MM"></input>
+                                            <input required 
+                                            id="year" 
+                                            name="year" 
+                                            type="number" class="data_info_date_inputs_year"
+                                            placeholder="YY"></input>
                                         </div>
-                                        <div class="data_form_error hidden">Can't blank</div>
+                                        <small></small>
+
                                     </div>
                                     <div class="data_info_cvv">
-                                        <div class="data_info_cvv title">cvv</div>
-                                        <input required id="code-cvv" name="code" type="text" class="data_info_cvv_input"
-                                            placeholder="e.g. 123"></input>
+                                        <div class="data_info_cvv title" for="code">cvv</div>
+                                        <input required 
+                                        id="code-cvv" 
+                                        name="code" 
+                                        type="text" 
+                                        class="data_info_cvv_input"
+                                        placeholder="e.g. 123"></input>
                                     </div>
-                                    <div class="data_form_error hidden">Can't blank</div>
+                                    <small></small>
                                 </div>
-                                <button class="data_btn" type="submit">Confirm</button>
+                                <input class="data_btn" type="submit" value="Confirm"></input>
                             </form>
                             <div class="wrapper_after_request hidden">
                                 <div class="request_check"><img src="./images/icon-complete.svg" alt="checkbox"></div>
@@ -86,7 +105,7 @@
                                     <div class="request_information_title">thank you!</div>
                                     <div class="request_information_subtitle">We've added your card details</div>
                                 </div>
-                                <button class="request_button" type="button">Continue</button>
+                                <input class="request_button" type="button" value="Continue"></input>
                             </div>
                         </div>
 
