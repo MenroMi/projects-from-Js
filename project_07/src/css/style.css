@@ -299,6 +299,9 @@ body main {
 .window_background .data_info_date_inputs_year::placeholder {
   color: rgba(0, 0, 0, 0.4);
 }
+.window_background .data_info_cvv {
+  width: 50%;
+}
 .window_background .data_info_cvv_input {
   width: 100%;
   height: 55px;

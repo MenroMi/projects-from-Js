@@ -50,7 +50,8 @@
                                     <label class="data_cardholder title" for="username">
                                         cardholder name
                                     </label>
-                                    <input required 
+                                    <input required
+                                    autocomplete="off" 
                                     id="username" 
                                     name="username" 
                                     type="text" 
@@ -60,7 +61,8 @@
                                 </div>
                                 <div class="data_cardnumber">
                                     <label class="data_cardnumber title" for="cardnumber">card number</label>
-                                    <input required 
+                                    <input required
+                                    autocomplete="off" 
                                     id="cardnumber" 
                                     name="card-number" 
                                     type="text" 
@@ -72,30 +74,32 @@
                                     <div class="data_info_date">
                                         <div class="data_info_date title">exp, date (mm/yy)</div>
                                         <div class="data_info_date_inputs">
-                                            <input required 
+                                            <input required
+                                            autocomplete="off" 
                                             id="month" 
                                             name="month" 
-                                            type="number"
+                                            type="text"
                                             class="data_info_date_inputs_month" placeholder="MM"></input>
-                                            <input required 
+                                            <input required
+                                            autocomplete="off" 
                                             id="year" 
                                             name="year" 
-                                            type="number" class="data_info_date_inputs_year"
+                                            type="text" class="data_info_date_inputs_year"
                                             placeholder="YY"></input>
                                         </div>
                                         <small></small>
-
                                     </div>
                                     <div class="data_info_cvv">
                                         <div class="data_info_cvv title" for="code">cvv</div>
-                                        <input required 
+                                        <input required
+                                        autocomplete="off" 
                                         id="code-cvv" 
                                         name="code" 
                                         type="text" 
                                         class="data_info_cvv_input"
                                         placeholder="e.g. 123"></input>
+                                        <small></small>
                                     </div>
-                                    <small></small>
                                 </div>
                                 <input class="data_btn" type="submit" value="Confirm"></input>
                             </form>
