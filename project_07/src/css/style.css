@@ -124,12 +124,13 @@ body main {
   border-radius: 10px;
   background: url(../images/bg-card-back.png);
   top: 70%;
-  left: 33%;
   -webkit-transform: translateY(-70%);
           transform: translateY(-70%);
   -webkit-box-shadow: 5px 3px 30px rgba(0, 0, 0, 0.2);
           box-shadow: 5px 3px 30px rgba(0, 0, 0, 0.2);
   padding: 20px 25px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 .window_background .wrapper_card .card_back_cvv {
   height: 100%;
@@ -401,4 +402,72 @@ body main {
 }
 .window_background .data .hidden {
   display: none;
+}
+
+@media (max-width: 1440px) {
+  .window {
+    margin-top: 0;
+  }
+}
+@media (max-width: 576px) {
+  body main {
+    width: 100%;
+  }
+  body .window {
+    min-height: 915px;
+  }
+  body .window_background {
+    position: relative;
+    min-height: 0;
+    border-radius: 0;
+    height: 230px;
+    background: url(../images/bg-main-desktop.png) 0% 0%/cover no-repeat;
+    z-index: 4;
+  }
+  body .window .wrapper_card {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    min-height: 200px;
+  }
+  body .window .wrapper_card .card_front {
+    background: url(../images/bg-card-front.png) 0% 0%/cover no-repeat;
+    top: 90%;
+    width: 270px;
+    height: 150px;
+    z-index: 3;
+  }
+  body .window .wrapper_card .card_front_circle_one {
+    width: 35px;
+    height: 35px;
+  }
+  body .window .wrapper_card .card_front_circle_two {
+    width: 15px;
+    height: 15px;
+  }
+  body .window .wrapper_card .card_front_number {
+    font-size: 18px;
+  }
+  body .window .wrapper_card .card_front_data {
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  body .window .wrapper_card .card_front_data:nth-child(n) {
+    font-size: 10px;
+  }
+  body .window .wrapper_card .card_back {
+    background: url(../images/bg-card-back.png) 0% 0%/cover no-repeat;
+    width: 270px;
+    height: 150px;
+    top: 77%;
+  }
+  body .window .wrapper_card .card_back_cvv {
+    font-size: 10px;
+    padding-top: 0;
+  }
+  body .window .data {
+    min-height: 0;
+    margin-top: 150px;
+  }
 }/*# sourceMappingURL=style.css.map */
