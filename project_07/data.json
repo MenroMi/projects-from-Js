@@ -1,34 +1,20 @@
 {
   "posts": [
     {
+      "username": "Adam Crugler",
+      "card-number": "1234123141232131",
+      "month": "12",
+      "year": "12",
+      "code": "123",
       "id": 1
     },
     {
+      "username": "Joanna Jark",
+      "card-number": "1231231231323122",
+      "month": "12",
+      "year": "12",
+      "code": "213",
       "id": 2
-    },
-    {
-      "username": "Kiryl Shchasny",
-      "card-number": "1234123412341234",
-      "month": "12",
-      "year": "84",
-      "code": "123",
-      "id": 3
-    },
-    {
-      "username": "Kiryl Shchasny",
-      "card-number": "1234123412341234",
-      "month": "12",
-      "year": "12",
-      "code": "123",
-      "id": 4
-    },
-    {
-      "username": "Kiryl Shchasny",
-      "card-number": "1234123412341213",
-      "month": "12",
-      "year": "12",
-      "code": "123",
-      "id": 5
     }
   ],
   "requests": []
