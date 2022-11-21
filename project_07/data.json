@@ -1,0 +1,35 @@
+{
+  "posts": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "username": "Kiryl Shchasny",
+      "card-number": "1234123412341234",
+      "month": "12",
+      "year": "84",
+      "code": "123",
+      "id": 3
+    },
+    {
+      "username": "Kiryl Shchasny",
+      "card-number": "1234123412341234",
+      "month": "12",
+      "year": "12",
+      "code": "123",
+      "id": 4
+    },
+    {
+      "username": "Kiryl Shchasny",
+      "card-number": "1234123412341213",
+      "month": "12",
+      "year": "12",
+      "code": "123",
+      "id": 5
+    }
+  ],
+  "requests": []
+}
