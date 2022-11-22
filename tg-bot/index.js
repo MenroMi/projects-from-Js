@@ -10,8 +10,11 @@ const CoinGeckoClient = new CoinGecko();
 
 // ===================================================
 
-const gun = {};
-const dataCoins = {};
+const dataCoins = {
+    coin: [],
+    markets: [],
+    tickers: [],
+};
 
 const trueOfFalse = async (id, chamber) => {
     if((chamber == 0) || (Math.random()*100 < 100/6)) {
@@ -29,7 +32,12 @@ function commandStart() {
         {command: "/next", description: "Узнай, что ты можешь."},
         {command: "/game", description: 'Сыграй в игру: "Русская рулетка'},
         {command: "/clean", description: "Удалить сообщения."},
-        {command: "/ping", description: "Проверить ping CoinGecko"}
+        {command: "/exchange", description: "Обмены валют"},
+        {command: "/coinslist", description: "Список монет"},
+        {command: "/data", description: "Обновление списка монет"},
+        {command: "/markets", description: "Обновление списка бирж"},
+
+
     ]);
 
     bot.on("message", async msg => {
@@ -72,13 +80,72 @@ function commandStart() {
             
         }
 
-        if(msg.text === "/ping") {
-            const requestPing = async () => {
-                let data = await CoinGeckoClient.coins.fetchTickers("bitcoin", {exchange_ids: "binance"});
-                return bot.sendMessage(chatId, `${data.data.tickers[0].base} - ${data.data.tickers[0].target}`);
+        if(msg.text === '/coinslist') {
+            const coinsList = async () => {
+                let list = await CoinGeckoClient.coins.list();
+                const data = await list.data; // array of coins
+                const res = [];
+                return await data.map(({name}) => name.match(/^Bit/g) !== null && name.length === 7 ? dataCoins.coin.push(name) : "none");
+                // return bot.sendMessage(chatId, `${}`);
+            }
+            return coinsList();
+        }
+
+        if(msg.text === "/data") {
+            const searchCoins = async () => {
+                const list = await CoinGeckoClient.coins.list();
+                let counter = 0;
+                return await list.data.map(obj => {
+                    counter++;
+                    return dataCoins.coin.push({
+                        id: counter--,
+                        "coin-id": obj.id
+                    });
+                });
+                // const coinsList = await CoinGeckoClient.coins.fetch(res[5673], {});
+                // for(let coin of res) {   
+                //     const coinsList = await CoinGeckoClient.coins.fetch(coin, {});
+
+                // }
+
             }
 
-            return requestPing();
+            return searchCoins();
+        }
+
+        if(msg.text === "/exchange") {
+            const exchange = async () => {
+                const {coin, markets} = dataCoins;
+                // let data;
+                // for(let i = 0; i < markets.length; i++) {
+                //     for(let k = 0; k < coin.length; k++) {
+                //         data = await CoinGeckoClient.exchanges.fetchTickers(markets[i], {
+                //             coin_ids: coin[i]
+                //         });
+                //     }
+                // }
+
+                console.log(coin, markets);
+
+            }
+
+            return exchange();
+        }
+
+        if(msg.text === "/markets") {
+            const searchMarkets = async() => {
+                const importantMarkets = ["Binance", "KuCoin", "MEXC Global", "Huobi Global", "Bybit", "Gate.io", "OKX", "WhiteBIT"];
+                let listMarkets = await CoinGeckoClient.exchanges.list();
+                const {data} = listMarkets;
+                const {markets} = dataCoins;
+                
+                for(let i = 0; i < importantMarkets.length; i++) {
+                    data.map(market => market.name.toLowerCase() === importantMarkets[i].toLowerCase() ? markets.push(market) : 'none');
+                }
+
+            }
+
+            return searchMarkets();
         }
         
         return bot.sendMessage(chatId, "Что-то пошло не так");
