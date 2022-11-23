@@ -1,40 +1,45 @@
 "use strict";
 
-const gulp = require("gulp");
-const browserSync = require("browser-sync");
-const sass = require('gulp-sass')(require('sass'));
-const rename = require("gulp-rename");
-const autoprefixer = require("gulp-autoprefixer");
-let cleanCSS = require("gulp-clean-css");
+import gulp from "gulp";
+import browserSync from "browser-sync";
+import dartSass from 'sass';
+import gulpSass from 'gulp-sass';
+import rename from "gulp-rename";
+import autoPrefixer from "gulp-autoprefixer";
+import cleanCSS from "gulp-clean-css";
+
+const sass = gulpSass(dartSass);
 
 
-gulp.task("browser-sync", function() {
-    browserSync.init({
+const server = () => {
+    return browserSync.init({
         server: {
             baseDir: "./src/"
         }
     });
-});
+};
 
-gulp.task("styles-sass", function() {
+const styleSass = () => {
     return gulp.src("./src/sass/*.+(scss|sass)")
-        .pipe(sass({outputStyle: "compressed"})).on('error', sass.logError)
+    .pipe(sass({outputStyle: "compressed"})).on('error', sass.logError)
         .pipe(rename({
             preffix: "",
             suffix: ".min",
         }))
-        .pipe(autoprefixer({
+        .pipe(autoPrefixer({
             browsers: ["last 2 versions"],
             cascade: false,
         }))
         .pipe(cleanCSS({compatibility: "ie8"}))
         .pipe(gulp.dest('./src/css/'))
         .pipe(browserSync.stream());
-});
+};
 
-gulp.task("watchers", function() {
-    gulp.watch("./src/sass/*.+(sass|scss)", gulp.parallel("styles-sass"));
+const watchers = () => {
+    gulp.watch("./src/sass/*.+(sass|scss)");
     gulp.watch("src/*.html").on('change', browserSync.reload);
-})
+};
 
-gulp.task('default', gulp.parallel("watchers", "browser-sync", 'styles-sass'));
+const dev = gulp.parallel(watchers, server, styleSass);
+
+gulp.task("default", dev);

@@ -2,6 +2,7 @@
   "name": "project_10",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,8 +11,8 @@
   "author": "",
   "license": "ISC",
   "browserslist": [
-    ">1%",
-    "not dead"
+    "defaults and supports es6-module",
+    "maintained node versions"
   ],
   "devDependencies": {
     "browser-sync": "^2.27.10",
