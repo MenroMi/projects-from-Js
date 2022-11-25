@@ -39,10 +39,10 @@ const renderScssCode = () => {
 
 const watchers = () => {
     gulp.watch('./src/scss/*.+(sass|scss)');
-    gulp.watch("./src/scss/*.html").on("change", browserSync.reload);
+    gulp.watch("./src/*.html").on("change", browserSync.reload);
 }
 
-const dev = gulp.parallel(server, styleSass, watchers);
+const dev = gulp.parallel(server, renderScssCode, watchers);
 
 gulp.task('default', dev);
 

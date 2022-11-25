@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: url('../fonts/100/MuseoSansCyrl-100.eot');
+    src: local('MuseoSansCyrl-100'),
+        url('../fonts/100/MuseoSansCyrl-100.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/100/MuseoSansCyrl-100.woff') format('woff'),
+        url('../fonts/100/MuseoSansCyrl-100.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: url('../fonts/300/MuseoSansCyrl-300.eot');
+    src: local('MuseoSansCyrl-300'),
+        url('../fonts/300/MuseoSansCyrl-300.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/300/MuseoSansCyrl-300.woff') format('woff'),
+        url('../fonts/300/MuseoSansCyrl-300.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: 'Museo Sans Cyrl';
+	src: url('../fonts/500/MuseoSansCyrl-500.eot');
+	src: local('MuseoSansCyrl-500'),
+		url('../fonts/500/MuseoSansCyrl-500.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/500/MuseoSansCyrl-500.woff') format('woff'),
+		url('../fonts/500/MuseoSansCyrl-500.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: url('../fonts/700/MuseoSansCyrl-700.eot');
+    src: local('MuseoSansCyrl-700'),
+        url('../fonts/700/MuseoSansCyrl-700.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/700/MuseoSansCyrl-700.woff') format('woff'),
+        url('../fonts/700/MuseoSansCyrl-700.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: url('../fonts/900/MuseoSansCyrl-900.eot');
+    src: local('MuseoSansCyrl-900'),
+        url('../fonts/900/MuseoSansCyrl-900.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/900/MuseoSansCyrl-900.woff') format('woff'),
+        url('../fonts/900/MuseoSansCyrl-900.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
