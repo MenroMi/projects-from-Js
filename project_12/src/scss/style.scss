@@ -7,6 +7,9 @@
     padding: 0;
 }
 
-@import "./blocks/promo";
-@import "./blocks/header";
-@import "./blocks/button";
+@import "./blocks/sections/promo";
+@import "./blocks/sections/benefits";
+@import "./blocks/sections/consultation";
+@import "./blocks/mains/title";
+@import "./blocks/mains/header";
+@import "./blocks/mains/button";

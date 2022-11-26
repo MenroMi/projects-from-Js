@@ -36,7 +36,7 @@ const renderScssCode = () => {
 };
 
 const watchers = () => {
-    gulp.watch('./src/scss/*.scss').on('change', renderScssCode);
+    gulp.watch('./src/scss/**/*.scss').on('change', renderScssCode);
     gulp.watch("./src/*.html").on("change", browserSync.reload);
 }
 
