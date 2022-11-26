@@ -1,3 +1,4 @@
+"use strict";
 import gulp from "gulp";
 import browserSync from "browser-sync";
 
@@ -23,26 +24,23 @@ const server = () => {
 };
 
 const renderScssCode = () => {
-    return gulp.src(['./src/scss/*.scss', './src/scss/**/*.scss'])
+    return gulp.src('./src/scss/**/*.scss')
         .pipe(sass({
             outputStyle: "compressed"
         }).on("error", sass.logError))
         .pipe(rename({suffix: ".min", prefix: ''}))
-        .pipe(autoPrefixer({
-            browsers: ["last 2 versions"],
-            cascade: false,
-        }))
+        .pipe(autoPrefixer())
         .pipe(GulpCleanCss({compatibility: "ie8"}))
         .pipe(gulp.dest('./src/css/'))
         .pipe(browserSync.stream());
 };
 
 const watchers = () => {
-    gulp.watch('./src/scss/*.+(sass|scss)');
+    gulp.watch('./src/scss/*.scss').on('change', renderScssCode);
     gulp.watch("./src/*.html").on("change", browserSync.reload);
 }
 
-const dev = gulp.parallel(server, renderScssCode, watchers);
+const dev = gulp.parallel(watchers, server, renderScssCode);
 
 gulp.task('default', dev);
 
