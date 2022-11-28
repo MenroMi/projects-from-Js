@@ -2,8 +2,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     &__logo {
         width: 251px;
+
         img {
             width: 100%;
         }
@@ -14,6 +16,7 @@
         font-weight: 500;
         color: #fff;
         text-align: center;
+
         span {
             display: block;
             font-size: 18px;
@@ -34,10 +37,9 @@
         text-align: right;
         color: #fff;
         transition: 0.3s ease;
+
         &:hover {
-            text-shadow: 0 0 10px $main-color;
             color: #fff;
         }
     }
 }
-
