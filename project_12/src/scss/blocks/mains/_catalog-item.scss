@@ -1,0 +1,105 @@
+.catalog-item {
+    padding: 20px 20px 27px 20px;
+    border: solid 2px #d0d0d0;
+    width: 330px;
+    text-align: center;
+
+    &__img {
+        height: 200px;
+    }
+
+    &__title {
+        margin-top: 20px;
+        font-size: 16px;
+        font-weight: 900;
+        text-align: center;
+        color: #0d0d0d;
+    }
+
+    &__descr {
+        margin-top: 16px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #0d0d0d;
+        line-height: 1;
+    }
+
+    &__details,
+    &__escape {
+        display: block;
+        margin-top: 17px;
+        font-size: 14px;
+        font-weight: 500;
+        color: $main-color;
+        text-transform: uppercase;
+
+        &:hover {
+            color: $main-color;
+        }
+    }
+
+    &__escape {
+        margin-top: 84px;
+    }
+
+    hr {
+        margin: 19px 0 21px 0;
+        border-bottom: none;
+        background-color: #e8e8e8;
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__prices,
+    .btn_catalog {
+        width: 50%;
+    }
+
+    &__sale-price {
+        text-decoration-line: line-through;
+        font-size: 14px;
+        font-weight: 300;
+        text-align: left;
+        color: #555;
+    }
+
+    &__actual-price {
+        font-size: 20px;
+        font-weight: 900;
+        color: #050505;
+        text-align: left;
+    }
+
+    &__details-benefits {
+        font-size: 14px;
+        font-weight: 300;
+        text-align: left;
+        color: #555;
+    }
+
+    &__details-benefit {
+        list-style: none;
+        line-height: 1.3;
+        margin-top: 14px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &::before {
+            content: "\25A0";
+            display: inline-block;
+            color: $main-color;
+            width: 20px;
+            margin-left: -2em;
+
+        }
+    }
+
+
+
+}

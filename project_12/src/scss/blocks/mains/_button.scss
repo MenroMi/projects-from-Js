@@ -10,17 +10,31 @@
     color: #fff;
     text-transform: uppercase;
     transition: 0.4s ease;
+
     &_main {
         margin-top: 68px;
         width: 300px;
         height: 50px;
         font-size: 16px;
     }
+
     &_form {
         width: 300px;
         height: 55px;
         font-size: 16px;
     }
+
+    &_catalog {
+        width: 131px;
+        height: 40px;
+
+        &:hover {
+            background-color: #fff;
+            color: #000000;
+            border: solid 1px black;
+        }
+    }
+
     &:hover {
         background-color: #fff;
         color: #000000;
