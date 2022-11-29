@@ -54,3 +54,15 @@ $('').ready(function () {
         ]
     });
 });
+
+$(".catalog__tabs > .catalog__tab").on("click", function () {
+
+    const target = event.currentTarget;
+    if (!$(target).hasClass("catalog__tab_active")) {
+        $(target.parentElement.children).each(function (i, el) {
+            $(el).removeClass("catalog__tab_active");
+        })
+        return $(target).addClass("catalog__tab_active");
+    }
+
+});
