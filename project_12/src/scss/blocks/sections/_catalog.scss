@@ -39,11 +39,15 @@
     }
 
     &__content {
+        display: none;
         position: relative;
         margin-top: 60px;
-        display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         align-content: space-between;
+
+        &_active {
+            display: flex;
+        }
     }
 }
