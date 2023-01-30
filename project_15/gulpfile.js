@@ -66,13 +66,13 @@ const renderStyles = () => {
   return gulp
     .src(paths.styles.src)
     .pipe(sourcemaps.init())
+    .pipe(size({ title: "Before:" })) // for checking how size of document(before)
+    .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
     .pipe(
       autoPrefixer({
         cascade: false,
       })
     )
-    .pipe(size({ title: "Before:" })) // for checking how size of document(before)
-    .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
     .pipe(
       cleanCSS({
         level: 2,

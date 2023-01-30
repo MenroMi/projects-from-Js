@@ -1,0 +1,14 @@
+.btn {
+  &_contact {
+    margin-top: 2.5rem;
+    width: 15.25rem;
+    height: 4.063rem;
+    border-radius: 1.875rem;
+    border: none;
+    background-color: var(--y-darker);
+    font-size: 1.25rem;
+    font-weight: 500;
+    box-shadow: 0 10px 35px -5px rgba(250, 224, 26, 1);
+    cursor: pointer;
+  }
+}

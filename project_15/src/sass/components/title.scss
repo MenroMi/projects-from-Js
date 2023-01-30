@@ -1,0 +1,11 @@
+.title {
+  &_main {
+    font-size: 2.85rem;
+    font-weight: 600;
+    span {
+      color: var(--primary-clr);
+      font-size: 3rem;
+      text-shadow: -37px -27px 0px rgba(1, 143, 163, 0.05);
+    }
+  }
+}

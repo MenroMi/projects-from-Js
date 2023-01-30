@@ -1,5 +1,75 @@
-h1 {
-  font-size: 50px;
-  color: red;
-  background-color: black;
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600;700&display=swap");
+
+$primary: #018fa3;
+$yellow-darker: #fae01a;
+$yellow-lite: #fff7be;
+$yellow-lemon: #ffe41b;
+$yellow-lightning: #ffa724;
+$pink-french-rose: #ff4d94;
+$purple-medium: #955eea;
+$green-kelly: #4eca30;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Commissioner", sans-serif;
 }
+
+:root {
+  --primary-clr: #{$primary};
+  --y-lite: #{$yellow-lite};
+  --y-darker: #{$yellow-darker};
+  --y-lemon: #{$yellow-lemon};
+  --y-lighting: #{$yellow-lightning};
+  --pink-f-r: #{$pink-french-rose};
+  --purple-m: #{$purple-medium};
+  --g-kelly: #{$green-kelly};
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  border: none;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+@import "./components/f-header/header-site";
+@import "./components/f-header/navigation";
+@import "./components/title";
+@import "./components/button";
