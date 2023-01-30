@@ -1,0 +1,17 @@
+.border-img {
+  position: absolute;
+  z-index: -1;
+  width: 488px;
+  height: 343px;
+  border: 4px dashed var(--primary-clr);
+  border-radius: 2.875rem;
+  &_top {
+    left: 32px;
+    top: 32px;
+  }
+
+  &_bottom {
+    right: 32px;
+    top: 32px;
+  }
+}

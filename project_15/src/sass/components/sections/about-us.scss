@@ -1,0 +1,59 @@
+@import "../blocks/rectangle";
+@import "../blocks/border-img";
+
+.about-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 839px;
+  &__info {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+  }
+
+  &__photo {
+    position: relative;
+    &_top {
+      justify-self: end;
+    }
+    &_bottom {
+      justify-self: start;
+    }
+  }
+
+  &__descr {
+    position: relative;
+    font-weight: 400;
+    font-size: 1.5rem;
+    &_top {
+      svg {
+        position: absolute;
+        right: 346px;
+      }
+
+      p {
+        position: absolute;
+        max-width: 459px;
+        max-height: 203px;
+        top: 4.375em;
+        right: 1.813rem;
+      }
+    }
+
+    &_bottom {
+      svg {
+        position: absolute;
+        left: 354px;
+        bottom: 45px;
+      }
+
+      p {
+        position: absolute;
+        left: 0;
+        top: 110px;
+        max-width: 459px;
+        max-height: 174px;
+      }
+    }
+  }
+}

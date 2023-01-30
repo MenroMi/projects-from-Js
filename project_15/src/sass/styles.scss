@@ -65,11 +65,16 @@ select {
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
+}
+
+main {
+  padding: 122px 0 107px 0;
 }
 
 @import "./components/f-header/header-site";
 @import "./components/f-header/navigation";
-@import "./components/title";
-@import "./components/button";
+@import "./components/blocks/title";
+@import "./components/blocks/button";
+@import "./components/sections/about-us";
