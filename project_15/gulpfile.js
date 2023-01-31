@@ -11,6 +11,7 @@ import sourcemaps from "gulp-sourcemaps";
 import cleanCSS from "gulp-clean-css";
 import rename from "gulp-rename";
 import htmlmin from "gulp-htmlmin";
+import imagemin from "gulp-imagemin";
 import babel from "gulp-babel";
 import concat from "gulp-concat";
 import uglify from "gulp-uglify";
@@ -32,12 +33,16 @@ const paths = {
     dest: "dist/",
   },
   styles: {
-    src: "src/sass/**/*.scss",
+    src: "src/sass/**/*.+(scss|sass)",
     dest: "dist/style/",
   },
   scripts: {
     src: "src/js/**/*.js",
     dest: "dist/script/",
+  },
+  images: {
+    src: "src/assets/img/**/*.+(svg|png)",
+    dest: "dist/assets/img",
   },
 };
 
@@ -49,6 +54,13 @@ const server = () => {
       baseDir: "./dist/",
     },
   });
+};
+
+const renderImages = () => {
+  return gulp
+    .src(paths.images.src)
+    .pipe(imagemin())
+    .pipe(gulp.dest(paths.images.dest));
 };
 
 const renderHTML = () => {
@@ -114,6 +126,7 @@ const watchers = () => {
 
 const dev = gulp.series(
   clean,
+  renderImages,
   gulp.parallel(server, watchers, renderHTML, renderStyles, renderScript)
 );
 
