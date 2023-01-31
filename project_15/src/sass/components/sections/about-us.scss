@@ -9,6 +9,11 @@
   &__info {
     display: grid;
     grid-template: 1fr / 1fr 1fr;
+    column-gap: 122px;
+
+    &_bottom {
+      margin-top: 83px;
+    }
   }
 
   &__photo {
