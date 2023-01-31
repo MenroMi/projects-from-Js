@@ -9,7 +9,7 @@
     <script defer="defer" src="./script/main.min.js"></script>
   </head>
   <body>
-    <header>
+    <header class="header">
       <div class="container">
         <nav class="nav-header">
           <a href="#" class="logo"
@@ -182,12 +182,165 @@
       </section>
       <section class="catalog">
         <div class="container">
-          <ul class="cards">
-            <li class="cards__card"></li>
-            <li class="cards__card"></li>
-            <li class="cards__card"></li>
-            <li class="cards__card"></li>
-          </ul>
+          <div class="wrapper">
+            <div class="circle circle_bgc-yellow"></div>
+            <div class="circle circle_brd-primary"></div>
+
+            <h2 class="title title_section">Catalog</h2>
+            <div class="slider-arrow slider-arrow_prev">
+              <img
+                src="./assets/img/vectors/arrow-left.svg"
+                alt="Arrow for change previous slide"
+              />
+            </div>
+            <div class="slider-arrow slider-arrow_next">
+              <img
+                src="./assets/img/vectors/arrow-right.svg"
+                alt="Arrow for change next slide"
+              />
+            </div>
+
+            <ul class="cards">
+              <li class="card card_active">
+                <header class="card__title card__title_preparation">
+                  <h3>Preparation to school</h3>
+                </header>
+                <div class="card__body">
+                  <header class="card__body-information">
+                    <h2 class="title">30 000 tg</h2>
+                    <div class="card__body-container">
+                      <p>4-6 years old</p>
+                      <p>3 lessons per week for 3 hours.</p>
+                    </div>
+                  </header>
+                  <ul class="card__features">
+                    <li class="card__feature">Learning to read</li>
+                    <li class="card__feature">Writing</li>
+                    <li class="card__feature">Mathematics</li>
+                    <li class="card__feature">English</li>
+                    <li class="card__feature">More...</li>
+                  </ul>
+                </div>
+                <button class="btn btn_card btn_card_preparation">
+                  Submit
+                </button>
+              </li>
+              <li class="card card_active">
+                <header class="card__title card__title_read">
+                  <h3>speed reading</h3>
+                </header>
+                <div class="card__body">
+                  <header class="card__body-information">
+                    <h2 class="title">27 000 tg</h2>
+                    <div class="card__body-container">
+                      <p>6-15 years old</p>
+                      <p>3 lessons per week for 1 hour.</p>
+                    </div>
+                  </header>
+                  <ul class="card__features">
+                    <li class="card__feature">Increase reading speed</li>
+                    <li class="card__feature">Articulation</li>
+                    <li class="card__feature">Speech development</li>
+                    <li class="card__feature">Development of attention</li>
+                    <li class="card__feature">More...</li>
+                  </ul>
+                </div>
+                <button class="btn btn_card btn_card_read">Submit</button>
+              </li>
+              <li class="card card_active">
+                <header class="card__title card__title_arithmetic">
+                  <h3>mental arithmetic</h3>
+                </header>
+                <div class="card__body">
+                  <header class="card__body-information">
+                    <h2 class="title">20 000 tg</h2>
+                    <div class="card__body-container">
+                      <p>2 lessons per week for 1 hour.</p>
+                    </div>
+                  </header>
+                  <ul class="card__features">
+                    <li class="card__feature">Quick score</li>
+                    <li class="card__feature">
+                      Development of high concentration
+                    </li>
+                    <li class="card__feature">Increasing the field of view</li>
+                    <li class="card__feature">Photographic memory</li>
+                    <li class="card__feature">More...</li>
+                  </ul>
+                </div>
+                <button class="btn btn_card btn_card_arithmetic">Submit</button>
+              </li>
+              <!-- <li class="card">
+                <header class="card__title card__title_calligraphy">
+                  <h3>Calligraphy</h3>
+                </header>
+                <div class="card__body">
+                  <header class="card__body-information">
+                    <h2 class="title">24 000 tg</h2>
+                    <div class="card__body-container">
+                      <p>3 lessons per week for 1 hour.</p>
+                    </div>
+                  </header>
+                  <ul class="card__features">
+                    <li class="card__feature">Memory development</li>
+                    <li class="card__feature">Perception of space</li>
+                    <li class="card__feature">Pumping fine motor skills</li>
+                    <li class="card__feature">Basics of literate writing</li>
+                    <li class="card__feature">More...</li>
+                  </ul>
+                </div>
+                <button class="btn btn_card btn_card_calligraphy">
+                  Submit
+                </button>
+              </li> -->
+              <!-- <li class="card">
+                <header class="card__title card__title_english">
+                  <h3>English</h3>
+                </header>
+                <div class="card__body">
+                  <header class="card__body-information">
+                    <h2 class="title">18 000 tg</h2>
+                    <div class="card__body-container">
+                      <p>2 lessons per week for 1,5 hour.</p>
+                    </div>
+                  </header>
+                  <ul class="card__features">
+                    <li class="card__feature">Reading by the rules</li>
+                    <li class="card__feature">Knowledge of 500 new words</li>
+                    <li class="card__feature">Independent homework</li>
+                  </ul>
+                </div>
+                <button class="btn btn_card btn_card_english">Submit</button>
+              </li> -->
+              <!-- <li class="card">
+                <header class="card__title card__title_day-care-center">
+                  <h3>Day care center</h3>
+                </header>
+                <div class="card__body">
+                  <header class="card__body-information">
+                    <h2 class="title">35 000 tg</h2>
+                    <div class="card__body-container">
+                      <p>5 times per week</p>
+                      <p>1 shift from 9:00 to 12:00</p>
+                      <p>2nd shift from 14:00 to 17:00</p>
+                    </div>
+                  </header>
+                  <ul class="card__features">
+                    <li class="card__feature">Preparation fo SAS, SAQ</li>
+                    <li class="card__feature">Addressing gaps in knowledge</li>
+                    <li class="card__feature">Individual approach</li>
+                    <li class="card__feature">
+                      Identifying the child's strengths
+                    </li>
+                    <li class="card__feature">More...</li>
+                  </ul>
+                </div>
+                <button class="btn btn_card btn_card_day-care-center">
+                  Submit
+                </button>
+              </li> -->
+            </ul>
+          </div>
         </div>
       </section>
 

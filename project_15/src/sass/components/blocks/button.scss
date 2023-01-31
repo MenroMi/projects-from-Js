@@ -1,4 +1,5 @@
 .btn {
+  cursor: pointer;
   &_contact {
     margin-top: 2.5rem;
     width: 15.25rem;
@@ -9,6 +10,38 @@
     font-size: 1.25rem;
     font-weight: 500;
     box-shadow: 0 10px 35px -5px rgba(250, 224, 26, 1);
-    cursor: pointer;
+  }
+
+  &_card {
+    display: block;
+    margin: auto auto 0 auto;
+    width: 13.688rem;
+    height: 4.25rem;
+    border-radius: 2.5rem;
+    font-size: 1.5rem;
+    color: #fff;
+    &_preparation {
+      background-color: var(--primary-clr);
+    }
+
+    &_read {
+      background-color: var(--purple-m);
+    }
+
+    &_arithmetic {
+      background-color: var(--g-kelly);
+    }
+
+    &_calligraphy {
+      background-color: var(--y-lemon);
+    }
+
+    &_english {
+      background-color: var(--pink-f-r);
+    }
+
+    &_day-care-center {
+      background-color: var(--y-lighting);
+    }
   }
 }

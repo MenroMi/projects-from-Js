@@ -1,0 +1,20 @@
+.circle {
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  &_bgc-yellow {
+    background-color: var(--y-lite);
+    width: 201px;
+    height: 200px;
+    top: 140px;
+    left: -50px;
+  }
+
+  &_brd-primary {
+    width: 268px;
+    height: 267px;
+    border: 16px solid var(--primary-clr);
+    right: 59px;
+    top: 60px;
+  }
+}
