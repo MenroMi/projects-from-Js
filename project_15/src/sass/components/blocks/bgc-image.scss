@@ -1,0 +1,9 @@
+.bgc-image {
+  img {
+    z-index: -1;
+    position: absolute;
+    &:nth-of-type(2) {
+      top: 4.5rem;
+    }
+  }
+}

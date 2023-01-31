@@ -1,0 +1,13 @@
+@import "../blocks/bgc-image";
+
+.certificates {
+  position: relative;
+  padding-top: 60px;
+  min-height: 450px;
+}
+
+.list-certificates {
+  display: flex;
+  margin-top: 3.875rem;
+  justify-content: space-between;
+}
