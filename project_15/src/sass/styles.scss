@@ -69,6 +69,11 @@ select {
   margin: 0 auto;
 }
 
+.wrapper {
+  position: relative;
+  z-index: 0;
+}
+
 main {
   padding: 122px 0 107px 0;
 }
@@ -81,3 +86,4 @@ main {
 @import "./components/sections/study-ways";
 @import "./components/sections/catalog";
 @import "./components/sections/certificates";
+@import "./components/sections/comments";

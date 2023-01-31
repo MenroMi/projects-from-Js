@@ -1,0 +1,17 @@
+.comments {
+  padding: 37px 0 71px 0;
+  min-height: 405px;
+}
+
+.list-comments {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3.875rem;
+
+  &__comment {
+    width: 387px;
+    height: 284px;
+    border: 4px solid #018fa3;
+    border-radius: 30px;
+  }
+}

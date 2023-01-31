@@ -1,0 +1,18 @@
+.slider-arrow {
+  &_prev,
+  &_next {
+    position: absolute;
+    z-index: 99;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &_prev {
+    left: -96px;
+  }
+
+  &_next {
+    right: -96px;
+  }
+}
