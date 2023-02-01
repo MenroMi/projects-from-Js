@@ -1,0 +1,24 @@
+.contacts {
+  min-height: 1270px;
+  padding: 71px 0 87px 0;
+
+  &__table {
+    align-self: end;
+    height: 540px;
+    width: 590px;
+    padding: 0.75em 2.565em 2.565em 2.565em;
+    background-color: var(--primary-clr);
+    box-shadow: 0px 50px 50px -27px rgba(0, 0, 0, 0.1);
+    border-radius: 1.875rem;
+    color: #fff;
+    text-align: center;
+  }
+
+  &__information {
+    text-align: left;
+    font-size: 1.5rem;
+    span {
+      font-weight: 400;
+    }
+  }
+}

@@ -65,13 +65,19 @@ select {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1264px;
   margin: 0 auto;
 }
 
 .wrapper {
   position: relative;
   z-index: 0;
+
+  &_contacts {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 122px;
+  }
 }
 
 main {
@@ -87,3 +93,5 @@ main {
 @import "./components/sections/catalog";
 @import "./components/sections/certificates";
 @import "./components/sections/comments";
+@import "./components/sections/contacts";
+@import "./components/sections/maps";

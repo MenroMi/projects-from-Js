@@ -1,0 +1,25 @@
+.maps {
+  position: relative;
+  iframe {
+    display: block;
+    margin: 3.625rem auto 0 auto;
+    border: 1.25rem solid #000;
+    border-radius: 1.25rem;
+  }
+
+  svg {
+    position: absolute;
+
+    &:nth-of-type(1) {
+      left: 9.5rem;
+      top: 3rem;
+      z-index: -1;
+    }
+
+    &:nth-of-type(2) {
+      right: 10.5rem;
+      bottom: 3rem;
+      z-index: -1;
+    }
+  }
+}

@@ -2,19 +2,26 @@
   position: absolute;
   z-index: -1;
   border-radius: 50%;
-  &_bgc-yellow {
+  &_bgc-yellow,
+  &_bgc-charlotte {
     background-color: var(--y-lite);
     width: 201px;
     height: 200px;
-    top: 15px;
-    left: -50px;
+    top: 0;
+    left: -1rem;
+  }
+
+  &_bgc-charlotte {
+    top: 3.85rem;
+    left: 2.3rem;
+    background-color: #95d8e0;
   }
 
   &_brd-primary {
     width: 268px;
     height: 267px;
     border: 16px solid var(--primary-clr);
-    right: 59px;
+    right: 84px;
     top: -59px;
   }
 
