@@ -1,0 +1,14 @@
+.logo {
+  grid-column: 1/3;
+
+  &_footer {
+    grid-column: 1;
+    justify-self: center;
+  }
+
+  &_designer {
+    justify-self: center;
+    grid-row: 1;
+    grid-column: 10/13;
+  }
+}

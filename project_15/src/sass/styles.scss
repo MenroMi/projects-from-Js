@@ -84,6 +84,7 @@ main {
   padding: 122px 0 107px 0;
 }
 
+@import "./components/blocks/logo";
 @import "./components/f-header/header-site";
 @import "./components/f-header/navigation";
 @import "./components/blocks/title";
@@ -95,3 +96,4 @@ main {
 @import "./components/sections/comments";
 @import "./components/sections/contacts";
 @import "./components/sections/maps";
+@import "./components/footer/footer";
