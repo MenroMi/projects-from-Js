@@ -2,6 +2,23 @@
   &_prev,
   &_next {
     position: absolute;
+    cursor: pointer;
+    top: 500px;
+  }
+
+  &_prev {
+    left: -10%;
+  }
+
+  &_next {
+    right: -10%;
+  }
+}
+
+.comments-arrow {
+  &_prev,
+  &_next {
+    position: absolute;
     z-index: 99;
     cursor: pointer;
     top: 50%;

@@ -8,7 +8,13 @@
     width: 201px;
     height: 200px;
     top: 0;
-    left: -1rem;
+    left: -2rem;
+  }
+
+  &_bgc-yellow {
+    z-index: 1;
+    left: -3%;
+    top: 16%;
   }
 
   &_bgc-charlotte {
@@ -18,11 +24,11 @@
   }
 
   &_brd-primary {
+    z-index: 1;
     width: 268px;
     height: 267px;
     border: 16px solid var(--primary-clr);
-    right: 84px;
-    top: -59px;
+    right: 6%;
   }
 
   &_certificate {

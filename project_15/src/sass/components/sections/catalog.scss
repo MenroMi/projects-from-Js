@@ -1,9 +1,9 @@
 @import "../blocks/circle";
-@import "../blocks/slider-arrows";
+@import "../blocks/arrows";
 
 .catalog {
   background-color: #f6faff;
-  min-height: 1053px;
+  min-height: 1130px;
   padding: 68px 0 80px 0;
 }
 
@@ -14,14 +14,20 @@
 }
 
 .card {
-  display: flex;
+  display: none;
   flex-direction: column;
   width: 387px;
-  min-height: 778px;
+  min-height: 850px;
   background: #ffffff;
   box-shadow: 0px 52px 34px -27px rgba(225, 225, 225, 0.15);
   border-radius: 1.875rem;
-  padding: 0 0.5rem 4rem 0.5rem;
+  animation: slideOpen 0.3s forwards;
+  padding: 0 0 4rem 0;
+  overflow: hidden;
+
+  &_active {
+    display: flex;
+  }
 
   &__title {
     width: 100%;
@@ -66,6 +72,7 @@
     text-align: center;
     margin-top: 3.875rem;
     margin-bottom: 3.875rem;
+    padding: 0 0.5rem;
 
     &-container {
       display: flex;
@@ -95,5 +102,23 @@
     &_active {
       display: block;
     }
+  }
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-350%);
+  }
+}
+
+@keyframes slideOpen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

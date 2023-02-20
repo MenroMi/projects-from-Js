@@ -70,18 +70,23 @@ button {
 }
 
 .container {
+  position: relative;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .wrapper {
   position: relative;
-  z-index: 0;
+  z-index: 100;
 
   &_contacts {
     display: flex;
     justify-content: space-between;
     column-gap: 122px;
+  }
+
+  &_cards {
+    overflow: hidden;
   }
 }
 
