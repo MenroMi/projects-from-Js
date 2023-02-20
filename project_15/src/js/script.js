@@ -1,3 +1,4 @@
+scaleCertificates();
 readMoreBtn();
 slider();
 
@@ -80,5 +81,33 @@ function slider() {
     changeElements(cardList, "card_active", [from, to]);
     onFlexCards(cardBox, cardList);
     readMoreBtn(true);
+  });
+}
+
+// scale certificates
+
+function scaleCertificates() {
+  const certificateParent = document.querySelector(".list-certificates");
+  const modalImage = document.querySelector("#modal-image");
+  const chosenImage = document.querySelector("#image");
+
+  certificateParent.addEventListener("click", (e) => {
+    const target = e.target;
+    if (
+      target.tagName === "IMG" &&
+      certificateParent.closest(`.${certificateParent.className}`)
+    ) {
+      modalImage.style.display = "block";
+      chosenImage.src = target.src;
+    }
+  });
+
+  modalImage.addEventListener("click", (e) => {
+    const target = e.target;
+
+    if (target.closest(`#${modalImage.id}`)) {
+      modalImage.style.display = "none";
+      chosenImage.src = "";
+    }
   });
 }
