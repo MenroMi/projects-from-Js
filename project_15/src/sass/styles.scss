@@ -64,8 +64,13 @@ select {
   border: none;
 }
 
+button {
+  background-color: transparent;
+  cursor: pointer;
+}
+
 .container {
-  max-width: 1264px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -97,3 +102,4 @@ main {
 @import "./components/sections/contacts";
 @import "./components/sections/maps";
 @import "./components/footer/footer";
+@import "./media/media";

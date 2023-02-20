@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./style/main.min.css" />
     <script defer="defer" src="./script/main.min.js"></script>
+    <link rel="stylesheet" href="./style/main.min.css" />
   </head>
   <body>
     <header class="header">
@@ -201,7 +201,7 @@
             </div>
 
             <ul class="cards">
-              <li class="card card_active">
+              <li id="preparation" class="card card_active">
                 <header class="card__title card__title_preparation">
                   <h3>Preparation to school</h3>
                 </header>
@@ -214,18 +214,37 @@
                     </div>
                   </header>
                   <ul class="card__features">
-                    <li class="card__feature">Learning to read</li>
-                    <li class="card__feature">Writing</li>
-                    <li class="card__feature">Mathematics</li>
-                    <li class="card__feature">English</li>
-                    <li class="card__feature">More...</li>
+                    <li class="card__feature card__feature_active">
+                      Learning to read
+                    </li>
+                    <li class="card__feature card__feature_active">Writing</li>
+                    <li class="card__feature card__feature_active">
+                      Mathematics
+                    </li>
+                    <li class="card__feature card__feature_active">English</li>
+                    <li class="card__feature">Speech development</li>
+                    <li class="card__feature">Concentration of attention</li>
+                    <li class="card__feature">
+                      Assimilation of the studied material
+                    </li>
+                    <li class="card__feature">
+                      Various memorization techniques
+                    </li>
+                    <li class="card__feature">
+                      Development of logical and mathematical thinking
+                    </li>
+                    <li class="card__feature card__feature_active">
+                      <button class="btn btn_more" type="button">
+                        More...
+                      </button>
+                    </li>
                   </ul>
                 </div>
                 <button class="btn btn_card btn_card_preparation">
                   Submit
                 </button>
               </li>
-              <li class="card card_active">
+              <li id="read" class="card card_active">
                 <header class="card__title card__title_read">
                   <h3>speed reading</h3>
                 </header>
@@ -238,16 +257,38 @@
                     </div>
                   </header>
                   <ul class="card__features">
-                    <li class="card__feature">Increase reading speed</li>
-                    <li class="card__feature">Articulation</li>
-                    <li class="card__feature">Speech development</li>
-                    <li class="card__feature">Development of attention</li>
-                    <li class="card__feature">More...</li>
+                    <li class="card__feature card__feature_active">
+                      Increase reading speed
+                    </li>
+                    <li class="card__feature card__feature_active">
+                      Articulation
+                    </li>
+                    <li class="card__feature card__feature_active">
+                      Speech development
+                    </li>
+                    <li class="card__feature card__feature_active">
+                      Development of attention
+                    </li>
+                    <li class="card__feature">Increasing the field of view</li>
+                    <li class="card__feature">Vocabulary increase</li>
+                    <li class="card__feature">Reading comprehension</li>
+                    <li class="card__feature">Retelling</li>
+                    <li class="card__feature">
+                      Various comprehension techniques
+                    </li>
+                    <li class="card__feature">
+                      Trial lesson and diagnostics for FREE
+                    </li>
+                    <li class="card__feature card__feature_active">
+                      <button class="btn btn_more" type="button">
+                        More...
+                      </button>
+                    </li>
                   </ul>
                 </div>
                 <button class="btn btn_card btn_card_read">Submit</button>
               </li>
-              <li class="card card_active">
+              <li id="arithmetic" class="card card_active">
                 <header class="card__title card__title_arithmetic">
                   <h3>mental arithmetic</h3>
                 </header>
@@ -259,18 +300,32 @@
                     </div>
                   </header>
                   <ul class="card__features">
-                    <li class="card__feature">Quick score</li>
-                    <li class="card__feature">
+                    <li class="card__feature card__feature_active">
+                      Quick score
+                    </li>
+                    <li class="card__feature card__feature_active">
                       Development of high concentration
                     </li>
-                    <li class="card__feature">Increasing the field of view</li>
-                    <li class="card__feature">Photographic memory</li>
-                    <li class="card__feature">More...</li>
+                    <li class="card__feature card__feature_active">
+                      Increasing the field of view
+                    </li>
+                    <li class="card__feature card__feature_active">
+                      Photographic memory
+                    </li>
+                    <li class="card__feature">Trial lesson FREE</li>
+                    <li class="card__feature">
+                      Educational platform as a GIFT
+                    </li>
+                    <li class="card__feature card__feature_active">
+                      <button class="btn btn_more" type="button">
+                        More...
+                      </button>
+                    </li>
                   </ul>
                 </div>
                 <button class="btn btn_card btn_card_arithmetic">Submit</button>
               </li>
-              <!-- <li class="card">
+              <!-- <li id="calligraphy" class="card">
                 <header class="card__title card__title_calligraphy">
                   <h3>Calligraphy</h3>
                 </header>
@@ -282,18 +337,37 @@
                     </div>
                   </header>
                   <ul class="card__features">
-                    <li class="card__feature">Memory development</li>
-                    <li class="card__feature">Perception of space</li>
-                    <li class="card__feature">Pumping fine motor skills</li>
-                    <li class="card__feature">Basics of literate writing</li>
-                    <li class="card__feature">More...</li>
+                    <li class="card__feature card__feature_active">
+                      Memory development
+                    </li>
+                    <li class="card__feature card__feature_active">
+                      Perception of space
+                    </li>
+                    <li class="card__feature card__feature_active">
+                      Pumping fine motor skills
+                    </li>
+                    <li class="card__feature card__feature_active">
+                      Basics of literate writing
+                    </li>
+                    <li class="card__feature">
+                      Development of physical endurance and perseverance
+                    </li>
+                    <li class="card__feature">
+                      Ability to write dictations without graphic and spelling
+                      errors
+                    </li>
+                    <li class="card__feature card__feature_active">
+                      <button class="btn btn_more" type="button">
+                        More...
+                      </button>
+                    </li>
                   </ul>
                 </div>
                 <button class="btn btn_card btn_card_calligraphy">
                   Submit
                 </button>
-              </li> -->
-              <!-- <li class="card">
+              </li>
+              <li id="english" class="card">
                 <header class="card__title card__title_english">
                   <h3>English</h3>
                 </header>
@@ -305,14 +379,20 @@
                     </div>
                   </header>
                   <ul class="card__features">
-                    <li class="card__feature">Reading by the rules</li>
-                    <li class="card__feature">Knowledge of 500 new words</li>
-                    <li class="card__feature">Independent homework</li>
+                    <li class="card__feature card__feature_active">
+                      Reading by the rules
+                    </li>
+                    <li class="card__feature card__feature_active">
+                      Knowledge of 500 new words
+                    </li>
+                    <li class="card__feature card__feature_active">
+                      Independent homework
+                    </li>
                   </ul>
                 </div>
                 <button class="btn btn_card btn_card_english">Submit</button>
-              </li> -->
-              <!-- <li class="card">
+              </li>
+              <li id="day-care-center" class="card">
                 <header class="card__title card__title_day-care-center">
                   <h3>Day care center</h3>
                 </header>
@@ -326,13 +406,29 @@
                     </div>
                   </header>
                   <ul class="card__features">
-                    <li class="card__feature">Preparation fo SAS, SAQ</li>
-                    <li class="card__feature">Addressing gaps in knowledge</li>
-                    <li class="card__feature">Individual approach</li>
-                    <li class="card__feature">
+                    <li class="card__feature card__feature_active">
+                      Preparation fo SAS, SAQ
+                    </li>
+                    <li class="card__feature card__feature_active">
+                      Addressing gaps in knowledge
+                    </li>
+                    <li class="card__feature card__feature_active">
+                      Individual approach
+                    </li>
+                    <li class="card__feature card__feature_active">
                       Identifying the child's strengths
                     </li>
-                    <li class="card__feature">More...</li>
+                    <li class="card__feature">
+                      Professional help with homework preparation
+                    </li>
+                    <li class="card__feature">
+                      Additional educational disciplines
+                    </li>
+                    <li class="card__feature card__feature_active">
+                      <button class="btn btn_more" type="button">
+                        More...
+                      </button>
+                    </li>
                   </ul>
                 </div>
                 <button class="btn btn_card btn_card_day-care-center">
