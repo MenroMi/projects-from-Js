@@ -48,4 +48,17 @@
   &_more {
     color: var(--primary-clr);
   }
+
+  &_form {
+    display: block;
+    margin: 0 auto;
+    margin-top: 2rem;
+    width: 244px;
+    height: 64px;
+    background-color: var(--y-darker);
+    box-shadow: 0px 20px 40px -27px rgba(0, 0, 0, 0.15);
+    border-radius: 1.875rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
 }

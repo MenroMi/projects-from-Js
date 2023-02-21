@@ -9,8 +9,9 @@
 
 .cards {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   margin-top: 4.375rem;
+  gap: 20px;
 }
 
 .card {

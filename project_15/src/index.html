@@ -633,6 +633,49 @@
                   Submit
                 </button>
               </li>
+              <li id="preparation" class="card">
+                <header class="card__title card__title_preparation">
+                  <h3>Preparation to school</h3>
+                </header>
+                <div class="card__body">
+                  <header class="card__body-information">
+                    <h2 class="title">30 000 tg</h2>
+                    <div class="card__body-container">
+                      <p>4-6 years old</p>
+                      <p>3 lessons per week for 3 hours.</p>
+                    </div>
+                  </header>
+                  <ul class="card__features">
+                    <li class="card__feature card__feature_active">
+                      Learning to read
+                    </li>
+                    <li class="card__feature card__feature_active">Writing</li>
+                    <li class="card__feature card__feature_active">
+                      Mathematics
+                    </li>
+                    <li class="card__feature card__feature_active">English</li>
+                    <li class="card__feature">Speech development</li>
+                    <li class="card__feature">Concentration of attention</li>
+                    <li class="card__feature">
+                      Assimilation of the studied material
+                    </li>
+                    <li class="card__feature">
+                      Various memorization techniques
+                    </li>
+                    <li class="card__feature">
+                      Development of logical and mathematical thinking
+                    </li>
+                    <li class="card__feature card__feature_active">
+                      <button class="btn btn_more" type="button">
+                        More...
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+                <button class="btn btn_card btn_card_preparation">
+                  Submit
+                </button>
+              </li>
             </ul>
           </div>
         </div>
@@ -683,20 +726,20 @@
         <div class="container">
           <h2 class="title title_section">Reviews</h2>
 
-          <div class="wrapper">
-            <div class="comments-arrow comments-arrow_prev">
-              <img
-                src="./assets/img/vectors/arrow-left.svg"
-                alt="Arrow for change previous slide"
-              />
-            </div>
-            <div class="comments-arrow comments-arrow_next">
-              <img
-                src="./assets/img/vectors/arrow-right.svg"
-                alt="Arrow for change next slide"
-              />
-            </div>
+          <div class="comments-arrow comments-arrow_prev">
+            <img
+              src="./assets/img/vectors/arrow-left.svg"
+              alt="Arrow for change previous slide"
+            />
+          </div>
+          <div class="comments-arrow comments-arrow_next">
+            <img
+              src="./assets/img/vectors/arrow-right.svg"
+              alt="Arrow for change next slide"
+            />
+          </div>
 
+          <div class="wrapper wrapper_reviews">
             <ul class="list-comments">
               <li class="list-comments__comment list-comments__comment_active">
                 <header class="list-comments__user">
@@ -741,8 +784,51 @@
                   сыпайы әрі білімді.
                 </p>
               </li>
-              <!-- <li class="list-comments__comment"></li>
-              <li class="list-comments__comment"></li> -->
+              <li class="list-comments__comment list-comments__comment_active">
+                <header class="list-comments__user">
+                  <img
+                    class="list-comments__photo"
+                    src="./assets/img/avatars/third-avatar.png"
+                    alt="Photo of user which wrote comment"
+                  />
+                  <h2 class="list-comments__name">Malika Fazlieva</h2>
+                </header>
+                <p class="list-comments__descr">
+                  Маған ұнаған жері білімді жақсы береді. Ұлымның қатынап
+                  жүргеніне 1 ай болмады бірақ нәтиже бар. Мұғалімдеріде өте
+                  сыпайы әрі білімді.
+                </p>
+              </li>
+              <li class="list-comments__comment list-comments__comment_active">
+                <header class="list-comments__user">
+                  <img
+                    class="list-comments__photo"
+                    src="./assets/img/avatars/third-avatar.png"
+                    alt="Photo of user which wrote comment"
+                  />
+                  <h2 class="list-comments__name">Malika Fazlieva</h2>
+                </header>
+                <p class="list-comments__descr">
+                  Маған ұнаған жері білімді жақсы береді. Ұлымның қатынап
+                  жүргеніне 1 ай болмады бірақ нәтиже бар. Мұғалімдеріде өте
+                  сыпайы әрі білімді.
+                </p>
+              </li>
+              <li class="list-comments__comment list-comments__comment_active">
+                <header class="list-comments__user">
+                  <img
+                    class="list-comments__photo"
+                    src="./assets/img/avatars/first-avatar.png"
+                    alt="Photo of user which wrote comment"
+                  />
+                  <h2 class="list-comments__name">Malika Fazlieva</h2>
+                </header>
+                <p class="list-comments__descr">
+                  Маған ұнаған жері білімді жақсы береді. Ұлымның қатынап
+                  жүргеніне 1 ай болмады бірақ нәтиже бар. Мұғалімдеріде өте
+                  сыпайы әрі білімді.
+                </p>
+              </li>
             </ul>
           </div>
         </div>
@@ -853,6 +939,45 @@
     <div id="modal-image">
       <img class="modal-content" id="image" />
     </div>
-    <div class="modal-form"></div>
+    <div id="overlay">
+      <div class="modal">
+        <div class="modal__close">&times;</div>
+        <div class="modal__form">
+          <form class="form" action="#">
+            <h2 class="form__title">
+              Fill out the <span>form</span> and we will contact you.
+            </h2>
+            <div class="form__wrapper">
+              <input
+                class="form__input"
+                name="name"
+                type="text"
+                placeholder="Your name..."
+                required
+              />
+              <input
+                class="form__input"
+                name="lastname"
+                type="text"
+                placeholder="Your lastname..."
+                required
+              />
+              <textarea
+                class="form__input form__input_bigger"
+                name="comment"
+                placeholder="Your comment..."
+                required
+              ></textarea>
+            </div>
+            <button class="btn btn_form" type="submit">Submit</button>
+          </form>
+        </div>
+        <div class="modal__thanks">
+          <img src="./assets/img/icons/form-done.svg" alt="Form is sent" />
+          <h3><span>Thanks</span> for the application</h3>
+          <h3>We will <span>contact</span> you shortly</h3>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

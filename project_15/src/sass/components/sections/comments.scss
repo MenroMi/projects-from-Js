@@ -4,11 +4,21 @@
 }
 
 .list-comments {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 3.875rem;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 200px;
+  list-style: none;
+  transition: all ease 0.3s;
+  // display: flex;
+  // justify-content: space-evenly;
+  // margin-top: 3.875rem;
 
   &__comment {
+    position: relative;
+    display: block;
+    margin-right: 13px;
+    float: left;
     width: 387px;
     min-height: 284px;
     border: 4px solid #018fa3;

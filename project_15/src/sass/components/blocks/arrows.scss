@@ -21,7 +21,7 @@
     position: absolute;
     z-index: 99;
     cursor: pointer;
-    top: 50%;
+    top: 65%;
     transform: translateY(-50%);
   }
 
@@ -30,6 +30,6 @@
   }
 
   &_next {
-    right: -60px;
+    right: -50px;
   }
 }

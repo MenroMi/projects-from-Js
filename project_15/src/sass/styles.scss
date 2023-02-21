@@ -75,30 +75,17 @@ button {
   margin: 0 auto;
 }
 
-.wrapper {
-  position: relative;
-  z-index: 9;
-
-  &_contacts {
-    display: flex;
-    justify-content: space-between;
-    column-gap: 122px;
-  }
-
-  &_cards {
-    overflow: hidden;
-  }
-}
-
 main {
   padding: 122px 0 107px 0;
 }
 
+@import "./components/blocks/wrapper";
 @import "./components/blocks/logo";
 @import "./components/f-header/header-site";
 @import "./components/f-header/navigation";
 @import "./components/blocks/title";
 @import "./components/blocks/button";
+@import "./components/blocks/modal";
 @import "./components/sections/about-us";
 @import "./components/sections/study-ways";
 @import "./components/sections/catalog";

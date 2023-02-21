@@ -1,8 +1,9 @@
 scaleCertificates();
 readMoreBtn();
 slider();
+secondSlider();
 
-function readMoreBtn(trans = false) {
+function readMoreBtn() {
   const parents = document.querySelectorAll(".card__features"),
     cards = document.querySelectorAll(".card");
 
@@ -12,6 +13,8 @@ function readMoreBtn(trans = false) {
     parent.addEventListener("click", (e) => {
       let features;
       const target = e.target;
+
+      console.log(target);
 
       if (target.tagName === "BUTTON" && target.closest(`#${cards[i].id}`)) {
         features = parent.children;
@@ -52,7 +55,7 @@ function slider() {
       card.classList.contains("card_active") ? count++ : null;
     });
 
-    return count < 3
+    return count < 2
       ? (parent.style.justifyContent = "flex-start")
       : (parent.style.justifyContent = "");
   };
@@ -68,7 +71,6 @@ function slider() {
     to -= elementsOnPage;
     changeElements(cardList, "card_active", [from, to]);
     onFlexCards(cardBox, cardList);
-    readMoreBtn(true);
   });
 
   arrowNext.addEventListener("click", () => {
@@ -80,7 +82,6 @@ function slider() {
     from += elementsOnPage;
     changeElements(cardList, "card_active", [from, to]);
     onFlexCards(cardBox, cardList);
-    readMoreBtn(true);
   });
 }
 
@@ -111,3 +112,75 @@ function scaleCertificates() {
     }
   });
 }
+
+// second slider
+
+function secondSlider() {
+  // slides
+  const slideParent = document.querySelector(".list-comments"),
+    slidesAmount = document.querySelectorAll(".list-comments__comment"),
+    slideParams = document
+      .querySelector(".list-comments__comment")
+      .getBoundingClientRect();
+
+  const slideHeight = slideParams.height,
+    slideWidth = slideParams.width + 13, // 13 is margin-right fo element in CSS
+    slideUlWidth = slidesAmount.length * slideWidth,
+    scrollAmount = slidesAmount.length - 3;
+
+  // wrapper
+  const wrapper = document.querySelector(".wrapper_reviews");
+
+  // arrays
+  const arrowPrev = document.querySelector(".comments-arrow_prev"),
+    arrowNext = document.querySelector(".comments-arrow_next");
+
+  let offset = 0,
+    count = 1;
+
+  // style for DOM elements
+  wrapper.style.cssText = `
+    width: 1200px;
+    height: ${slideHeight}px;
+  `;
+
+  slideParent.style.width = `${slideUlWidth}px`;
+
+  arrowPrev.onclick = () => {
+    if (count === 1) {
+      return (slideParent.style.transform = `translateX(0)`);
+    }
+
+    if (count > 1) {
+      offset -= slideWidth;
+      slideParent.style.transform = `translateX(-${offset}px)`;
+      count--;
+    }
+  };
+
+  arrowNext.onclick = () => {
+    if (count <= scrollAmount) {
+      offset += slideWidth;
+      slideParent.style.transform = `translateX(-${offset}px)`;
+      count++;
+    } else {
+      return (slideParent.style.transform = `translateX(${offset})`);
+    }
+    console.log(offset);
+  };
+}
+
+// form
+
+// function form() {
+//   const form = document.querySelector(".form"),
+//     modalForm = document.querySelector(".modal__form"),
+//     modalThank = document.querySelector(".modal__thanks");
+
+//   const postData = (form) => {
+//     form.addEventListener('submit', (e) => {
+
+//     })
+//   }
+
+// }

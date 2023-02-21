@@ -1,0 +1,19 @@
+.wrapper {
+  position: relative;
+  z-index: 9;
+
+  &_contacts {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 122px;
+  }
+
+  &_cards,
+  &_reviews {
+    overflow: hidden;
+  }
+
+  &_reviews {
+    margin: 60px 0 0 0;
+  }
+}
